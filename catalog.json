@@ -1,0 +1,46 @@
+[
+  {
+    "id": "camdle",
+    "type": "Theory",
+    "languages": [
+      "en"
+    ],
+    "status": "draft",
+    "description": "CAMDLE as a proposed learning design: a generative writing assistant whose drafting support is conditional on prior dialogic contribution — a research agenda, not an efficacy claim.",
+    "updated": "2026-08-09T14:00:00+00:00",
+    "canonical_resource": "https://github.com/evaluchat/research/blob/main/theory/camdle.en.md"
+  },
+  {
+    "id": "contribution-ladder",
+    "type": "Playbook",
+    "languages": [
+      "en"
+    ],
+    "status": "stable",
+    "description": "Observation → documented experience → structured experiment → replication/challenge → synthesis → finding: the contribution model that lets ordinary teachers contribute without writing papers.",
+    "updated": "2026-08-09T14:00:00+00:00",
+    "canonical_resource": "https://github.com/evaluchat/research/blob/main/methods/contribution-ladder.en.md"
+  },
+  {
+    "id": "review-protocol",
+    "type": "Reference",
+    "languages": [
+      "en"
+    ],
+    "status": "stable",
+    "description": "Tiered claim governance: low-friction entry (auto-approval at provisional/tentative via deterministic rules), high-bar promotion (supported requires human review), challenge-anything, direction-of-fit pre-registration.",
+    "updated": "2026-08-09T14:00:00+00:00",
+    "canonical_resource": "https://github.com/evaluchat/research/blob/main/governance/review-protocol.en.md"
+  },
+  {
+    "id": "threshold-calibration",
+    "type": "Research Question",
+    "languages": [
+      "en"
+    ],
+    "status": "open",
+    "description": "Central research question: how the drafting-unlock threshold should vary by task type, proficiency level, language background, and learner strategy.",
+    "updated": "2026-08-09T14:00:00+00:00",
+    "canonical_resource": "https://github.com/evaluchat/research/blob/main/theory/threshold-calibration.en.md"
+  }
+]
