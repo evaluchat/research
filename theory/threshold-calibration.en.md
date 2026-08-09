@@ -12,6 +12,9 @@ sources:
   - id: camdle-white-paper
     resource: https://docs.evaluchat.com/research/camdle-white-paper.pdf
     title: CAMDLE white paper (docs.evaluchat.com/research/)
+  - id: research-apparatus-concept
+    resource: https://github.com/evaluchat/knowledge/blob/main/concepts/research-apparatus.en.md
+    title: Research apparatus — reproducible research on Canvas (knowledge catalog)
 ---
 
 # Threshold calibration — what counts as sufficient dialogic contribution?
@@ -45,5 +48,9 @@ A miscalibrated threshold fails in one of two directions. If the threshold is to
 ## Related
 
 - [CAMDLE — constrained AI-mediated dialogic writing (theory, unproven)](camdle.en.md)
+- [The apparatus as research instrument](../methods/apparatus.en.md) — the instrument view: what dialogic contribution means as a measured quantity, what process signals record, and how evidence must cite apparatus identity and configuration.
+- [Research apparatus — reproducible research on Canvas (knowledge catalog)][research-apparatus-concept] — the apparatus pattern: four-dimension invariant, versioning, and the Apparatus → Version → Configuration → Experiment model.
 
 Translations: none yet — contribute one via PR (see CONTRIBUTING.md).
+
+[research-apparatus-concept]: https://github.com/evaluchat/knowledge/blob/main/concepts/research-apparatus.en.md

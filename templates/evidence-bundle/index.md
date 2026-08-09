@@ -11,8 +11,10 @@ This directory is the starting skeleton for one evidence contribution. Copy it t
 | [results.md](results.md) | results | Structured measurements only (Measures / Observed differences / Missing data) |
 | [reflection.md](reflection.md) | reflection | Teacher interpretation — inference kept separate |
 | [limitations.md](limitations.md) | limitations | Scope, confounders, design limits |
-| [provenance.md](provenance.md) | provenance | Sources, consent + anonymisation record |
+| [provenance.md](provenance.md) | provenance | Sources, consent + anonymisation record; optional apparatus configuration block (apparatus id/version/configuration + canvas version) |
 
 Each file is a concept with `id: <role>` and `lang`. A non-English submission keeps its native-language file (e.g. `observations.pt-BR.md`, `origin: native`) plus, where useful, an agent-generated English summary (`observations.en.md`, `origin: translation`).
+
+**If the contribution ran inside a research apparatus**, fill the optional `apparatus:` block in `provenance.md` (id, version, configuration, canvas version) — evidence is only comparable across configurations of the same apparatus when the actual configuration is recorded. See [The apparatus as research instrument](../../methods/apparatus.en.md).
 
 **These files are templates.** Replace each `<!-- ... -->` instruction block with your content, then delete the comment. Every bundle carries a `stage:` field (in the registry or frontmatter) naming its ladder rung — see the [contribution ladder](../../methods/contribution-ladder.en.md).

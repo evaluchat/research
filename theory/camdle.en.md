@@ -11,6 +11,9 @@ sources:
   - id: camdle-white-paper
     resource: https://docs.evaluchat.com/research/camdle-white-paper.pdf
     title: CAMDLE white paper (docs.evaluchat.com/research/)
+  - id: research-apparatus-concept
+    resource: https://github.com/evaluchat/knowledge/blob/main/concepts/research-apparatus.en.md
+    title: Research apparatus — reproducible research on Canvas (knowledge catalog)
 ---
 
 # CAMDLE — constrained AI-mediated dialogic writing (theory, unproven)
@@ -73,6 +76,10 @@ Six propositions structure the research programme:
 | L2 / EAP writing | AI raises questions of voice, critical literacy, and equity | That machine fluency is a fair human benchmark |
 | Process-based AI assessment | Interaction traces can be analysed as candidate evidence | That any trace is a validated learning measure |
 
+## Research apparatus
+
+The CAMDLE design is instrumented on Canvas as **Apparatus #1 (Essays)** — a reproducible configuration of Canvas capabilities, workflows, and measurements. The instrument view — what dialogic contribution means as a measured quantity, what process signals conceptually record, and how evidence cites apparatus identity and configuration — is defined in [The apparatus as research instrument](../methods/apparatus.en.md). The pattern itself (four-dimension invariant, versioning, configuration model) is defined in the knowledge catalog as the [research-apparatus-concept].
+
 ## Status
 
 `status: draft`. This document is a proposal; nothing here is established by the existence of the cited traditions. The central open question is threshold calibration — see [Threshold calibration — what counts as sufficient dialogic contribution?](threshold-calibration.en.md).
@@ -80,3 +87,5 @@ Six propositions structure the research programme:
 Source: [CAMDLE white paper (PDF)](https://docs.evaluchat.com/research/camdle-white-paper.pdf)
 
 Translations: none yet — contribute one via PR (see CONTRIBUTING.md).
+
+[research-apparatus-concept]: https://github.com/evaluchat/knowledge/blob/main/concepts/research-apparatus.en.md
