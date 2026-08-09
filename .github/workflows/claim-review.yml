@@ -1,0 +1,136 @@
+name: claim-review
+
+# Claim governance review (deterministic rules engine).
+# Runs scripts/okf_claim_check.py over findings and labels the PR.
+# On workflow_dispatch, runs the synthetic fixture dry-run sequence
+# (see scripts/tests/README.md) and asserts expected routes.
+
+on:
+  pull_request:
+    paths:
+      - "evidence/**"
+      - "findings/**"
+      - "governance/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  claim-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fixture dry-run (workflow_dispatch)
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          set -euo pipefail
+          declare -A EXPECT=(
+            [scenario-provisional]=auto-approve
+            [scenario-tentative]=auto-approve
+            [scenario-supported]=needs-review
+            [scenario-challenge]=needs-review
+            [scenario-dof-violation]=needs-review
+          )
+          failed=0
+          for s in scenario-provisional scenario-tentative scenario-supported scenario-challenge scenario-dof-violation; do
+            echo "=== $s (expect ${EXPECT[$s]}) ==="
+            out=$(python3 scripts/okf_claim_check.py "scripts/tests/fixtures/$s/findings/")
+            echo "$out"
+            route=$(echo "$out" | awk -F': ' '/^ROUTE:/{print $2; exit}')
+            echo "GOT_ROUTE=$route"
+            if [[ "$route" != "${EXPECT[$s]}" ]]; then
+              echo "::error::scenario $s expected ${EXPECT[$s]}, got $route"
+              failed=1
+            fi
+          done
+          if [[ "$failed" -ne 0 ]]; then
+            exit 1
+          fi
+          echo "All five fixture scenarios matched expected routes."
+
+      - name: Run claim check on findings/
+        if: github.event_name == 'pull_request'
+        id: check
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/claim-check
+          report=/tmp/claim-check/report.txt
+          : > "$report"
+          routes_auto=0
+          routes_review=0
+          shopt -s nullglob globstar
+          finding_files=()
+          declare -A seen=()
+          for f in findings/*.md findings/**/*.md; do
+            [[ -f "$f" ]] || continue
+            base=$(basename "$f")
+            lower=${base,,}
+            if [[ "$lower" == "index.md" || "$lower" == "log.md" || "$lower" == "readme.md" ]]; then
+              continue
+            fi
+            if [[ -n "${seen[$f]:-}" ]]; then
+              continue
+            fi
+            seen[$f]=1
+            finding_files+=("$f")
+          done
+          if [[ ${#finding_files[@]} -eq 0 ]]; then
+            echo "No finding files under findings/; nothing to label." | tee "$report"
+            echo "auto=no" >> "$GITHUB_OUTPUT"
+            echo "review=no" >> "$GITHUB_OUTPUT"
+            {
+              echo "report<<EOF"
+              cat "$report"
+              echo "EOF"
+            } >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          for f in "${finding_files[@]}"; do
+            echo "=== $f ===" | tee -a "$report"
+            out=$(python3 scripts/okf_claim_check.py "$f")
+            echo "$out" | tee -a "$report"
+            echo "---" | tee -a "$report"
+            route=$(echo "$out" | awk -F': ' '/^ROUTE:/{print $2; exit}')
+            if [[ "$route" == "auto-approve" ]]; then
+              routes_auto=$((routes_auto + 1))
+            else
+              routes_review=$((routes_review + 1))
+            fi
+          done
+          if [[ $routes_auto -gt 0 ]]; then echo "auto=yes" >> "$GITHUB_OUTPUT"; else echo "auto=no" >> "$GITHUB_OUTPUT"; fi
+          if [[ $routes_review -gt 0 ]]; then echo "review=yes" >> "$GITHUB_OUTPUT"; else echo "review=no" >> "$GITHUB_OUTPUT"; fi
+          {
+            echo "report<<EOF"
+            cat "$report"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Label and comment (pull_request)
+        if: github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AUTO: ${{ steps.check.outputs.auto }}
+          REVIEW: ${{ steps.check.outputs.review }}
+          REPORT: ${{ steps.check.outputs.report }}
+        run: |
+          set -euo pipefail
+          PR="${{ github.event.pull_request.number }}"
+          gh label create auto-approved --color "0E8A16" --description "Claim check: auto-approve" 2>/dev/null || true
+          gh label create needs-review --color "D93F0B" --description "Claim check: needs human review" 2>/dev/null || true
+          if [[ "${AUTO}" == "yes" ]]; then
+            gh pr edit "$PR" --add-label "auto-approved" || true
+          fi
+          if [[ "${REVIEW}" == "yes" ]]; then
+            gh pr edit "$PR" --add-label "needs-review" || true
+          fi
+          body=$(printf '## Claim check report\n\n```\n%s\n```\n' "$REPORT")
+          gh pr comment "$PR" --body "$body"
