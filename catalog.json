@@ -1,5 +1,16 @@
 [
   {
+    "id": "apparatus",
+    "type": "Reference",
+    "languages": [
+      "en"
+    ],
+    "status": "draft",
+    "description": "Instrument view of a Canvas research apparatus: what dialogic contribution means as a measured quantity, what process signals conceptually record, the threshold as a research variable, and how evidence cites apparatus identity and configuration.",
+    "updated": "2026-08-09T16:40:00+00:00",
+    "canonical_resource": "https://github.com/evaluchat/research/blob/main/methods/apparatus.en.md"
+  },
+  {
     "id": "camdle",
     "type": "Theory",
     "languages": [
