@@ -74,7 +74,7 @@ Evidence contributions record the actual apparatus configuration used, so that e
 
 ```yaml
 apparatus:
-  id: essays
+  id: ai-assisted-essay
   version: 0.5.9
   configuration:
     threshold: 3
