@@ -9,7 +9,7 @@ The catalog is a companion to the [knowledge repository](https://github.com/eval
 | Layer | Role |
 |---|---|
 | **Git / OKF** | The open substrate — provenance and contribution. Every claim traces to a file, a diff, and a review. |
-| **Website** | The human interface — a rendered, language-first view of the catalog (GitHub Pages). |
+| **Website** | The human interface — a rendered, language-first view of the catalog ([research.evaluchat.org](https://research.evaluchat.org)). |
 | **AI** | The reasoning interface — agents navigate questions → hypotheses → interventions → evidence → claims via [AGENT.md](AGENT.md). |
 
 ## Multilingual
@@ -27,4 +27,6 @@ Content: CC-BY-4.0 ([LICENSE](LICENSE)). Code and tooling: MIT ([LICENSE-CODE](L
 ## Links
 
 - Knowledge repository: https://github.com/evaluchat/knowledge
+- Live research catalog: https://research.evaluchat.org
+- Live knowledge catalog: https://knowledge.evaluchat.org
 - OKF specification: https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf
