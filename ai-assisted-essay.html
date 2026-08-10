@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AI-assisted essay — constrained dialogic drafting (CAMDLE)</title>
+<style>
+  :root { --fg:#1a1a1a; --muted:#555; --link:#0b57d0; --bg:#fafafa; --border:#ddd; }
+  body { font-family: Georgia, "Times New Roman", serif; line-height:1.55; color:var(--fg);
+         max-width: 52rem; margin: 0 auto; padding: 1.5rem; background: var(--bg); }
+  a { color: var(--link); }
+  header { border-bottom: 1px solid var(--border); margin-bottom: 1.5rem; padding-bottom: .75rem; }
+  header .brand { font-size: 1.25rem; font-weight: bold; }
+  .muted { color: var(--muted); font-size: .95rem; }
+  table.facts { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
+  table.facts th, table.facts td { border: 1px solid var(--border); padding: .35rem .6rem; text-align: left; vertical-align: top; }
+  table.facts th { width: 8rem; background: #f0f0f0; }
+  .lang-badges a { margin-right: .4rem; }
+  .catalog { width: 100%; border-collapse: collapse; }
+  .catalog th, .catalog td { border-bottom: 1px solid var(--border); padding: .45rem .3rem; text-align: left; vertical-align: top; }
+  .catalog th { font-size: .85rem; color: var(--muted); }
+  pre { background: #f3f3f3; padding: .75rem; overflow-x: auto; }
+  code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .9em; }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><a href="index.html">evaluchat research</a></div>
+  <p class="muted">Open Knowledge Format catalog ·
+    <a href="https://github.com/evaluchat/research">GitHub</a> ·
+    <a href="https://github.com/evaluchat/research/blob/main/README.md">README</a>
+  </p>
+  
+</header>
+<main>
+<h1>AI-assisted essay — constrained dialogic drafting (CAMDLE)</h1>
+<table class="facts"><tr><th>type</th><td>Apparatus</td></tr><tr><th>id</th><td>ai-assisted-essay</td></tr><tr><th>status</th><td>draft</td></tr><tr><th>lang</th><td>en</td></tr><tr><th>origin</th><td>native</td></tr><tr><th>generated</th><td>by=evaluchat-continuation, at=2026-08-10T10:30:00Z</td></tr><tr><th>sources</th><td>{&#x27;id&#x27;: &#x27;essays-workflow&#x27;, &#x27;resource&#x27;: &#x27;https://github.com/evaluchat/knowledge/blob/main/concepts/essays-workflow.en.md&#x27;, &#x27;title&#x27;: &#x27;Essays workflow — proportional drafting unlock (knowledge catalog)&#x27;}, {&#x27;id&#x27;: &#x27;research-apparatus-concept&#x27;, &#x27;resource&#x27;: &#x27;https://github.com/evaluchat/knowledge/blob/main/concepts/research-apparatus.en.md&#x27;, &#x27;title&#x27;: &#x27;Research apparatus — reproducible research on Canvas (knowledge catalog)&#x27;}, {&#x27;id&#x27;: &#x27;apparatus-method&#x27;, &#x27;resource&#x27;: &#x27;https://github.com/evaluchat/research/blob/main/methods/apparatus.en.md&#x27;, &#x27;title&#x27;: &#x27;The apparatus as research instrument (research catalog)&#x27;}</td></tr></table>
+
+<article class="body"><h1 id="ai-assisted-essay-constrained-dialogic-drafting-camdle">AI-assisted essay — constrained dialogic drafting (CAMDLE)</h1>
+<blockquote>
+<p><code>status: draft</code>. Apparatus #1: the Essays assignment flow as a research apparatus. The drafting-unlock
+constraint turns a pedagogical design (CAMDLE) into a measurable intervention; the AI chat transcript
+is collected as candidate engagement evidence. See <a href="../../theory/camdle.en.md">CAMDLE — constrained AI-mediated dialogic writing (theory, unproven)</a> for the construct, <a href="../../theory/threshold-calibration.en.md">Threshold calibration — what counts as sufficient dialogic contribution?</a> for the central research question, and the <a href="../../methods/apparatus.en.md">instrument view</a> for how measurement and evidence relate.</p>
+</blockquote>
+<h2 id="research-question">Research question</h2>
+<blockquote>
+<p>Does the AI chat transcript provide sufficient traceable evidence of student engagement with an
+assignment to validate it as an activity with academic merit if the AI is allowed to contribute
+to the canvas content?</p>
+</blockquote>
+<p>This apparatus serves the <a href="https://github.com/evaluchat/research/blob/main/theory/threshold-calibration.en.md">threshold-calibration</a> question family: the drafting-unlock threshold is a
+research variable (see <a href="#knobs">knobs</a>), and the transcript + process signals are the evidence substrate
+for the engagement question above.</p>
+<h2 id="platform-requirement">Platform requirement</h2>
+<ul>
+<li><code>min_platform: 0.5.9</code> — requires the Canvas platform to expose: markdown canvas with configurable
+  edit permissions, an optional AI chat panel with configurable system prompt and constraints, the
+  drafting gate policy, and the telemetry surfaces listed below. If a knob has no platform surface in
+  the running version, the apparatus must run with the closest supported value and record the deviation
+  in evidence provenance.</li>
+</ul>
+<h2 id="knobs">Knobs</h2>
+<table>
+<thead>
+<tr>
+<th>Knob</th>
+<th>Values</th>
+<th>Default</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ai_mode</code></td>
+<td>none, chat-only, constrained, full</td>
+<td>constrained</td>
+<td>constrained = chat plus gated canvas contribution</td>
+</tr>
+<tr>
+<td><code>drafting_gate</code></td>
+<td>none, discussion-first, thesis-approved</td>
+<td>discussion-first</td>
+<td>the contribution→drafting unlock policy</td>
+</tr>
+<tr>
+<td><code>threshold</code></td>
+<td>variable</td>
+<td>variable</td>
+<td>the research variable — set, varied, pre-registered per experiment</td>
+</tr>
+<tr>
+<td><code>canvas_editing</code></td>
+<td>enabled, disabled</td>
+<td>enabled</td>
+<td>whether the student can edit the canvas document directly</td>
+</tr>
+</tbody>
+</table>
+<h2 id="telemetry">Telemetry</h2>
+<table>
+<thead>
+<tr>
+<th>Stream</th>
+<th>Records</th>
+<th>Evidence use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>process_signals</code></td>
+<td>keystroke bursts, paste volume, canvas edit types</td>
+<td>engagement intensity, authoring patterns</td>
+</tr>
+<tr>
+<td><code>transcript</code></td>
+<td>full LLM agent conversation</td>
+<td>candidate traceable evidence of engagement</td>
+</tr>
+<tr>
+<td><code>output</code></td>
+<td>final submission</td>
+<td>outcome comparison across configurations</td>
+</tr>
+</tbody>
+</table>
+<p>Boundary: process evidence is <strong>not</strong> authorship detection and yields <strong>no integrity score</strong> — see the
+<a href="https://github.com/evaluchat/knowledge/blob/main/concepts/essays-workflow.en.md">essays-workflow</a> concept for the shipped behaviour.</p>
+<h2 id="evidence-collection">Evidence collection</h2>
+<p>Evidence for this apparatus lives under <a href="evidence/index.md">evidence/</a> — one collection per apparatus,
+with each contribution bundle recording <code>apparatus: {id, version, configuration}</code> and <code>canvas: {version}</code>
+in provenance (see the <a href="../../methods/apparatus.en.md">instrument view</a> and the
+<a href="../../templates/evidence-bundle/index.md">evidence-bundle template</a>).</p>
+<h2 id="status">Status</h2>
+<ul>
+<li><code>status: draft</code> — spec version 0.1.0; platform 0.5.9 ships the constrained flow (see <a href="https://github.com/evaluchat/knowledge/blob/main/concepts/essays-workflow.en.md">essays-workflow</a>).</li>
+<li>No evidence contributions yet. Threshold-calibration experiments may pre-register configurations here.</li>
+</ul></article>
+
+</main>
+</body>
+</html>

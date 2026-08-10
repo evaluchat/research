@@ -1,5 +1,16 @@
 [
   {
+    "id": "ai-assisted-essay",
+    "type": "Apparatus",
+    "languages": [
+      "en"
+    ],
+    "status": "draft",
+    "description": "Apparatus #1: a constrained dialogic drafting assignment where drafting support is gated behind dialogic contribution. Investigates threshold-calibration and the evidential value of the AI chat transcript for student engagement.",
+    "updated": "2026-08-10T10:30:00+00:00",
+    "canonical_resource": "https://github.com/evaluchat/research/blob/main/apparatus/ai-assisted-essay/ai-assisted-essay.en.md"
+  },
+  {
     "id": "apparatus",
     "type": "Reference",
     "languages": [
