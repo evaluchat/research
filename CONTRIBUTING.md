@@ -79,7 +79,7 @@ sources:
 
 ## Evidence contributions
 
-Each contribution is a mini-bundle under `evidence/<slug>/`: `index.md`, `question.md`, `context.md`, `intervention.md`, `observations.md` (teacher narrative, verbatim, native origin), `results.md` (structured measurements only — no interpretation), `reflection.md` (interpretation), `limitations.md` (scope and confounders), `provenance.md` (sources plus consent/anonymisation record).
+Each contribution is a mini-bundle under `apparatus/<apparatus-id>/evidence/<slug>/` (evidence is organised per apparatus — one collection per apparatus): `index.md`, `question.md`, `context.md`, `intervention.md`, `observations.md` (teacher narrative, verbatim, native origin), `results.md` (structured measurements only — no interpretation), `reflection.md` (interpretation), `limitations.md` (scope and confounders), `provenance.md` (sources plus consent/anonymisation record). The provenance file must record `apparatus: {id, version, configuration}` and `canvas: {version}`.
 
 - **Observation/inference separation is mandatory**: measurements and observations are not interpretation, and interpretation is not a claim.
 - **Pre-registration**: every evidence bundle links a research question that predates the evidence. A contribution that "discovers" its question after the fact is a CI flag and goes to human review.

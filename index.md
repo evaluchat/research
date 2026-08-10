@@ -17,9 +17,13 @@ Open research catalog for AI-compatible education research. This repository hold
 
 - [Governance](governance/) — the review protocol: finding tiers, approval gates, review procedure, and challenge rules.
 
+## Apparatus
+
+- [Apparatus](apparatus/) — research apparatuses: reproducible configurations of Canvas capabilities for one or more research questions, each with its own evidence collection.
+
 ## Evidence
 
-- [Evidence](evidence/) — registry of evidence contributions, organised by research question and ladder stage.
+- [Evidence](evidence/) — registry of evidence collections, organised per apparatus (`apparatus/<id>/evidence/`).
 
 ## Findings
 
