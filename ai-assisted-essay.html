@@ -344,6 +344,7 @@ table.catalog th { font-size: .85rem; color: var(--muted); }
 .muted { color: var(--muted); font-size: .95rem; }
 .lang-badges a { margin-right: .4rem; font-size: .85rem; }
 .intro { margin-bottom: 1.5rem; }
+.empty-state { border: 1px dashed var(--line); border-radius: 10px; padding: 1.1rem 1.3rem; color: var(--muted); margin: 1.5rem 0; }
 .breadcrumbs { max-width: 900px; margin: 0 auto 28px; display: flex; gap: 10px; color: #8a8997; font-size: 13px; font-weight: 600; }
 .breadcrumbs a { color: #68677a; }
 .site-footer { border-top: 1px solid var(--line); padding: 40px 0; margin-top: 40px; }
@@ -378,7 +379,7 @@ table.catalog th { font-size: .85rem; color: var(--muted); }
 <blockquote>
 <p><code>status: draft</code>. Apparatus #1: the Essays assignment flow as a research apparatus. The drafting-unlock
 constraint turns a pedagogical design (CAMDLE) into a measurable intervention; the AI chat transcript
-is collected as candidate engagement evidence. See <a href="../../theory/camdle.en.md">CAMDLE — constrained AI-mediated dialogic writing (theory, unproven)</a> for the construct, <a href="../../theory/threshold-calibration.en.md">Threshold calibration — what counts as sufficient dialogic contribution?</a> for the central research question, and the <a href="../../methods/apparatus.en.md">instrument view</a> for how measurement and evidence relate.</p>
+is collected as candidate engagement evidence. See <a href="camdle.html">CAMDLE — constrained AI-mediated dialogic writing (theory, unproven)</a> for the construct, <a href="threshold-calibration.html">Threshold calibration — what counts as sufficient dialogic contribution?</a> for the central research question, and the <a href="apparatus.html">instrument view</a> for how measurement and evidence relate.</p>
 </blockquote>
 <h2 id="research-question">Research question</h2>
 <blockquote>
@@ -464,10 +465,10 @@ for the engagement question above.</p>
 <p>Boundary: process evidence is <strong>not</strong> authorship detection and yields <strong>no integrity score</strong> — see the
 <a href="https://github.com/evaluchat/knowledge/blob/main/concepts/essays-workflow.en.md">essays-workflow</a> concept for the shipped behaviour.</p>
 <h2 id="evidence-collection">Evidence collection</h2>
-<p>Evidence for this apparatus lives under <a href="evidence/index.md">evidence/</a> — one collection per apparatus,
+<p>Evidence for this apparatus lives under <a href="https://github.com/evaluchat/research/blob/main/apparatus/ai-assisted-essay/evidence/index.md">evidence/</a> — one collection per apparatus,
 with each contribution bundle recording <code>apparatus: {id, version, configuration}</code> and <code>canvas: {version}</code>
-in provenance (see the <a href="../../methods/apparatus.en.md">instrument view</a> and the
-<a href="../../templates/evidence-bundle/index.md">evidence-bundle template</a>).</p>
+in provenance (see the <a href="apparatus.html">instrument view</a> and the
+<a href="https://github.com/evaluchat/research/blob/main/templates/evidence-bundle/index.md">evidence-bundle template</a>).</p>
 <h2 id="status">Status</h2>
 <ul>
 <li><code>status: draft</code> — spec version 0.1.0; platform 0.5.9 ships the constrained flow (see <a href="https://github.com/evaluchat/knowledge/blob/main/concepts/essays-workflow.en.md">essays-workflow</a>).</li>

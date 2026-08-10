@@ -344,6 +344,7 @@ table.catalog th { font-size: .85rem; color: var(--muted); }
 .muted { color: var(--muted); font-size: .95rem; }
 .lang-badges a { margin-right: .4rem; font-size: .85rem; }
 .intro { margin-bottom: 1.5rem; }
+.empty-state { border: 1px dashed var(--line); border-radius: 10px; padding: 1.1rem 1.3rem; color: var(--muted); margin: 1.5rem 0; }
 .breadcrumbs { max-width: 900px; margin: 0 auto 28px; display: flex; gap: 10px; color: #8a8997; font-size: 13px; font-weight: 600; }
 .breadcrumbs a { color: #68677a; }
 .site-footer { border-top: 1px solid var(--line); padding: 40px 0; margin-top: 40px; }
@@ -380,7 +381,7 @@ table.catalog th { font-size: .85rem; color: var(--muted); }
 </blockquote>
 <h2 id="the-instrument-view">The instrument view</h2>
 <p>A research apparatus is a reproducible configuration of Canvas capabilities, workflows, and measurements designed to investigate one or more research questions and produce specified evidence. From the research catalog's point of view, the apparatus is an <strong>instrument</strong>: it turns a designed workflow into recorded observations that can later be submitted as evidence.</p>
-<p>The Essays assignment flow (Apparatus #1) is the reference instance — see <a href="../theory/camdle.en.md">CAMDLE — constrained AI-mediated dialogic writing (theory, unproven)</a> for the construct and <a href="../theory/threshold-calibration.en.md">Threshold calibration — what counts as sufficient dialogic contribution?</a> for the central research question it serves.</p>
+<p>The Essays assignment flow (Apparatus #1) is the reference instance — see <a href="camdle.html">CAMDLE — constrained AI-mediated dialogic writing (theory, unproven)</a> for the construct and <a href="threshold-calibration.html">Threshold calibration — what counts as sufficient dialogic contribution?</a> for the central research question it serves.</p>
 <h2 id="dialogic-contribution-as-a-measured-quantity">Dialogic contribution as a measured quantity</h2>
 <p>CAMDLE's design makes drafting support conditional on prior dialogic contribution. To study that design, "dialogic contribution" must be treated as a <strong>measured quantity</strong>: a count of the learner's contributions along the dialogue-and-drafting workflow, aggregated per session, per phase, and per learner.</p>
 <p>At the abstraction level of this catalog, the quantity is defined by the apparatus's <em>threshold policy</em>: the apparatus declares which learner actions count toward contribution and how many are required before drafting support unlocks. The concrete definition of a countable contribution lives in the apparatus's own manifest and concept (per-apparatus, not universal), and <strong>the threshold is a research variable, not a design constant</strong> — its calibration is the subject of <a href="https://github.com/evaluchat/research/blob/main/theory/threshold-calibration.en.md">threshold-calibration</a>.</p>
@@ -426,7 +427,7 @@ table.catalog th { font-size: .85rem; color: var(--muted); }
 </tr>
 </tbody>
 </table>
-<p>The evidence-bundle shape enforces this separation: <code>observations</code> and <code>results</code> hold what was recorded, <code>reflection</code> holds interpretation, <code>limitations</code> holds what we don't know why. A claim ("students who spent 12 minutes learned more") is neither measurement nor observation — it requires the findings machinery and the <a href="contribution-ladder.en.md">contribution ladder</a>.</p>
+<p>The evidence-bundle shape enforces this separation: <code>observations</code> and <code>results</code> hold what was recorded, <code>reflection</code> holds interpretation, <code>limitations</code> holds what we don't know why. A claim ("students who spent 12 minutes learned more") is neither measurement nor observation — it requires the findings machinery and the <a href="contribution-ladder.html">contribution ladder</a>.</p>
 <h2 id="the-threshold-as-a-research-variable">The threshold as a research variable</h2>
 <p>The drafting-unlock threshold is the one manipulable variable the CAMDLE design introduces into writing education. Because the apparatus makes the threshold a configuration value, it can be set, varied, pre-registered, and compared — a pedagogical constraint becomes a research variable. The open question is how the threshold should vary by task type, proficiency level, language background, and learner strategy (<a href="https://github.com/evaluchat/research/blob/main/theory/threshold-calibration.en.md">threshold-calibration</a>). Any evidence contribution that bears on that question must therefore record <strong>which threshold configuration</strong> it ran under — the same apparatus version with different thresholds runs materially different interventions.</p>
 <h2 id="configuration-in-provenance">Configuration in provenance</h2>
@@ -443,7 +444,7 @@ table.catalog th { font-size: .85rem; color: var(--muted); }
 </code></pre>
 <p>The evidence graph is <code>Question → Apparatus → Version → Configuration → Intervention → Evidence</code>. Because the pre-registered question, apparatus, and configuration all predate the evidence, this strengthens direction-of-fit checking: an evidence bundle that cites an apparatus version or configuration that did not exist when the question was registered is a red flag, not an ordinary submission.</p>
 <h2 id="how-evidence-bundles-cite-apparatus-identity">How evidence bundles cite apparatus identity</h2>
-<p>The <a href="../templates/evidence-bundle/index.md">evidence-bundle template</a> is the canonical shape; its <code>provenance</code> file carries the optional <code>apparatus: {id, version, configuration}</code> and <code>canvas: {version}</code> blocks. Rules for citing apparatus identity in an evidence bundle:</p>
+<p>The <a href="https://github.com/evaluchat/research/blob/main/templates/evidence-bundle/index.md">evidence-bundle template</a> is the canonical shape; its <code>provenance</code> file carries the optional <code>apparatus: {id, version, configuration}</code> and <code>canvas: {version}</code> blocks. Rules for citing apparatus identity in an evidence bundle:</p>
 <ol>
 <li><strong>Always cite <code>id</code> + <code>version</code></strong> — the apparatus version is the behaviour/evidence contract; never substitute the canvas version for it (they are independent).</li>
 <li><strong>Record <code>configuration</code> whenever the apparatus exposes it</strong> — especially the threshold, defense policy, and AI modes. A bundle without configuration is still comparable at the version level, but its bearing on threshold calibration is limited.</li>

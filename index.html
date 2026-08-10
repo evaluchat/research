@@ -344,6 +344,7 @@ table.catalog th { font-size: .85rem; color: var(--muted); }
 .muted { color: var(--muted); font-size: .95rem; }
 .lang-badges a { margin-right: .4rem; font-size: .85rem; }
 .intro { margin-bottom: 1.5rem; }
+.empty-state { border: 1px dashed var(--line); border-radius: 10px; padding: 1.1rem 1.3rem; color: var(--muted); margin: 1.5rem 0; }
 .breadcrumbs { max-width: 900px; margin: 0 auto 28px; display: flex; gap: 10px; color: #8a8997; font-size: 13px; font-weight: 600; }
 .breadcrumbs a { color: #68677a; }
 .site-footer { border-top: 1px solid var(--line); padding: 40px 0; margin-top: 40px; }
@@ -371,21 +372,37 @@ table.catalog th { font-size: .85rem; color: var(--muted); }
 <main class="shell page">
 
   <article class="content">
-
-<h1>Research catalog</h1>
-<div class="intro muted"><p>An open research catalog for AI-compatible education research, maintained by the evaluchat community. This repository is where research questions are asked, theory and methods are recorded, classroom evidence is submitted, and tiered findings are built — in the Open Knowledge Format (OKF) v0.2.</p>
-<p>The catalog is a companion to the <a href="https://github.com/evaluchat/knowledge">knowledge repository</a>, which holds product truth (what the product does and how it is implemented). This repository holds research truth: what we are investigating and what the evidence currently supports — never as undifferentiated "knowledge."</p>
-<h2 id="three-layers">Three layers</h2></div>
+<h1 id="research-catalog">Research Catalog</h1>
+<p>Open research catalog for AI-compatible education research. This repository holds research truth: research questions, theory, methods, evidence contributions, and tiered findings. Content is licensed CC-BY-4.0; scripts and tooling are MIT (see <a href="https://github.com/evaluchat/research/tree/main/LICENSE">LICENSE</a> and <a href="https://github.com/evaluchat/research/tree/main/LICENSE-CODE">LICENSE-CODE</a>).</p>
+<h2 id="theory">Theory</h2>
+<ul>
+<li><a href="theory/index.html">Theory</a> — theoretical constructs and background for the research program. Explicitly unproven (<code>status: draft</code>) until supported by evidence.</li>
+</ul>
+<h2 id="methods">Methods</h2>
+<ul>
+<li><a href="methods/index.html">Methods</a> — measurement definitions, the contribution ladder, and how evidence is produced and staged.</li>
+</ul>
+<h2 id="governance">Governance</h2>
+<ul>
+<li><a href="governance/index.html">Governance</a> — the review protocol: finding tiers, approval gates, review procedure, and challenge rules.</li>
+</ul>
+<h2 id="apparatus">Apparatus</h2>
+<ul>
+<li><a href="apparatus/index.html">Apparatus</a> — research apparatuses: reproducible configurations of Canvas capabilities for one or more research questions, each with its own evidence collection.</li>
+</ul>
+<h2 id="evidence">Evidence</h2>
+<ul>
+<li><a href="evidence/index.html">Evidence</a> — registry of evidence collections, organised per apparatus (<code>apparatus/&lt;id&gt;/evidence/</code>).</li>
+</ul>
+<h2 id="findings">Findings</h2>
+<ul>
+<li><a href="findings/index.html">Findings</a> — tiered findings derived from evidence. Empty until community evidence exists.</li>
+</ul>
+<h2 id="templates">Templates</h2>
+<ul>
+<li><a href="https://github.com/evaluchat/research/tree/main/templates">Templates</a> — reusable skeletons, including the evidence bundle that Canvas and PR contributors start from.</li>
+</ul><h2>Recently updated</h2><table class="catalog"><thead><tr><th>Title / id</th><th>Type</th><th>Status</th><th>Updated</th></tr></thead><tbody><tr><td><a href="ai-assisted-essay.html">AI-assisted essay — constrained dialogic drafting (CAMDLE)</a><br/><span class="muted"><code>ai-assisted-essay</code></span></td><td>Apparatus</td><td>draft</td><td class="muted">2026-08-10</td></tr><tr><td><a href="apparatus.html">The apparatus as research instrument — measurement, observation, evidence</a><br/><span class="muted"><code>apparatus</code></span></td><td>Reference</td><td>draft</td><td class="muted">2026-08-09</td></tr><tr><td><a href="camdle.html">CAMDLE — constrained AI-mediated dialogic writing (theory, unproven)</a><br/><span class="muted"><code>camdle</code></span></td><td>Theory</td><td>draft</td><td class="muted">2026-08-09</td></tr><tr><td><a href="contribution-ladder.html">The contribution ladder — how teachers contribute to research</a><br/><span class="muted"><code>contribution-ladder</code></span></td><td>Playbook</td><td>stable</td><td class="muted">2026-08-09</td></tr><tr><td><a href="review-protocol.html">Claim governance — review protocol for findings</a><br/><span class="muted"><code>review-protocol</code></span></td><td>Reference</td><td>stable</td><td class="muted">2026-08-09</td></tr><tr><td><a href="threshold-calibration.html">Threshold calibration — what counts as sufficient dialogic contribution?</a><br/><span class="muted"><code>threshold-calibration</code></span></td><td>Research Question</td><td>open</td><td class="muted">2026-08-09</td></tr></tbody></table>
 <p class="muted">6 concept groups · generated by build_site.py</p>
-<table class="catalog">
-<thead>
-<tr><th>Title / id</th><th>Type</th><th>Description</th><th>Status</th><th>Tier</th><th>Languages</th></tr>
-</thead>
-<tbody>
-<tr><td><a href="ai-assisted-essay.html">AI-assisted essay — constrained dialogic drafting (CAMDLE)</a><br/><span class="muted"><code>ai-assisted-essay</code></span></td><td>Apparatus</td><td>Apparatus #1: a constrained dialogic drafting assignment where drafting support is gated behind dialogic contribution. Investigates threshold-calibration and the evidential value of the AI chat transcript for student engagement.</td><td>draft</td><td>—</td><td class="lang-badges"><a href="ai-assisted-essay.html">en</a></td></tr><tr><td><a href="apparatus.html">The apparatus as research instrument — measurement, observation, evidence</a><br/><span class="muted"><code>apparatus</code></span></td><td>Reference</td><td>Instrument view of a Canvas research apparatus: what dialogic contribution means as a measured quantity, what process signals conceptually record, the threshold as a research variable, and how evidence cites apparatus identity and configuration.</td><td>draft</td><td>—</td><td class="lang-badges"><a href="apparatus.html">en</a></td></tr><tr><td><a href="camdle.html">CAMDLE — constrained AI-mediated dialogic writing (theory, unproven)</a><br/><span class="muted"><code>camdle</code></span></td><td>Theory</td><td>CAMDLE as a proposed learning design: a generative writing assistant whose drafting support is conditional on prior dialogic contribution — a research agenda, not an efficacy claim.</td><td>draft</td><td>—</td><td class="lang-badges"><a href="camdle.html">en</a></td></tr><tr><td><a href="contribution-ladder.html">The contribution ladder — how teachers contribute to research</a><br/><span class="muted"><code>contribution-ladder</code></span></td><td>Playbook</td><td>Observation → documented experience → structured experiment → replication/challenge → synthesis → finding: the contribution model that lets ordinary teachers contribute without writing papers.</td><td>stable</td><td>—</td><td class="lang-badges"><a href="contribution-ladder.html">en</a></td></tr><tr><td><a href="review-protocol.html">Claim governance — review protocol for findings</a><br/><span class="muted"><code>review-protocol</code></span></td><td>Reference</td><td>Tiered claim governance: low-friction entry (auto-approval at provisional/tentative via deterministic rules), high-bar promotion (supported requires human review), challenge-anything, direction-of-fit pre-registration.</td><td>stable</td><td>—</td><td class="lang-badges"><a href="review-protocol.html">en</a></td></tr><tr><td><a href="threshold-calibration.html">Threshold calibration — what counts as sufficient dialogic contribution?</a><br/><span class="muted"><code>threshold-calibration</code></span></td><td>Research Question</td><td>Central research question: how the drafting-unlock threshold should vary by task type, proficiency level, language background, and learner strategy.</td><td>open</td><td>—</td><td class="lang-badges"><a href="threshold-calibration.html">en</a></td></tr>
-</tbody>
-</table>
-
   </article>
 </main>
 <footer class="site-footer">
