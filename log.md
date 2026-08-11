@@ -1,5 +1,8 @@
 # Research Catalog — Update Log
 
+## 2026-08-11
+* **Apparatus contract (public-beta runtime)**: `apparatus/ai-assisted-essay/ai-assisted-essay.en.md` updated from the rev-2 draft to the public-beta runtime contract — `min_canvas_version` (0.5.9), `required_capabilities`, typed knob definitions (`ai_assistance`, `ai_canvas_actions`, `drafting_gate`, `threshold`, `tracking`) with defaults/requires/ranges, five immutable profiles (`canonical-constrained-dialogue`, `gate-off`, `ai-off`, `canvas-actions-off`, `tracking-off`), provenance + `catalog_urls`. `apparatus/index.md` gains the Min Canvas column and profile/fixture note. `CONTRIBUTING.md` type vocabulary gains `Apparatus` plus apparatus PR rules (immutable IDs/versions, no executable deployment code). Synthetic fixtures under `apparatus/ai-assisted-essay/fixtures/` (profile matrix + tracking event shapes; no real participant data).
+
 ## 2026-08-10
 * **Apparatus structure (rev 2)**: Added `apparatus/` directory — `apparatus/ai-assisted-essay/ai-assisted-essay.en.md` (type: Apparatus, spec as frontmatter: version 0.1.0, min_platform 0.5.9, research_questions, roles, knobs, telemetry, sources) + `apparatus/index.md` registry + `apparatus/ai-assisted-essay/evidence/index.md` (one evidence collection per apparatus — structural). Evidence registry now points to per-apparatus collections (`apparatus/<id>/evidence/`); CONTRIBUTING evidence-contribution path updated; root index gains Apparatus section.
 

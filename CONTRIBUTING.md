@@ -10,7 +10,14 @@ This repository holds **research truth**: research questions, hypotheses, theory
 
 Every non-reserved file declares exactly one `type`:
 
-`Theory`, `Research Question`, `Hypothesis`, `Intervention`, `Evidence Contribution`, `Observation`, `Measurement`, `Result`, `Reflection`, `Limitations`, `Finding`, `Synthesis`, `Replication`, `Challenge`, `Playbook`, `Reference`.
+`Apparatus`, `Theory`, `Research Question`, `Hypothesis`, `Intervention`, `Evidence Contribution`, `Observation`, `Measurement`, `Result`, `Reflection`, `Limitations`, `Finding`, `Synthesis`, `Replication`, `Challenge`, `Playbook`, `Reference`.
+
+Apparatus PRs must declare an immutable ID and semantic version, minimum Canvas
+version, required capabilities, roles, telemetry, provenance, typed knobs with
+dependencies/exclusions, and immutable fully resolved profiles. Profiles must
+leave students assignment context, an authoring surface, and submission. The
+Canvas app executes only reviewed built-in implementations; an apparatus PR
+must never contain executable deployment code.
 
 Reserved files (no frontmatter required): `index.md` (per-directory listing), `log.md` (update log), `README.md`.
 
@@ -101,5 +108,6 @@ Before opening a pull request:
 - [ ] Filename follows `<slug>.<bcp47>.md`, English included
 - [ ] `generated.by` set to `<producer>/<version>` where applicable; no fabricated `verified: human:`
 - [ ] For evidence PRs: observation/inference separation maintained, and the consent/privacy record present in `provenance.md`
+- [ ] For apparatus PRs: catalog validation passes and every profile has a viable student workflow
 
 Use the pull request template (`.github/pull_request_template.md`) — it mirrors this checklist. Governance and spec changes are never auto-merged.

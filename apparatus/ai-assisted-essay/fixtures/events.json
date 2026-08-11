@@ -1,0 +1,12 @@
+{
+  "studentId": "synthetic-student-001",
+  "assignmentId": "synthetic-assignment-001",
+  "profileId": "canonical-constrained-dialogue",
+  "events": [
+    { "type": "assignment_opened", "at": "2026-01-01T09:00:00Z" },
+    { "type": "message_visible", "at": "2026-01-01T09:00:10Z", "content": "My claim is that the title is ironic." },
+    { "type": "authoring_started", "at": "2026-01-01T09:02:00Z" },
+    { "type": "submission_created", "at": "2026-01-01T09:15:00Z" }
+  ],
+  "trackingOffExpected": "The event stream is not captured, transmitted, or displayed when tracking=false."
+}
