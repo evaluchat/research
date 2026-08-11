@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AI Assignment Stress Test — assignment-level measurement analysis</title>
+<link rel="icon" href="favicon.ico" sizes="any"/>
+<link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <a href="index.html" aria-label="Research catalog">
+        <img class="logo-mark" src="assets/evaluchat.png" width="32" height="32" alt=""/>
+        evaluchat
+      </a>
+    </div>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="index.html">Research catalog</a>
+      <a href="https://github.com/evaluchat/research">GitHub</a>
+      <a href="https://github.com/evaluchat/research/blob/main/README.md">README</a>
+      <a href="https://evaluchat.com/" class="nav-cta">Open evaluchat ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page-wrap">
+<p class="breadcrumb"><a href="index.html">Research catalog</a><span class="sep">/</span><span>AI Assignment Stress Test — assignment-level measurement analysis</span></p>
+  <article class="content">
+<h1>AI Assignment Stress Test — assignment-level measurement analysis</h1>
+<table class="facts"><tr><th>type</th><td>Apparatus</td></tr><tr><th>id</th><td>ai-assignment-stress-test</td></tr><tr><th>status</th><td>draft</td></tr><tr><th>lang</th><td>en</td></tr><tr><th>origin</th><td>native</td></tr><tr><th>generated</th><td>by=codex/gpt-5, at=2026-08-11T09:41:42Z</td></tr><tr><th>sources</th><td>{&#x27;id&#x27;: &#x27;ai-assignment-stress-test-design&#x27;, &#x27;resource&#x27;: &#x27;https://github.com/evaluchat/knowledge/blob/main/okf/bundles/evaluchat/concepts/ai-assignment-stress-test.md&#x27;, &#x27;title&#x27;: &#x27;AI Assignment Stress Test — Apparatus #2 Design (knowledge catalog)&#x27;}, {&#x27;id&#x27;: &#x27;research-apparatus-concept&#x27;, &#x27;resource&#x27;: &#x27;https://github.com/evaluchat/knowledge/blob/main/okf/bundles/evaluchat/concepts/research-apparatus.md&#x27;, &#x27;title&#x27;: &#x27;Research Apparatus Platform (knowledge catalog)&#x27;}, {&#x27;id&#x27;: &#x27;apparatus-method&#x27;, &#x27;resource&#x27;: &#x27;https://github.com/evaluchat/research/blob/main/methods/apparatus.en.md&#x27;, &#x27;title&#x27;: &#x27;The apparatus as research instrument (research catalog)&#x27;}</td></tr></table>
+
+<article class="body"><h1 id="ai-assignment-stress-test-assignment-level-measurement-analysis">AI Assignment Stress Test — assignment-level measurement analysis</h1>
+<blockquote>
+<p><code>status: draft</code>. Apparatus #2 is a design specification, not an implementation. It is a
+teacher-side instrument for analysing an assignment as written; it is not a learner workflow,
+a submission surface, or an AI-use detector. It applies the <a href="apparatus.html">instrument view</a>
+to the assignment side of the measurement-validity question.</p>
+</blockquote>
+<h2 id="research-question">Research question</h2>
+<p>This apparatus serves <a href="ai-assignment-stress-test-validity.html">AI assignment stress-test validity — when can task probes identify what an
+assessment still measures?</a>. The question
+evaluates the validity, reliability, and consequences of this assignment-level method; it does not
+ask whether a student used AI or whether AI can be detected in student work.</p>
+<p>Its secondary analyses concern expert agreement with the capability map, probe stability, delegation
+loss across Modes A–F, and the costs and consequences of redesign alternatives. Apparatus #1's
+<a href="threshold-calibration.html">threshold-calibration</a> is the student-side counterpart:
+both instruments ask what a workflow actually measures when AI is available, from opposite ends of
+the assignment.</p>
+<h2 id="instrument-and-boundary">Instrument and boundary</h2>
+<p>The teacher supplies an assignment prompt and, optionally, its rubric, criteria, and expected
+artefact. The apparatus returns a structured assignment-level report. Its workflow is:</p>
+<p><code>input task</code> → <code>probe</code> → <code>measure</code> → <code>delegate analysis</code> → <code>redesign</code> → <code>report</code></p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>What it does</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input task</td>
+<td>Receives the teacher-authored assignment artefact and optional rubric.</td>
+<td>Structured task and rubric input.</td>
+</tr>
+<tr>
+<td>Probe</td>
+<td>Has each pinned model attempt the task as a capable student would, beginning with Mode A and optionally covering Modes B–F.</td>
+<td>Per-model <code>task_completable</code>, <code>rubric_pass</code> when a rubric exists, and <code>modes_vulnerable</code>.</td>
+</tr>
+<tr>
+<td>Measure</td>
+<td>Maps task demands to the multi-dimensional outcomes vocabulary and identifies what the task can still detect after the probes.</td>
+<td>Capability and measurement-validity map.</td>
+</tr>
+<tr>
+<td>Delegate analysis</td>
+<td>Distinguishes capabilities delegation bypasses from those the task still exposes.</td>
+<td>Mode-by-mode delegation-loss analysis.</td>
+</tr>
+<tr>
+<td>Redesign</td>
+<td>Produces several alternatives that preserve the task's intent while exposing understanding.</td>
+<td>Alternatives with their measurements and costs.</td>
+</tr>
+<tr>
+<td>Report</td>
+<td>Packages the stage outputs and exact configuration for review or optional evidence publication.</td>
+<td>Assignment-level structured report.</td>
+</tr>
+</tbody>
+</table>
+<p>This is explicitly <strong>not</strong> authorship scoring, an academic-integrity verdict, or a detector of
+AI use in submitted work. It analyses the task, never an individual student. It collects no
+learner transcripts, process signals, submissions, or learner-level telemetry.</p>
+<h2 id="platform-requirement">Platform requirement</h2>
+<p><code>min_canvas_version: 0.5.9</code> adopts the shared knob vocabulary. The five declared required
+capabilities describe the additional teacher-side platform surface this draft needs: input-artefact
+analysis, multi-model comparison, capability mapping, redesign generation, and assignment-level
+reporting. They are requirements for a future Canvas implementation, not a claim that the current
+platform implements or executes this apparatus.</p>
+<p>The apparatus uses the recipe's deliberate divergence: it needs neither class management nor a
+student workspace, managed submission, drafting gate, or student defence. That divergence is part
+of the experiment's design, not a missing student workflow.</p>
+<h2 id="knobs-and-profile">Knobs and profile</h2>
+<p><code>model_set</code> is pinned by apparatus version. Results are comparable only within the same pinned
+model set, apparatus version, and resolved configuration. The <code>canonical-all-modes</code> profile is an
+immutable treatment record for the complete teacher-side analysis; before any execution, its
+<code>stress-test-v0.1</code> model-set identifier must resolve to a published fixed model list.</p>
+<table>
+<thead>
+<tr>
+<th>Knob</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>model_set</code></td>
+<td><code>stress-test-v0.1</code></td>
+<td>Version-pinned models that attempt the task.</td>
+</tr>
+<tr>
+<td><code>ai_mode</code></td>
+<td><code>full</code></td>
+<td>Permitted behaviour for the probing AI.</td>
+</tr>
+<tr>
+<td><code>mode_coverage</code></td>
+<td>Modes A–F</td>
+<td>AI-use modes included in the probe.</td>
+</tr>
+<tr>
+<td><code>rubric_input</code></td>
+<td><code>none</code></td>
+<td>Whether rubric-pass can be reported.</td>
+</tr>
+<tr>
+<td><code>capability_focus</code></td>
+<td>all outcomes</td>
+<td>Outcomes included in the measurement map.</td>
+</tr>
+<tr>
+<td><code>redesign_count</code></td>
+<td><code>3</code></td>
+<td>Alternatives to include in the report.</td>
+</tr>
+<tr>
+<td><code>telemetry</code></td>
+<td><code>report</code></td>
+<td>Assignment-level stage outputs only.</td>
+</tr>
+</tbody>
+</table>
+<p><code>drafting_gate</code> is retained as reserved shared vocabulary with the value <code>none</code>; it has no effect
+in this teacher-only workflow.</p>
+<h2 id="measurement-and-report">Measurement and report</h2>
+<p>The report names the model set, apparatus version, resolved configuration, and Canvas version.
+It records what the configured workflow produced; a published report is an assignment-level
+observation, not a finding and not a universal statement about task quality. The redesign section
+offers alternatives rather than one asserted best design, and identifies the teacher effort,
+class time, marking load, and task complexity each alternative may cost.</p>
+<h2 id="evidence-collection-and-privacy">Evidence collection and privacy</h2>
+<p>Evidence lives in the apparatus-owned <a href="https://github.com/evaluchat/research/blob/main/apparatus/ai-assignment-stress-test/evidence/index.md">evidence collection</a>. A report may be
+published only at the teacher's option and only after the assignment has been appropriately
+anonymised. Its provenance must record:</p>
+<pre><code class="language-yaml">apparatus:
+  id: ai-assignment-stress-test
+  version: 0.1.0
+  configuration: # the resolved knob values, including the pinned model set
+  canvas:
+    version: &lt;canvas-version&gt;
+</code></pre>
+<p>The teacher's assignment is the sole input. Retention beyond the report requires the teacher's
+opt-in publication decision; raw learner material does not belong in this apparatus or its evidence
+collection.</p>
+<h2 id="status-and-versioning">Status and versioning</h2>
+<ul>
+<li><code>status: draft</code>; no Canvas implementation, completed probe, or evidence contribution exists.</li>
+<li>Apparatus version <code>0.1.0</code> describes this design. A change to report semantics, the outcomes
+  vocabulary, or a pinned model set is a comparability change and requires an apparatus-version
+  decision.</li>
+<li>The apparatus version and Canvas version are independent and are both required in evidence
+  provenance.</li>
+</ul></article>
+
+  </article>
+</main>
+<footer class="site-footer">
+  <p>
+    <a href="https://evaluchat.com">evaluchat.com</a>
+    &middot; Research catalog
+    &middot; <a href="https://github.com/evaluchat/research">GitHub</a>
+    &middot; <a href="mailto:hello@evaluchat.com">hello@evaluchat.com</a>
+  </p>
+  <p class="copyright">© 2026 Evaluchat · Open Knowledge Format</p>
+</footer>
+</body>
+</html>
