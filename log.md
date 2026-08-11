@@ -1,6 +1,7 @@
 # Research Catalog — Update Log
 
 ## 2026-08-11
+* **Research question and apparatus specification**: Added [AI assignment stress-test validity](theory/ai-assignment-stress-test-validity.en.md), an open assessment-validity question grounded in an explicit interpretation/use argument, and linked it to the draft, teacher-side [AI Assignment Stress Test apparatus](apparatus/ai-assignment-stress-test/ai-assignment-stress-test.en.md). Added its evidence collection and catalog index entries; no Canvas code, student data, or AI-use detection is included.
 * **Apparatus contract (public-beta runtime)**: `apparatus/ai-assisted-essay/ai-assisted-essay.en.md` updated from the rev-2 draft to the public-beta runtime contract — `min_canvas_version` (0.5.9), `required_capabilities`, typed knob definitions (`ai_assistance`, `ai_canvas_actions`, `drafting_gate`, `threshold`, `tracking`) with defaults/requires/ranges, five immutable profiles (`canonical-constrained-dialogue`, `gate-off`, `ai-off`, `canvas-actions-off`, `tracking-off`), provenance + `catalog_urls`. `apparatus/index.md` gains the Min Canvas column and profile/fixture note. `CONTRIBUTING.md` type vocabulary gains `Apparatus` plus apparatus PR rules (immutable IDs/versions, no executable deployment code). Synthetic fixtures under `apparatus/ai-assisted-essay/fixtures/` (profile matrix + tracking event shapes; no real participant data).
 
 ## 2026-08-10

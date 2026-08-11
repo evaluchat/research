@@ -7,6 +7,7 @@ for one or more research questions. Each apparatus owns exactly one evidence col
 | Apparatus | Question(s) | Status | Min Canvas |
 |---|---|---|---|
 | [AI-assisted essay — constrained dialogic drafting (CAMDLE)](ai-assisted-essay/ai-assisted-essay.en.md) | [threshold-calibration](../theory/threshold-calibration.en.md) | draft | 0.5.9 |
+| [AI Assignment Stress Test — assignment-level measurement analysis](ai-assignment-stress-test/ai-assignment-stress-test.en.md) | [ai-assignment-stress-test-validity](../theory/ai-assignment-stress-test-validity.en.md) | draft | 0.5.9 |
 
 The Essays apparatus publishes immutable canonical, gate-off, AI-off,
 canvas-action-off, and tracking-off profiles plus [synthetic fixtures](ai-assisted-essay/fixtures/index.md).
