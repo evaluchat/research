@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Revision-tracking validity — when can process metrics provide fair evidence about recorded Canvas AI assistance?</title>
+<link rel="icon" href="favicon.ico" sizes="any"/>
+<link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <a href="index.html" aria-label="Research catalog">
+        <img class="logo-mark" src="assets/evaluchat.png" width="32" height="32" alt=""/>
+        evaluchat
+      </a>
+    </div>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="index.html">Research catalog</a>
+      <a href="https://github.com/evaluchat/research">GitHub</a>
+      <a href="https://github.com/evaluchat/research/blob/main/README.md">README</a>
+      <a href="https://evaluchat.com/" class="nav-cta">Open evaluchat ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page-wrap">
+<p class="breadcrumb"><a href="index.html">Research catalog</a><span class="sep">/</span><span>Revision-tracking validity — when can process metrics provide fair evidence about recorded Canvas AI assistance?</span></p>
+  <article class="content">
+<h1>Revision-tracking validity — when can process metrics provide fair evidence about recorded Canvas AI assistance?</h1>
+<table class="facts"><tr><th>type</th><td>Research Question</td></tr><tr><th>id</th><td>revision-tracking-validity-question</td></tr><tr><th>status</th><td>open</td></tr><tr><th>lang</th><td>en</td></tr><tr><th>origin</th><td>native</td></tr><tr><th>generated</th><td>by=codex/gpt-5, at=2026-08-11T10:02:43Z</td></tr><tr><th>sources</th><td>{&#x27;id&#x27;: &#x27;testing-standards&#x27;, &#x27;resource&#x27;: &#x27;https://www.testingstandards.net/uploads/7/6/6/4/76643089/standards_2014edition.pdf&#x27;, &#x27;title&#x27;: &#x27;Standards for Educational and Psychological Testing (AERA, APA, &amp; NCME, 2014)&#x27;}, {&#x27;id&#x27;: &#x27;kane-validity&#x27;, &#x27;resource&#x27;: &#x27;https://eric.ed.gov/?id=EJ996447&#x27;, &#x27;title&#x27;: &#x27;Kane (2013), Validating the Interpretations and Uses of Test Scores&#x27;}, {&#x27;id&#x27;: &#x27;apparatus-method&#x27;, &#x27;resource&#x27;: &#x27;https://github.com/evaluchat/research/blob/main/methods/apparatus.en.md&#x27;, &#x27;title&#x27;: &#x27;The apparatus as research instrument (research catalog)&#x27;}</td></tr></table>
+
+<article class="body"><h1 id="revision-tracking-validity-when-can-process-metrics-provide-fair-evidence-about-recorded-canvas-ai-assistance">Revision-tracking validity — when can process metrics provide fair evidence about recorded Canvas AI assistance?</h1>
+<h2 id="framing-question">Framing question</h2>
+<blockquote>
+<p><strong>Under a randomly allocated, assessor-blind assignment condition, to what extent can a
+pre-specified, condition-neutral revision-metrics protocol distinguish an authoring episode with
+a recorded Canvas AI assistance event from one with no recorded Canvas AI event, and are its
+errors, confidence, burdens, and subgroup differences acceptable for the proposed research use?</strong></p>
+</blockquote>
+<p>This is the theory question for <a href="revision-tracking-validity.html">Apparatus #3 — revision-tracking validity</a>.
+It asks whether a narrow process-evidence interpretation can be supported, not whether a student
+used AI in general, authored the work, or acted with or without integrity.</p>
+<h2 id="terms-that-must-remain-separate">Terms that must remain separate</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Defined meaning in this research</th>
+<th>It does not mean</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Z</code> — allocated condition</td>
+<td>The server-recorded immutable assignment profile: <code>canvas-ai-enabled</code> or <code>canvas-ai-disabled</code>.</td>
+<td>Whether a student actually used assistance, learned more, or authored the work.</td>
+</tr>
+<tr>
+<td><code>E_any</code> — recorded Canvas AI event</td>
+<td>At least one eligible Canvas AI request completed for the assignment authoring episode. Canvas knows this platform event.</td>
+<td>That any AI response affected the submitted text.</td>
+</tr>
+<tr>
+<td><code>E_content</code> — recorded content-affecting Canvas AI event</td>
+<td>A recorded Canvas AI insertion or transformation of content in the assignment canvas. This is a secondary, narrower event label.</td>
+<td>That the displayed content remains in the submission, was understood, or was authored by the student.</td>
+</tr>
+<tr>
+<td><code>E = 0</code></td>
+<td>No eligible Canvas AI event was recorded by Canvas for that episode.</td>
+<td>No AI, copying, retyping, collaboration, or other assistance occurred elsewhere.</td>
+</tr>
+<tr>
+<td>Revision metric</td>
+<td>A derived description of recorded editing activity under the study's metric schema.</td>
+<td>Proof of authorship, intent, learning, misconduct, or a reliable integrity score.</td>
+</tr>
+</tbody>
+</table>
+<p>Random allocation can estimate the consequences of making bounded Canvas AI available (<code>Z</code>). The
+event-labelled comparison (<code>E_any</code> or <code>E_content</code>) is a validity comparison against a known
+platform record, but it is not a causal estimate of AI use: students who choose to interact with
+Canvas AI can differ from students who do not. Both analyses are useful only when their different
+targets are named.</p>
+<p>The intended interpretation is deliberately narrow: a frozen metrics display or a blinded
+research judgment may be associated with the presence of a <em>recorded Canvas event</em> in this study.
+The interpretation requires evidence about representation, generalisation, explanation, and
+consequences; it cannot be promoted to an authorship or integrity inference merely because a
+metric is statistically associated with <code>E</code>. This follows the interpretation-and-use framing in
+the <a href="https://www.testingstandards.net/uploads/7/6/6/4/76643089/standards_2014edition.pdf">Standards for Educational and Psychological Testing</a> and Kane's
+argument-based account of validity.<a href="https://eric.ed.gov/?id=EJ996447">kane-validity</a></p>
+<h2 id="falsifiable-primary-question-and-hypotheses">Falsifiable primary question and hypotheses</h2>
+<h3 id="primary-question">Primary question</h3>
+<p>For a held-out or independently assessed set of completed study episodes, do the pre-registered
+condition-neutral metrics view and the assessor's recorded <code>E_any</code> judgment have discrimination,
+calibration, and error rates consistent with the protocol's pre-registered research-use bounds
+when compared with the locked Canvas event record?</p>
+<p>The primary unit is one submitted assignment authoring episode. The reference standard is the
+immutable Canvas event record, released only after grades and research judgments are locked. The
+primary judgment asks, <em>"Does this de-identified metrics summary support <code>recorded Canvas AI
+interaction</code> or <code>no recorded Canvas AI interaction</code>?"</em> The separate required condition judgment
+asks, <em>"Which allocated profile is more likely?"</em> It is evaluated against <code>Z</code>, not substituted for
+<code>E_any</code>.</p>
+<h3 id="primary-hypotheses">Primary hypotheses</h3>
+<ul>
+<li><strong>H1 — discriminative signal.</strong> The pre-registered metrics protocol and blinded <code>E_any</code> judgment
+  show more than chance discrimination of <code>E_any</code> in the evaluation set, with uncertainty intervals
+  reported. If the observed discrimination is null or the interval includes practically trivial
+  discrimination, H1 is not supported.</li>
+<li><strong>H2 — bounded error and calibration.</strong> Sensitivity, specificity, precision, recall,
+  false-positive rate, false-negative rate, and confidence calibration satisfy the explicit,
+  context-approved bounds set before data inspection. If a bound is missed, H2 is not supported;
+  a positive average association cannot offset the failure.</li>
+<li><strong>H3 — no material fairness failure.</strong> Error rates and calibration do not show a pre-specified,
+  practically material disadvantage for protected or plausibly confounded groups after accounting
+  for task and ordinary drafting behaviour. If estimates show such a disadvantage, or are too
+  imprecise to rule it out, H3 is not supported.</li>
+</ul>
+<p>These are falsifiable protocol hypotheses, not a claim that useful discrimination will be found.
+The protocol must specify its chance comparator, acceptable error and calibration bounds, minimum
+subgroup precision, and decision rule before inspecting outcome labels. In a small feasibility
+study, estimates and intervals are reported without asserting that a bound has been met.</p>
+<h3 id="secondary-hypotheses">Secondary hypotheses</h3>
+<ul>
+<li><strong>H4 — event granularity matters.</strong> Diagnostic quantities for <code>E_content</code> differ from those for
+  <code>E_any</code> by more than the pre-specified practically trivial margin. This tests whether chat-only
+  and canvas-changing events should be treated as one reference class; it does not assume which
+  event will be more discriminable.</li>
+<li><strong>H5 — ordinary drafting does not wholly explain the result.</strong> The primary event-judgment
+  association remains outside the pre-specified practically trivial region after the declared
+  adjustment for task and ordinary drafting variables. If it does not, the protocol has not shown
+  a revision-specific signal.</li>
+<li><strong>H6 — assessors can use the view with restraint.</strong> Assessors meet the pre-specified
+  comprehension, completion, and burden criteria while correctly endorsing the view's non-claims.
+  This hypothesis fails when a view produces over-confidence, unacceptable burden, or confusion
+  about its inability to establish authorship or misconduct.</li>
+</ul>
+<h2 id="secondary-questions">Secondary questions</h2>
+<ul>
+<li><strong>Allocation agreement:</strong> How accurately and with what confidence do blinded teachers identify
+  <code>canvas-ai-enabled</code> versus <code>canvas-ai-disabled</code> from the standardised metrics view, relative to
+  the locked allocation <code>Z</code>? An enabled episode with no event is an expected source of disagreement,
+  not a labelling error.</li>
+<li><strong>Event definition:</strong> Do findings differ for <code>E_any</code> and the more content-proximal <code>E_content</code>?
+  A difference would show that chat-only and canvas-changing events should not be collapsed.</li>
+<li><strong>Metric contribution:</strong> Which individual metrics show distributional separation, overlap, or no
+  usable signal after a direction is frozen in advance? Individual metrics are described; none is
+  converted into a production score.</li>
+<li><strong>Ordinary-drafting adjustment:</strong> Do associations persist after task type and pre-study or
+  concurrent measures of ordinary drafting cadence, writing fluency, device, language background,
+  and approved accessibility tools are accounted for? This is explanatory, not an excuse to erase
+  unequal error.</li>
+<li><strong>Heterogeneity and fairness:</strong> How do accuracy, error, and confidence vary by task type, writing
+  fluency, self-described language background, device/input method, accessibility tools, prior
+  revision habits, and other pre-registered plausible confounders?</li>
+<li><strong>Practical usefulness and consequences:</strong> Can assessors use the condition-neutral view
+  consistently without material grading burden, privacy intrusion, or harmful over-confidence, and
+  do they understand its stated limits?</li>
+</ul>
+<h2 id="validity-argument-to-test">Validity argument to test</h2>
+<table>
+<thead>
+<tr>
+<th>Inference</th>
+<th>Claim to be tested</th>
+<th>Required evidence</th>
+<th>Disconfirming result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Representation</td>
+<td>The schema records the declared revision events and reports the same neutral view in both profiles.</td>
+<td>Event-schema tests, profile snapshots, simulated traces, and masking audits.</td>
+<td>Missing, profile-dependent, or incorrectly classified events.</td>
+</tr>
+<tr>
+<td>Generalisation</td>
+<td>Observed signal and error are not an artefact of one task, device, or ordinary drafting style.</td>
+<td>Replicated task types, prespecified subgroup analyses, baseline drafting measures, and uncertainty intervals.</td>
+<td>Large task or subgroup variation, or uncertainty too wide to support transport.</td>
+</tr>
+<tr>
+<td>Explanation</td>
+<td>A judgment reflects the declared metrics, not access to a condition leak or direct event evidence.</td>
+<td>Assessor masking checks, view inspection, reasoning-code audit, and negative-control cases.</td>
+<td>Labels can be inferred from a leaked field or judgments lack a stable relationship to the frozen metrics.</td>
+</tr>
+<tr>
+<td>Consequences</td>
+<td>The research use is proportionate and does not create unacceptable privacy, equity, or grading harm.</td>
+<td>Consent records, burden measures, withdrawal handling, fairness analysis, and participant/assessor feedback.</td>
+<td>Harm, unmanageable burden, or error patterns that make the intended research interpretation unsafe.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="non-claims">Non-claims</h2>
+<p>This question does not test, and no result may be represented as testing:</p>
+<ul>
+<li>AI use outside Canvas, on another device, in another application, or before or after the recorded
+  Canvas session;</li>
+<li>manual retyping, copying from notes, collaboration, use of another person's work, or any other
+  source of text not recorded by the Canvas event schema;</li>
+<li>authorship, understanding, learning, intent, academic-integrity compliance, or misconduct;</li>
+<li>a generalisable AI detector, an automated integrity score, a cheating verdict, or a grading
+  decision.</li>
+</ul>
+<p>The corresponding apparatus must preserve these boundaries in its interface, access controls,
+analysis plan, and publication rules.</p>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="revision-tracking-validity.html">Revision-tracking validity apparatus</a></li>
+<li><a href="apparatus.html">The apparatus as research instrument</a></li>
+<li><a href="ai-assignment-stress-test-validity.html">AI assignment stress-test validity</a> — the related
+  assignment-level question; this question concerns process evidence, not the assignment's design.</li>
+</ul></article>
+
+  </article>
+</main>
+<footer class="site-footer">
+  <p>
+    <a href="https://evaluchat.com">evaluchat.com</a>
+    &middot; Research catalog
+    &middot; <a href="https://github.com/evaluchat/research">GitHub</a>
+    &middot; <a href="mailto:hello@evaluchat.com">hello@evaluchat.com</a>
+  </p>
+  <p class="copyright">© 2026 Evaluchat · Open Knowledge Format</p>
+</footer>
+</body>
+</html>

@@ -77,6 +77,28 @@
     "canonical_resource": "https://github.com/evaluchat/research/blob/main/governance/review-protocol.en.md"
   },
   {
+    "id": "revision-tracking-validity",
+    "type": "Apparatus",
+    "languages": [
+      "en"
+    ],
+    "status": "draft",
+    "description": "Apparatus #3: a randomised, assessor-blind assignment study that evaluates the validity, fairness, limitations, and practical usefulness of condition-neutral revision metrics as evidence about recorded Canvas AI events.",
+    "updated": "2026-08-11T10:31:24+00:00",
+    "canonical_resource": "https://github.com/evaluchat/research/blob/main/apparatus/revision-tracking-validity/revision-tracking-validity.en.md"
+  },
+  {
+    "id": "revision-tracking-validity-question",
+    "type": "Research Question",
+    "languages": [
+      "en"
+    ],
+    "status": "open",
+    "description": "Primary research question for Apparatus #3: whether a frozen, condition-neutral revision-metrics protocol can validly, fairly, and usefully distinguish a recorded Canvas AI assistance event from no recorded Canvas AI event under assessor-blind study conditions.",
+    "updated": "2026-08-11T10:02:43+00:00",
+    "canonical_resource": "https://github.com/evaluchat/research/blob/main/theory/revision-tracking-validity-question.en.md"
+  },
+  {
     "id": "threshold-calibration",
     "type": "Research Question",
     "languages": [
