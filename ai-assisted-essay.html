@@ -48,7 +48,7 @@ research variable (see <a href="#knobs">knobs</a>), and the transcript + process
 for the engagement question above.</p>
 <h2 id="platform-requirement">Platform requirement</h2>
 <ul>
-<li><code>min_platform: 0.5.9</code> — requires the Canvas platform to expose: markdown canvas with configurable
+<li><code>min_canvas_version: 0.5.9</code> — requires the Canvas platform to expose: markdown canvas with configurable
   edit permissions, an optional AI chat panel with configurable system prompt and constraints, the
   drafting gate policy, and the telemetry surfaces listed below. If a knob has no platform surface in
   the running version, the apparatus must run with the closest supported value and record the deviation
@@ -66,10 +66,16 @@ for the engagement question above.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>ai_mode</code></td>
-<td>none, chat-only, constrained, full</td>
-<td>constrained</td>
-<td>constrained = chat plus gated canvas contribution</td>
+<td><code>ai_assistance</code></td>
+<td>true, false</td>
+<td>true</td>
+<td>whether agent calls are allowed</td>
+</tr>
+<tr>
+<td><code>ai_canvas_actions</code></td>
+<td>true, false</td>
+<td>true</td>
+<td>whether AI can generate or edit canvas content</td>
 </tr>
 <tr>
 <td><code>drafting_gate</code></td>
@@ -79,18 +85,21 @@ for the engagement question above.</p>
 </tr>
 <tr>
 <td><code>threshold</code></td>
-<td>variable</td>
-<td>variable</td>
-<td>the research variable — set, varied, pre-registered per experiment</td>
+<td>integer 0–100</td>
+<td>4</td>
+<td>visible contributions before the escape hatch</td>
 </tr>
 <tr>
-<td><code>canvas_editing</code></td>
-<td>enabled, disabled</td>
-<td>enabled</td>
-<td>whether the student can edit the canvas document directly</td>
+<td><code>tracking</code></td>
+<td>true, false</td>
+<td>true</td>
+<td>whether process telemetry is captured and displayed</td>
 </tr>
 </tbody>
 </table>
+<p>Profiles are immutable treatment records. Teachers select one enabled profile;
+they do not edit these values in the assignment form. Existing assignments
+retain their resolved snapshot if a newer profile is published.</p>
 <h2 id="telemetry">Telemetry</h2>
 <table>
 <thead>
