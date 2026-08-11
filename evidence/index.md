@@ -5,4 +5,5 @@ Evidence is organised **per apparatus** — each apparatus owns exactly one coll
 
 - [AI-assisted essay — evidence collection](../apparatus/ai-assisted-essay/evidence/index.md)
 - [AI Assignment Stress Test — evidence collection](../apparatus/ai-assignment-stress-test/evidence/index.md)
+- [Revision-tracking validity — evidence collection](../apparatus/revision-tracking-validity/evidence/index.md)
 - [Evidence bundle template](../templates/evidence-bundle/index.md)
