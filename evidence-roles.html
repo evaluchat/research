@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Shared evidence roles — how every method files a run</title>
+<link rel="icon" href="favicon.ico" sizes="any"/>
+<link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <a href="index.html" aria-label="Research catalog">
+        <img class="logo-mark" src="assets/evaluchat.png" width="32" height="32" alt=""/>
+        evaluchat
+      </a>
+    </div>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="index.html">Research catalog</a>
+      <a href="https://github.com/evaluchat/research">GitHub</a>
+      <a href="https://github.com/evaluchat/research/blob/main/README.md">README</a>
+      <a href="https://evaluchat.org/" class="nav-cta">Open evaluchat ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page-wrap">
+<p class="breadcrumb"><a href="index.html">Research catalog</a><span class="sep">/</span><span>Shared evidence roles — how every method files a run</span></p>
+  <article class="content">
+<h1>Shared evidence roles — how every method files a run</h1>
+<table class="facts"><tr><th>type</th><td>Reference</td></tr><tr><th>id</th><td>evidence-roles</td></tr><tr><th>status</th><td>draft</td></tr><tr><th>lang</th><td>en</td></tr><tr><th>origin</th><td>native</td></tr><tr><th>generated</th><td>by=cursor-grok/4.6, at=2026-08-13T14:48:00Z</td></tr><tr><th>sources</th><td>{&#x27;id&#x27;: &#x27;research-method&#x27;, &#x27;resource&#x27;: &#x27;https://github.com/evaluchat/knowledge/blob/main/concepts/research-method.en.md&#x27;, &#x27;title&#x27;: &#x27;Research methods — how Methods use platform capabilities and levers (knowledge catalog)&#x27;}, {&#x27;id&#x27;: &#x27;contribution-ladder&#x27;, &#x27;resource&#x27;: &#x27;https://github.com/evaluchat/research/blob/main/governance/contribution-ladder.en.md&#x27;, &#x27;title&#x27;: &#x27;The contribution ladder — how teachers contribute to research&#x27;}</td></tr></table>
+
+<article class="body"><h1 id="shared-evidence-roles-how-every-method-files-a-run">Shared evidence roles — how every method files a run</h1>
+<blockquote>
+<p><code>status: draft</code>. These roles apply to every published method. They are catalog convention, not a measurement schema. Each method version pins its own payload (what <code>results</code> actually contains) in <code>methods/&lt;id&gt;/evidence-template/</code>.</p>
+</blockquote>
+<p>A <strong>Method</strong> is a versioned, profiled way of investigating a research question. Evaluchat applies a method profile in a workspace. When a run concludes, evidence is filed under that method — never in a second, catalog-wide evidence cabinet.</p>
+<p>Findings may <em>cite</em> several methods; they do not <em>own</em> evidence. Evidence belongs to exactly one method, at <code>methods/&lt;id&gt;/evidence/&lt;slug&gt;/</code>.</p>
+<h2 id="shared-roles-every-method">Shared roles (every method)</h2>
+<table>
+<thead>
+<tr>
+<th>Role file</th>
+<th>What it holds</th>
+<th>What it must not hold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>question</code></td>
+<td>The research question that predates this run</td>
+<td>A question invented after the data</td>
+</tr>
+<tr>
+<td><code>context</code></td>
+<td>Setting, learners, subject, language, n, duration</td>
+<td>Student identifiers</td>
+</tr>
+<tr>
+<td><code>intervention</code></td>
+<td>What the method actually did this run (task, resolved levers, instructions, deviations)</td>
+<td>Interpretation of outcomes</td>
+</tr>
+<tr>
+<td><code>observations</code></td>
+<td>Teacher/researcher narrative of what happened (verbatim, any language)</td>
+<td>Causal claims</td>
+</tr>
+<tr>
+<td><code>results</code></td>
+<td>Structured measurements only — shape pinned by the method version</td>
+<td>Interpretation</td>
+</tr>
+<tr>
+<td><code>reflection</code></td>
+<td>Interpretation of observations and results</td>
+<td>New undeclared measures presented as primary results</td>
+</tr>
+<tr>
+<td><code>limitations</code></td>
+<td>Scope, confounders, missing data, competing explanations</td>
+<td>Softening of a claim that belongs in a finding</td>
+</tr>
+<tr>
+<td><code>provenance</code></td>
+<td>Sources, consent/anonymisation, and <code>method: {id, version, levers, canvas}</code></td>
+<td>Raw student material</td>
+</tr>
+</tbody>
+</table>
+<p>Observation and measurement are not interpretation. A claim ("students who spent 12 minutes learned more") is neither: it requires the findings machinery and the <a href="contribution-ladder.html">contribution ladder</a>.</p>
+<p>Every bundle carries a <code>stage:</code> naming its ladder rung. Post-hoc analyses are labelled exploratory.</p>
+<h2 id="provenance-cite-the-method-not-a-global-format">Provenance: cite the method, not a global format</h2>
+<p>Two runs of the same method version are comparable only when the resolved levers are recorded. Same method version + different lever values = different intervention.</p>
+<pre><code class="language-yaml">method:
+  id: ai-assisted-essay
+  version: 0.1.0
+  levers:
+    threshold: 3
+    drafting_gate: discussion-first
+    ai_assistance: true
+  canvas:
+    version: 0.5.9
+</code></pre>
+<p>Rules:</p>
+<ol>
+<li><strong>Always cite <code>id</code> + <code>version</code>.</strong> The method version is the behaviour and evidence contract. Never substitute the Canvas version for it; they are independent.</li>
+<li><strong>Record <code>levers</code> whenever the method exposes them.</strong> A bundle without resolved levers is comparable only at the version level.</li>
+<li><strong>Record <code>canvas.version</code></strong> so the substrate is identifiable, separately from the method version.</li>
+<li><strong>Link the research question</strong> the method was configured to investigate, so direction-of-fit machinery can verify the question predates the evidence.</li>
+</ol>
+<p>The evidence graph is <code>Question → Method → Version → Levers → Intervention → Evidence</code>. An evidence bundle that cites a method version or lever set that did not exist when the question was registered is a red flag, not an ordinary submission.</p>
+<h2 id="privacy">Privacy</h2>
+<p>Raw student material is never committed. A public artifact requires a consent and anonymisation record in <code>provenance</code>. If data cannot be public, say exactly what cannot be reproduced and provide the strongest lawful substitute (synthetic fixtures, data dictionary, restricted-access note).</p>
+<p>Participants produce activity inside Evaluchat; a teacher or researcher submits the anonymised evidence PR. Students do not file raw work into this catalog.</p>
+<h2 id="where-the-payload-lives">Where the payload lives</h2>
+<p>Do not treat these shared roles as if every method measured the same thing. Essays, the stress test, and revision-tracking produce different payloads on purpose. Copy the method version's <code>evidence-template/</code> when filing a run. If the measures change, bump the method version.</p>
+<p>Until Evaluchat can generate the document at "Ready to conclude", humans fill the same template by hand. The catalog shape does not wait on that product work.</p></article>
+
+  </article>
+</main>
+<footer class="site-footer">
+  <p>
+    <a href="https://evaluchat.org">evaluchat.com</a>
+    &middot; Research catalog
+    &middot; <a href="https://github.com/evaluchat/research">GitHub</a>
+    &middot; <a href="mailto:hello@evaluchat.com">hello@evaluchat.com</a>
+  </p>
+  <p class="copyright">© 2026 Evaluchat · Open Knowledge Format</p>
+</footer>
+</body>
+</html>

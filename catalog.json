@@ -1,14 +1,14 @@
 [
   {
     "id": "ai-assignment-stress-test",
-    "type": "Apparatus",
+    "type": "Method",
     "languages": [
       "en"
     ],
     "status": "draft",
-    "description": "Apparatus #2: a teacher-facing, assignment-level stress test that probes what current AI can do, maps what the task measures, identifies delegation loss, and offers alternative designs without requiring AI prohibition.",
-    "updated": "2026-08-11T09:41:42+00:00",
-    "canonical_resource": "https://github.com/evaluchat/research/blob/main/apparatus/ai-assignment-stress-test/ai-assignment-stress-test.en.md"
+    "description": "Method: a teacher-facing, assignment-level stress test that probes what current AI can do, maps what the task measures, identifies delegation loss, and offers alternative designs without requiring AI prohibition.",
+    "updated": "2026-08-13T14:48:00+00:00",
+    "canonical_resource": "https://github.com/evaluchat/research/blob/main/methods/ai-assignment-stress-test/ai-assignment-stress-test.en.md"
   },
   {
     "id": "ai-assignment-stress-test-validity",
@@ -17,31 +17,20 @@
       "en"
     ],
     "status": "open",
-    "description": "Primary research question for Apparatus #2: when standardized AI task probes provide valid, reliable, and useful evidence about the human capabilities an assignment can still measure in AI-permissive contexts.",
-    "updated": "2026-08-11T09:41:42+00:00",
+    "description": "Primary research question for the AI Assignment Stress Test method: when standardized AI task probes provide valid, reliable, and useful evidence about the human capabilities an assignment can still measure in AI-permissive contexts.",
+    "updated": "2026-08-13T14:48:00+00:00",
     "canonical_resource": "https://github.com/evaluchat/research/blob/main/theory/ai-assignment-stress-test-validity.en.md"
   },
   {
     "id": "ai-assisted-essay",
-    "type": "Apparatus",
+    "type": "Method",
     "languages": [
       "en"
     ],
     "status": "draft",
-    "description": "Apparatus #1: a constrained dialogic drafting assignment where drafting support is gated behind dialogic contribution. Investigates threshold-calibration and the evidential value of the AI chat transcript for student engagement.",
-    "updated": "2026-08-10T10:30:00+00:00",
-    "canonical_resource": "https://github.com/evaluchat/research/blob/main/apparatus/ai-assisted-essay/ai-assisted-essay.en.md"
-  },
-  {
-    "id": "apparatus",
-    "type": "Reference",
-    "languages": [
-      "en"
-    ],
-    "status": "draft",
-    "description": "Instrument view of a Canvas research apparatus: what dialogic contribution means as a measured quantity, what process signals conceptually record, the threshold as a research variable, and how evidence cites apparatus identity and configuration.",
-    "updated": "2026-08-09T16:40:00+00:00",
-    "canonical_resource": "https://github.com/evaluchat/research/blob/main/methods/apparatus.en.md"
+    "description": "Method: a constrained dialogic drafting assignment where drafting support is gated behind dialogic contribution. Investigates threshold-calibration and the evidential value of the AI chat transcript for student engagement.",
+    "updated": "2026-08-13T14:48:00+00:00",
+    "canonical_resource": "https://github.com/evaluchat/research/blob/main/methods/ai-assisted-essay/ai-assisted-essay.en.md"
   },
   {
     "id": "camdle",
@@ -51,7 +40,7 @@
     ],
     "status": "draft",
     "description": "CAMDLE as a proposed learning design: a generative writing assistant whose drafting support is conditional on prior dialogic contribution — a research agenda, not an efficacy claim.",
-    "updated": "2026-08-09T14:00:00+00:00",
+    "updated": "2026-08-13T14:48:00+00:00",
     "canonical_resource": "https://github.com/evaluchat/research/blob/main/theory/camdle.en.md"
   },
   {
@@ -62,8 +51,19 @@
     ],
     "status": "stable",
     "description": "Observation → documented experience → structured experiment → replication/challenge → synthesis → finding: the contribution model that lets ordinary teachers contribute without writing papers.",
-    "updated": "2026-08-09T14:00:00+00:00",
-    "canonical_resource": "https://github.com/evaluchat/research/blob/main/methods/contribution-ladder.en.md"
+    "updated": "2026-08-13T14:48:00+00:00",
+    "canonical_resource": "https://github.com/evaluchat/research/blob/main/governance/contribution-ladder.en.md"
+  },
+  {
+    "id": "evidence-roles",
+    "type": "Reference",
+    "languages": [
+      "en"
+    ],
+    "status": "draft",
+    "description": "Catalog convention for evidence: shared document roles, observation/inference separation, and provenance that cites method {id, version, levers, canvas}. Payload shape is pinned by each method version.",
+    "updated": "2026-08-13T14:48:00+00:00",
+    "canonical_resource": "https://github.com/evaluchat/research/blob/main/governance/evidence-roles.en.md"
   },
   {
     "id": "review-protocol",
@@ -78,14 +78,14 @@
   },
   {
     "id": "revision-tracking-validity",
-    "type": "Apparatus",
+    "type": "Method",
     "languages": [
       "en"
     ],
     "status": "draft",
-    "description": "Apparatus #3: a randomised, assessor-blind assignment study that evaluates the validity, fairness, limitations, and practical usefulness of condition-neutral revision metrics as evidence about recorded Canvas AI events.",
-    "updated": "2026-08-11T10:31:24+00:00",
-    "canonical_resource": "https://github.com/evaluchat/research/blob/main/apparatus/revision-tracking-validity/revision-tracking-validity.en.md"
+    "description": "Method: a randomised, assessor-blind assignment study that evaluates the validity, fairness, limitations, and practical usefulness of condition-neutral revision metrics as evidence about recorded Canvas AI events.",
+    "updated": "2026-08-13T14:48:00+00:00",
+    "canonical_resource": "https://github.com/evaluchat/research/blob/main/methods/revision-tracking-validity/revision-tracking-validity.en.md"
   },
   {
     "id": "revision-tracking-validity-question",
@@ -94,8 +94,8 @@
       "en"
     ],
     "status": "open",
-    "description": "Primary research question for Apparatus #3: whether a frozen, condition-neutral revision-metrics protocol can validly, fairly, and usefully distinguish a recorded Canvas AI assistance event from no recorded Canvas AI event under assessor-blind study conditions.",
-    "updated": "2026-08-11T10:02:43+00:00",
+    "description": "Primary research question for the revision-tracking validity method: whether a frozen, condition-neutral revision-metrics protocol can validly, fairly, and usefully distinguish a recorded Canvas AI assistance event from no recorded Canvas AI event under assessor-blind study conditions.",
+    "updated": "2026-08-13T14:48:00+00:00",
     "canonical_resource": "https://github.com/evaluchat/research/blob/main/theory/revision-tracking-validity-question.en.md"
   },
   {
@@ -106,7 +106,7 @@
     ],
     "status": "open",
     "description": "Central research question: how the drafting-unlock threshold should vary by task type, proficiency level, language background, and learner strategy.",
-    "updated": "2026-08-09T14:00:00+00:00",
+    "updated": "2026-08-13T14:48:00+00:00",
     "canonical_resource": "https://github.com/evaluchat/research/blob/main/theory/threshold-calibration.en.md"
   }
 ]

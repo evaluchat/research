@@ -20,7 +20,7 @@
       <a href="index.html">Research catalog</a>
       <a href="https://github.com/evaluchat/research">GitHub</a>
       <a href="https://github.com/evaluchat/research/blob/main/README.md">README</a>
-      <a href="https://evaluchat.com/" class="nav-cta">Open evaluchat ↗</a>
+      <a href="https://evaluchat.org/" class="nav-cta">Open evaluchat ↗</a>
     </nav>
   </div>
 </header>
@@ -29,27 +29,27 @@
 <p class="breadcrumb"><a href="index.html">Research catalog</a><span class="sep">/</span><span>Revision-tracking validity — assessor-blind process-evidence study</span></p>
   <article class="content">
 <h1>Revision-tracking validity — assessor-blind process-evidence study</h1>
-<table class="facts"><tr><th>type</th><td>Apparatus</td></tr><tr><th>id</th><td>revision-tracking-validity</td></tr><tr><th>status</th><td>draft</td></tr><tr><th>lang</th><td>en</td></tr><tr><th>origin</th><td>native</td></tr><tr><th>generated</th><td>by=codex/gpt-5, at=2026-08-11T10:31:24Z</td></tr><tr><th>sources</th><td>{&#x27;id&#x27;: &#x27;revision-tracking-validity-question&#x27;, &#x27;resource&#x27;: &#x27;https://github.com/evaluchat/research/blob/main/theory/revision-tracking-validity-question.en.md&#x27;, &#x27;title&#x27;: &#x27;Revision-tracking validity — theory research question&#x27;}, {&#x27;id&#x27;: &#x27;apparatus-method&#x27;, &#x27;resource&#x27;: &#x27;https://github.com/evaluchat/research/blob/main/methods/apparatus.en.md&#x27;, &#x27;title&#x27;: &#x27;The apparatus as research instrument (research catalog)&#x27;}, {&#x27;id&#x27;: &#x27;experimental-assignment-condition-feature-request&#x27;, &#x27;resource&#x27;: &#x27;https://github.com/evaluchat/research/issues/1&#x27;, &#x27;title&#x27;: &#x27;Feature request — experimental assignment conditions with server-side randomisation&#x27;}</td></tr></table>
+<table class="facts"><tr><th>type</th><td>Method</td></tr><tr><th>id</th><td>revision-tracking-validity</td></tr><tr><th>status</th><td>draft</td></tr><tr><th>lang</th><td>en</td></tr><tr><th>origin</th><td>native</td></tr><tr><th>generated</th><td>by=cursor-grok/4.6, at=2026-08-13T14:48:00Z</td></tr><tr><th>sources</th><td>{&#x27;id&#x27;: &#x27;revision-tracking-validity-question&#x27;, &#x27;resource&#x27;: &#x27;https://github.com/evaluchat/research/blob/main/theory/revision-tracking-validity-question.en.md&#x27;, &#x27;title&#x27;: &#x27;Revision-tracking validity — theory research question&#x27;}, {&#x27;id&#x27;: &#x27;evidence-roles&#x27;, &#x27;resource&#x27;: &#x27;https://github.com/evaluchat/research/blob/main/governance/evidence-roles.en.md&#x27;, &#x27;title&#x27;: &#x27;Shared evidence roles — how evidence cites a method (research catalog)&#x27;}, {&#x27;id&#x27;: &#x27;experimental-assignment-condition-feature-request&#x27;, &#x27;resource&#x27;: &#x27;https://github.com/evaluchat/research/issues/1&#x27;, &#x27;title&#x27;: &#x27;Feature request — experimental assignment conditions with server-side randomisation&#x27;}</td></tr></table>
 
 <article class="body"><h1 id="revision-tracking-validity-assessor-blind-process-evidence-study">Revision-tracking validity — assessor-blind process-evidence study</h1>
 <blockquote>
-<p><code>status: draft</code>. Apparatus #3 is a research-method specification, not an implementation and not
+<p><code>status: draft</code>. This method is a research-method specification, not an implementation and not
 a detector. Its intended outcome is credible evidence about when revision tracking is useful,
-when it misleads, and whether it should influence an educational judgment at all. No apparatus
+when it misleads, and whether it should influence an educational judgment at all. No method
 output is an integrity score, cheating verdict, authorship claim, or grade input.</p>
 <p><strong>Implementation status: blocked.</strong> The design cannot enter simulated acceptance testing or an
 internal feasibility run until Canvas supplies the missing
 <a href="https://github.com/evaluchat/research/issues/1"><code>experimental-assignment-condition</code> capability request</a>. Canvas currently has
-no server-side, per-assignment-group knob that randomly binds individual students to immutable
+no server-side, per-assignment-group lever that randomly binds individual students to immutable
 <code>canvas-ai-enabled</code> / <code>canvas-ai-disabled</code> profiles while preserving assessment masking and an
 allocation audit trail. A teacher toggle, a client-side experiment, or post-hoc grouping is not
 an equivalent substitute.</p>
 </blockquote>
 <h2 id="public-development-trail">Public development trail</h2>
-<p>This apparatus is the first public acceptance example for the linked feature request. The sequence
+<p>This method is the first public acceptance example for the linked feature request. The sequence
 is deliberately visible so that a proposed capability, its implementation evidence, and the later
 research evidence are not conflated:</p>
-<p><code>blocked apparatus</code> → <code>public feature request</code> → <code>versioned capability contract</code> →
+<p><code>blocked method</code> → <code>public feature request</code> → <code>versioned capability contract</code> →
 <code>synthetic acceptance demonstration</code> → <code>internal feasibility</code> → <code>ethics-reviewed low-stakes pilot</code> →
 <code>independent challenge / replication</code></p>
 <table>
@@ -101,7 +101,7 @@ research evidence are not conflated:</p>
 </tbody>
 </table>
 <h3 id="e2e-acceptance-example">E2E acceptance example</h3>
-<p>The missing capability is sufficient to unblock the apparatus only when this end-to-end flow can be
+<p>The missing capability is sufficient to unblock the method only when this end-to-end flow can be
 demonstrated in a reviewed test environment:</p>
 <ol>
 <li>A study owner selects one defined, low-stakes assignment group and the frozen equivalent task.</li>
@@ -114,14 +114,14 @@ demonstrated in a reviewed test environment:</p>
    or research interpretation. A separate de-identified metrics review is then locked.</li>
 <li>Only the allocation custodian can make the minimum pseudonymised release of <code>Z</code>, <code>E_any</code>, and
    <code>E_content</code>, after both locks and with an append-only reveal audit.</li>
-<li>The reproducibility packet proves the apparatus version, Canvas version, resolved profiles,
+<li>The reproducibility packet proves the method version, Canvas version, resolved profiles,
    allocation method, metric schema, analysis plan, and reveal history—without exporting student
    text, transcripts, raw traces, or identity mappings.</li>
 </ol>
 <p>This is an acceptance demonstration for a comparative-study platform capability. It is neither a
 student trial nor evidence that revision metrics are valid.</p>
-<h2 id="1-apparatus-definition-and-rationale">1. Apparatus definition and rationale</h2>
-<p>This apparatus runs an equivalent-task, randomised assignment study with an assessor-blind,
+<h2 id="1-method-definition-and-rationale">1. Method definition and rationale</h2>
+<p>This method runs an equivalent-task, randomised assignment study with an assessor-blind,
 two-pass workflow. The platform randomly allocates each consenting student to an immutable profile:</p>
 <ul>
 <li><code>canvas-ai-enabled</code> — the normal Canvas authoring surface with Canvas's existing bounded,
@@ -318,7 +318,7 @@ accessibility tools, and device class are optional contextual variables, with a 
 option and an analysis plan for missingness.</p>
 <h2 id="4-primary-outcomes-and-analysis">4. Primary outcomes and analysis</h2>
 <h3 id="outcomes">Outcomes</h3>
-<p>The apparatus evaluates two related but non-interchangeable comparisons:</p>
+<p>The method evaluates two related but non-interchangeable comparisons:</p>
 <ol>
 <li><strong>Event-reference validity (primary):</strong> blinded <code>E_any</code> research judgments against the locked
    <code>E_any</code> event record. Repeat for <code>E_content</code> as a secondary outcome.</li>
@@ -359,7 +359,7 @@ estimable. No deficit interpretation is assigned to a group.</p>
 <li>Start with a low-stakes or ungraded feasibility assignment. A graded study may proceed only after
   ethics approval and a documented, independently reviewed grading-equivalence and grade-protection
   plan establish that participation and allocation cannot disadvantage a student.</li>
-<li>Before recruitment, register the question, apparatus version, profiles, task set, learning
+<li>Before recruitment, register the question, method version, profiles, task set, learning
   objective, metric schema, reference-event definitions, hypotheses, sample-size rationale,
   exclusions, missing-data handling, outcome thresholds, analysis scripts or pseudocode, retention,
   and stopping rule. Time-stamp and hash the registration.</li>
@@ -407,7 +407,7 @@ plausible. Never impute a Canvas AI event from revision metrics.</p>
 logging failure, observer agreement, subgroup sizes, and non-differential ordinary drafting. Choose
 a target sample that can estimate the primary error rates and pre-specified fairness contrasts with
 useful interval width; do not use a post-result power calculation as validation evidence. The
-feasibility phase reports process rates and uncertainty rather than claiming the apparatus passes
+feasibility phase reports process rates and uncertainty rather than claiming the method passes
 an accuracy standard.</p>
 <p>Any interpretation bound — for example, a maximum tolerable false-positive rate for a <em>research-only</em>
 judgment, a calibration tolerance, or a subgroup-disparity bound — is set with ethics and assessment
@@ -429,7 +429,7 @@ future non-AI education studies.</p>
 <tbody>
 <tr>
 <td><strong>Study definition</strong></td>
-<td>Stores a study ID, apparatus/version, protocol and ethics references, eligible population rule, task-set version, allocation protocol, profile identifiers, masking plan, metric schema, retention policy, and reproducibility-packet schema. It does not encode a cheating label.</td>
+<td>Stores a study ID, method/version, protocol and ethics references, eligible population rule, task-set version, allocation protocol, profile identifiers, masking plan, metric schema, retention policy, and reproducibility-packet schema. It does not encode a cheating label.</td>
 </tr>
 <tr>
 <td><strong>Server-side allocation</strong></td>
@@ -457,7 +457,7 @@ future non-AI education studies.</p>
 </tr>
 <tr>
 <td><strong>Reproducibility export</strong></td>
-<td>Produces a versioned packet with apparatus and Canvas versions, resolved profiles, configuration hashes, allocation method, metric schema, display schema, analysis plan, data dictionary, retention/de-identification statement, and reveal-audit digest. Public export contains no student-identifiable text, transcripts, raw revision trace, or identity mapping.</td>
+<td>Produces a versioned packet with method and Canvas versions, resolved profiles, lever hashes, allocation method, metric schema, display schema, analysis plan, data dictionary, retention/de-identification statement, and reveal-audit digest. Public export contains no student-identifiable text, transcripts, raw revision trace, or identity mapping.</td>
 </tr>
 </tbody>
 </table>
@@ -574,7 +574,7 @@ transcripts, raw revision traces, browser history, or identity mapping.</p>
 <tbody>
 <tr>
 <td><code>manifest</code></td>
-<td>Apparatus ID/version, Canvas version/build, study ID, packet version, creation time, hashes, licences, and retention class.</td>
+<td>Method ID/version, Canvas version/build, study ID, packet version, creation time, hashes, licences, and retention class.</td>
 <td>Shareable after review.</td>
 </tr>
 <tr>
@@ -609,11 +609,11 @@ transcripts, raw revision traces, browser history, or identity mapping.</p>
 </tr>
 </tbody>
 </table>
-<p>The packet records <code>apparatus: {id, version, configuration}</code> and <code>canvas: {version}</code> for every
+<p>The packet records <code>method: {id, version, levers, canvas}</code> for every
 future evidence contribution. It makes the research process inspectable without making student
 work inspectable.</p>
 <h2 id="9-explicit-non-claims-and-failure-conditions">9. Explicit non-claims and failure conditions</h2>
-<h3 id="non-claims-enforced-by-the-apparatus">Non-claims enforced by the apparatus</h3>
+<h3 id="non-claims-enforced-by-the-method">Non-claims enforced by the method</h3>
 <ul>
 <li>No output detects or rules out AI use outside Canvas, on another device, manual retyping, copied
   work, collaboration, another person's work, or any unrecorded process.</li>
@@ -621,13 +621,13 @@ work inspectable.</p>
   or misconduct.</li>
 <li>A recorded Canvas AI interaction proves only that the defined platform event was logged; it does
   not prove that AI output entered, remained in, or determined the submission.</li>
-<li>The apparatus does not create an automated integrity score, risk band, alert, disciplinary record,
+<li>The method does not create an automated integrity score, risk band, alert, disciplinary record,
   grade modifier, or admissions/advancement decision.</li>
-<li>Results apply only to the declared apparatus version, Canvas version, profiles, tasks, participants,
+<li>Results apply only to the declared method version, Canvas version, profiles, tasks, participants,
   event definitions, and local prevalence. They do not validate a general detector.</li>
 </ul>
 <h3 id="failure-conditions-with-useful-results">Failure conditions with useful results</h3>
-<p>The apparatus must report non-endorsement for the proposed research use, or stop a phase pending
+<p>The method must report non-endorsement for the proposed research use, or stop a phase pending
 review, when any pre-registered condition occurs, including:</p>
 <ul>
 <li>insufficient consent, ethics approval, privacy protections, or grade-equivalence evidence;</li>
@@ -680,19 +680,21 @@ hidden by a more complex model.</p>
 <li><code>status: draft</code>; <code>implementation_status: blocked</code>. This is a design proposal. It implements no
   Canvas capability, collects no student data, and asserts no evidence result. The blocking
   capability and public development trail are recorded in <a href="https://github.com/evaluchat/research/issues/1">feature request #1</a>.</li>
-<li>Apparatus version <code>0.1.0</code> fixes the proposed profile pair, two-pass method, metric schema label,
+<li>Method version <code>0.1.0</code> fixes the proposed profile pair, two-pass method, metric schema label,
   reference-event definitions, and boundary statements. A change to any of these is a comparability
-  decision requiring a new apparatus or metric-schema version.</li>
-<li>Evidence belongs in the apparatus-owned <a href="https://github.com/evaluchat/research/blob/main/apparatus/revision-tracking-validity/evidence/index.md">evidence collection</a>, with the required
-  consent, anonymisation, configuration, Canvas-version, and provenance record. Observation,
-  measurement, interpretation, and limitations remain in their separate evidence-bundle documents.</li>
+  decision requiring a new method or metric-schema version.</li>
+<li>Evidence belongs in the method-owned <a href="https://github.com/evaluchat/research/blob/main/methods/revision-tracking-validity/evidence/index.md">evidence collection</a>. File a run with
+  this version's <a href="https://github.com/evaluchat/research/blob/main/methods/revision-tracking-validity/evidence-template/index.md">evidence-template/</a>. Shared roles are in
+  <a href="evidence-roles.html">shared evidence roles</a>; this version pins blinded
+  judgment matrices, condition-neutral metric summaries, and the reproducibility packet — never
+  raw student text, transcripts, or identity mappings.</li>
 </ul></article>
 
   </article>
 </main>
 <footer class="site-footer">
   <p>
-    <a href="https://evaluchat.com">evaluchat.com</a>
+    <a href="https://evaluchat.org">evaluchat.com</a>
     &middot; Research catalog
     &middot; <a href="https://github.com/evaluchat/research">GitHub</a>
     &middot; <a href="mailto:hello@evaluchat.com">hello@evaluchat.com</a>
