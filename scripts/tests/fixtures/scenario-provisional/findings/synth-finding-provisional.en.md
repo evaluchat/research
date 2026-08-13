@@ -1,5 +1,7 @@
 ---
 type: Finding
+authors:
+  - name: Synthetic Fixture Author
 id: synth-finding-provisional
 lang: en
 status: provisional

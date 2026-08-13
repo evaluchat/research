@@ -1,5 +1,7 @@
 ---
 type: Finding
+authors:
+  - name: Synthetic Fixture Author
 id: synth-finding-supported
 lang: en
 status: supported

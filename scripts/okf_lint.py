@@ -329,6 +329,28 @@ def main() -> int:
                 if desc is None or (isinstance(desc, str) and not str(desc).strip()):
                     errors.append(f"ERROR: {r}: missing or empty description")
 
+                typ_s = str(typ).strip() if typ is not None else ""
+                if typ_s in ("Theory", "Finding"):
+                    authors = meta.get("authors")
+                    if not isinstance(authors, list) or len(authors) == 0:
+                        errors.append(
+                            f"ERROR: {r}: type {typ_s} requires a non-empty authors list"
+                        )
+                    else:
+                        for i, entry in enumerate(authors):
+                            if not isinstance(entry, dict):
+                                errors.append(
+                                    f"ERROR: {r}: authors[{i}] must be a mapping with name"
+                                )
+                                continue
+                            name = entry.get("name")
+                            if name is None or (
+                                isinstance(name, str) and not str(name).strip()
+                            ):
+                                errors.append(
+                                    f"ERROR: {r}: authors[{i}] missing or empty name"
+                                )
+
                 if meta.get("origin") == "translation":
                     gen = meta.get("generated")
                     by = gen.get("by") if isinstance(gen, dict) else None
