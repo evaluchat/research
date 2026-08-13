@@ -1,6 +1,7 @@
 # Research Catalog — Update Log
 
 ## 2026-08-13
+* **Authors required on Theory and Finding**: Catalog convention + `okf_lint` now require a non-empty `authors` list (each entry needs `name`). CI `okf-lint` runs on PRs/pushes to `main` only. See [design](docs/superpowers/specs/2026-08-13-theory-finding-authors-design.md).
 * **Agent contract**: Merged the consumer (`AGENT.md`) and contributor (`AGENTS.md`) contracts into a single [AGENTS.md](AGENTS.md), the industry-standard filename. Deleted `AGENT.md`; README and CONTRIBUTING reserved-file list updated. Aligned the contract with the research-evidence programme: agents traverse question → protocol → ethics → apparatus → evidence → review → finding; AI may structure work but not decide ethics, interpretation, or publication status; no claim stronger than its evidence and review.
 
 ## 2026-08-11

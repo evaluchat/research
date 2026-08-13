@@ -39,6 +39,7 @@ English is the machine/catalogue language — **not** the epistemic source langu
 - **`title` / `description` — REQUIRED, English** (index/snippet layer). Optional `title_local`: native display name.
 - **`type` / `status`** — required per the type vocabulary and lifecycle values below.
 - **`origin`** — `native` (default) = content originally authored in `lang`; `translation` = derived from another language's version.
+- **`authors` — REQUIRED for `Theory` and `Finding`** — non-empty list of maps; each entry must include a non-empty `name` string. Extra keys on an entry are allowed and currently unvalidated. Other types: optional / TBD.
 
 ### Filename suffix rule (settled — not to be revisited)
 
@@ -75,6 +76,8 @@ tags: [tag1, tag2]
 lang: en
 origin: native
 status: draft
+authors:
+  - name: Example Author
 generated: { by: <producer>/<version>, at: 2026-08-09T00:00:00Z }
 verified: { by: human:<id>, at: 2026-08-09T00:00:00Z }
 sources:
@@ -104,7 +107,7 @@ Each contribution is a mini-bundle under `apparatus/<apparatus-id>/evidence/<slu
 Before opening a pull request:
 
 - [ ] Type of change declared: **spec / translation / evidence / theory / methods / correction**
-- [ ] Lint green (frontmatter parses; `type` / `id` / `lang` / `description` present; `id` == filename slug; filename suffix matches `lang`; root `index.md` declares `okf_version`)
+- [ ] Lint green (frontmatter parses; `type` / `id` / `lang` / `description` present; `id` == filename slug; filename suffix matches `lang`; Theory/Finding `authors` with at least one `{ name: ... }` entry; root `index.md` declares `okf_version`)
 - [ ] Filename follows `<slug>.<bcp47>.md`, English included
 - [ ] `generated.by` set to `<producer>/<version>` where applicable; no fabricated `verified: human:`
 - [ ] For evidence PRs: observation/inference separation maintained, and the consent/privacy record present in `provenance.md`

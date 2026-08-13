@@ -13,7 +13,8 @@
 
 ## Checks
 
-- [ ] Lint green: frontmatter parses; `type` / `id` / `lang` / `description` present; `id` == filename slug; filename suffix matches `lang`
+- [ ] Lint green: frontmatter parses; `type` / `id` / `lang` / `description` present; `id` == filename slug; filename suffix matches `lang`; Theory/Finding `authors` with at least one `{ name: ... }` entry
+- [ ] Theory / Finding PRs: `authors` present with at least one `{ name: ... }` entry
 - [ ] Filename follows `<slug>.<bcp47>.md` (English included)
 - [ ] `generated.by` set to `<producer>/<version>` where applicable; no fabricated `verified: human:`
 
