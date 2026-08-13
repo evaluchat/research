@@ -19,7 +19,7 @@ leave students assignment context, an authoring surface, and submission. The
 Canvas app executes only reviewed built-in implementations; an apparatus PR
 must never contain executable deployment code.
 
-Reserved files (no frontmatter required): `index.md` (per-directory listing), `log.md` (update log), `README.md`.
+Reserved files (no frontmatter required): `index.md` (per-directory listing), `log.md` (update log), `README.md`, `AGENTS.md`.
 
 ## Multilingual house convention
 

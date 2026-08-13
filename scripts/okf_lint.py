@@ -22,7 +22,6 @@ RESERVED_NAMES = {
     "license-code",
     "contributing.md",
     "agents.md",
-    "agent.md",
 }
 SKIP_DIR_NAMES = {".github", "templates", ".git"}
 
