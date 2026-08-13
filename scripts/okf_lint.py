@@ -23,7 +23,7 @@ RESERVED_NAMES = {
     "contributing.md",
     "agents.md",
 }
-SKIP_DIR_NAMES = {".github", "templates", ".git"}
+SKIP_DIR_NAMES = {".github", "templates", ".git", ".superpowers", "docs"}
 
 ROOT = Path(".").resolve()
 

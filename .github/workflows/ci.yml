@@ -2,10 +2,11 @@ name: okf-lint
 
 on:
   pull_request:
+    branches:
+      - main
   push:
     branches:
       - main
-      - dev
 
 jobs:
   okf-lint:
