@@ -210,7 +210,7 @@ def collect_findings(path: Path) -> list[Path]:
         return [path]
     files: list[Path] = []
     for p in sorted(path.rglob("*.md")):
-        if p.name.lower() in ("index.md", "log.md", "readme.md"):
+        if p.name.lower() in ("index.md", "log.md", "changelog.md", "readme.md"):
             continue
         files.append(p)
     return files
@@ -222,7 +222,7 @@ def existing_supported_claims(root: Path, exclude: Path) -> list[tuple[Path, str
         return []
     out: list[tuple[Path, str]] = []
     for p in findings_dir.rglob("*.md"):
-        if p.name.lower() in ("index.md", "log.md", "readme.md"):
+        if p.name.lower() in ("index.md", "log.md", "changelog.md", "readme.md"):
             continue
         if p.resolve() == exclude.resolve():
             continue

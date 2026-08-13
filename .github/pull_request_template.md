@@ -2,7 +2,7 @@
 
 - [ ] **Spec** — change to house conventions, governance, or the review protocol
 - [ ] **Translation** — new or updated translation of an existing concept
-- [ ] **Evidence** — evidence contribution (mini-bundle under `evidence/`)
+- [ ] **Evidence** — evidence contribution (mini-bundle under `methods/<id>/evidence/`)
 - [ ] **Theory** — theory, research question, or hypothesis content
 - [ ] **Methods** — methodology or measurement definitions
 - [ ] **Correction** — fix to existing content (errors, broken links, frontmatter)

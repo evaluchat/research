@@ -7,14 +7,11 @@ title: Threshold calibration — what counts as sufficient dialogic contribution
 description: "Central research question: how the drafting-unlock threshold should vary by task type, proficiency level, language background, and learner strategy."
 tags: [camdle, research-question, threshold, equity]
 created: 2026-08-09T14:00:00Z
-generated: { by: opencode-go/deepseek-v4-flash, at: 2026-08-09T14:00:00Z }
+generated: { by: cursor-grok/4.6, at: 2026-08-13T14:48:00Z }
 sources:
-  - id: camdle-white-paper
-    resource: https://docs.evaluchat.com/research/camdle-white-paper.pdf
-    title: CAMDLE white paper (docs.evaluchat.com/research/)
-  - id: research-apparatus-concept
-    resource: https://github.com/evaluchat/knowledge/blob/main/concepts/research-apparatus.en.md
-    title: Research apparatus — reproducible research on Canvas (knowledge catalog)
+  - id: research-method
+    resource: https://github.com/evaluchat/knowledge/blob/main/concepts/research-method.en.md
+    title: Research methods — how Methods use platform capabilities and levers (knowledge catalog)
 ---
 
 # Threshold calibration — what counts as sufficient dialogic contribution?
@@ -48,9 +45,9 @@ A miscalibrated threshold fails in one of two directions. If the threshold is to
 ## Related
 
 - [CAMDLE — constrained AI-mediated dialogic writing (theory, unproven)](camdle.en.md)
-- [The apparatus as research instrument](../methods/apparatus.en.md) — the instrument view: what dialogic contribution means as a measured quantity, what process signals record, and how evidence must cite apparatus identity and configuration.
-- [Research apparatus — reproducible research on Canvas (knowledge catalog)][research-apparatus-concept] — the apparatus pattern: four-dimension invariant, versioning, and the Apparatus → Version → Configuration → Experiment model.
+- [AI-assisted essay method](../methods/ai-assisted-essay/ai-assisted-essay.en.md) — dialogic contribution as a measured quantity, process signals, and how evidence must cite `method: {id, version, levers, canvas}`.
+- [Research methods — how Methods use platform capabilities and levers (knowledge catalog)][research-method] — capabilities, versioning, and Method → Version → Levers → Evidence.
 
 Translations: none yet — contribute one via PR (see CONTRIBUTING.md).
 
-[research-apparatus-concept]: https://github.com/evaluchat/knowledge/blob/main/concepts/research-apparatus.en.md
+[research-method]: https://github.com/evaluchat/knowledge/blob/main/concepts/research-method.en.md

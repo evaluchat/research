@@ -1,0 +1,82 @@
+{
+  "methodId": "ai-assisted-essay",
+  "methodVersion": "0.1.0",
+  "canvasVersion": "0.5.9",
+  "profiles": [
+    {
+      "id": "canonical-constrained-dialogue",
+      "expected": [
+        "assignment-context",
+        "student-authoring",
+        "submission",
+        "ai-dialogue",
+        "process-tracking"
+      ],
+      "levers": {
+        "ai_assistance": true,
+        "ai_canvas_actions": true,
+        "drafting_gate": "discussion-first",
+        "threshold": 4,
+        "tracking": true
+      }
+    },
+    {
+      "id": "gate-off",
+      "expected": [
+        "starts-in-drafting",
+        "no-thesis-assessment"
+      ],
+      "levers": {
+        "ai_assistance": true,
+        "ai_canvas_actions": true,
+        "drafting_gate": "none",
+        "threshold": 0,
+        "tracking": true
+      }
+    },
+    {
+      "id": "ai-off",
+      "expected": [
+        "local-authoring",
+        "submission",
+        "no-agent-calls"
+      ],
+      "levers": {
+        "ai_assistance": false,
+        "ai_canvas_actions": false,
+        "drafting_gate": "none",
+        "threshold": 0,
+        "tracking": true
+      }
+    },
+    {
+      "id": "canvas-actions-off",
+      "expected": [
+        "dialogue",
+        "local-authoring",
+        "no-ai-canvas-edits"
+      ],
+      "levers": {
+        "ai_assistance": true,
+        "ai_canvas_actions": false,
+        "drafting_gate": "discussion-first",
+        "threshold": 4,
+        "tracking": true
+      }
+    },
+    {
+      "id": "tracking-off",
+      "expected": [
+        "workflow",
+        "no-process-telemetry"
+      ],
+      "levers": {
+        "ai_assistance": true,
+        "ai_canvas_actions": true,
+        "drafting_gate": "discussion-first",
+        "threshold": 4,
+        "tracking": false
+      }
+    }
+  ]
+}

@@ -5,11 +5,12 @@ lang: en
 origin: native
 status: open
 title: Revision-tracking validity — when can process metrics provide fair evidence about recorded Canvas AI assistance?
-description: "Primary research question for Apparatus #3: whether a frozen, condition-neutral revision-metrics protocol can validly, fairly, and usefully distinguish a recorded Canvas AI assistance event from no recorded Canvas AI event under assessor-blind study conditions."
+description: "Primary research question for the revision-tracking validity method: whether a frozen, condition-neutral revision-metrics protocol can validly, fairly, and usefully distinguish a recorded Canvas AI assistance event from no recorded Canvas AI event under assessor-blind study conditions."
 tags: [research-question, process-evidence, revision-tracking, assessment-validity, fairness, ai]
 created: 2026-08-11T10:02:43Z
 timestamp: 2026-08-11T10:02:43Z
-generated: { by: codex/gpt-5, at: 2026-08-11T10:02:43Z }
+authors:
+  - name: Cronje van Heerden
 sources:
   - id: testing-standards
     resource: https://www.testingstandards.net/uploads/7/6/6/4/76643089/standards_2014edition.pdf
@@ -17,9 +18,10 @@ sources:
   - id: kane-validity
     resource: https://eric.ed.gov/?id=EJ996447
     title: Kane (2013), Validating the Interpretations and Uses of Test Scores
-  - id: apparatus-method
-    resource: https://github.com/evaluchat/research/blob/main/methods/apparatus.en.md
-    title: The apparatus as research instrument (research catalog)
+  - id: evidence-roles
+    resource: https://github.com/evaluchat/research/blob/main/governance/evidence-roles.en.md
+    title: Shared evidence roles — how evidence cites a method (research catalog)
+generated: { by: cursor-grok/4.6, at: 2026-08-13T14:48:00Z }
 ---
 
 # Revision-tracking validity — when can process metrics provide fair evidence about recorded Canvas AI assistance?
@@ -31,7 +33,7 @@ sources:
 > a recorded Canvas AI assistance event from one with no recorded Canvas AI event, and are its
 > errors, confidence, burdens, and subgroup differences acceptable for the proposed research use?**
 
-This is the theory question for [Apparatus #3 — revision-tracking validity](../apparatus/revision-tracking-validity/revision-tracking-validity.en.md).
+This is the theory question for [revision-tracking validity](../methods/revision-tracking-validity/revision-tracking-validity.en.md).
 It asks whether a narrow process-evidence interpretation can be supported, not whether a student
 used AI in general, authored the work, or acted with or without integrity.
 
@@ -153,13 +155,13 @@ This question does not test, and no result may be represented as testing:
 - a generalisable AI detector, an automated integrity score, a cheating verdict, or a grading
   decision.
 
-The corresponding apparatus must preserve these boundaries in its interface, access controls,
+The corresponding method must preserve these boundaries in its interface, access controls,
 analysis plan, and publication rules.
 
 ## Related
 
-- [Revision-tracking validity apparatus](../apparatus/revision-tracking-validity/revision-tracking-validity.en.md)
-- [The apparatus as research instrument](../methods/apparatus.en.md)
+- [Revision-tracking validity method](../methods/revision-tracking-validity/revision-tracking-validity.en.md)
+- [Shared evidence roles](../governance/evidence-roles.en.md)
 - [AI assignment stress-test validity](ai-assignment-stress-test-validity.en.md) — the related
   assignment-level question; this question concerns process evidence, not the assignment's design.
 

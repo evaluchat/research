@@ -15,7 +15,7 @@ labels: [evidence]
 <!-- observation | documented experience | structured experiment | replication/challenge | synthesis -->
 
 ## Files
-<!-- List the evidence bundle files you intend to add under evidence/<slug>/. -->
+<!-- List the evidence bundle files you intend to add under methods/<method-id>/evidence/<slug>/. Copy that method version's evidence-template/. -->
 
 ## Consent & privacy
 <!-- REQUIRED: describe the consent record and anonymisation. Raw student material is never committed. -->

@@ -10,16 +10,16 @@ This repository holds **research truth**: research questions, hypotheses, theory
 
 Every non-reserved file declares exactly one `type`:
 
-`Apparatus`, `Theory`, `Research Question`, `Hypothesis`, `Intervention`, `Evidence Contribution`, `Observation`, `Measurement`, `Result`, `Reflection`, `Limitations`, `Finding`, `Synthesis`, `Replication`, `Challenge`, `Playbook`, `Reference`.
+`Method`, `Theory`, `Research Question`, `Hypothesis`, `Intervention`, `Evidence Contribution`, `Observation`, `Measurement`, `Result`, `Reflection`, `Limitations`, `Finding`, `Synthesis`, `Replication`, `Challenge`, `Playbook`, `Reference`.
 
-Apparatus PRs must declare an immutable ID and semantic version, minimum Canvas
-version, required capabilities, roles, telemetry, provenance, typed knobs with
+Method PRs must declare an immutable ID and semantic version, minimum Canvas
+version, required capabilities, roles, telemetry, provenance, typed levers with
 dependencies/exclusions, and immutable fully resolved profiles. Profiles must
 leave students assignment context, an authoring surface, and submission. The
-Canvas app executes only reviewed built-in implementations; an apparatus PR
+Canvas app executes only reviewed built-in implementations; a method PR
 must never contain executable deployment code.
 
-Reserved files (no frontmatter required): `index.md` (per-directory listing), `log.md` (update log), `README.md`, `AGENTS.md`.
+Reserved files (no frontmatter required): `index.md` (per-directory listing), `CHANGELOG.md` (update log), `README.md`, `AGENTS.md`.
 
 ## Multilingual house convention
 
@@ -89,7 +89,7 @@ sources:
 
 ## Evidence contributions
 
-Each contribution is a mini-bundle under `apparatus/<apparatus-id>/evidence/<slug>/` (evidence is organised per apparatus — one collection per apparatus): `index.md`, `question.md`, `context.md`, `intervention.md`, `observations.md` (teacher narrative, verbatim, native origin), `results.md` (structured measurements only — no interpretation), `reflection.md` (interpretation), `limitations.md` (scope and confounders), `provenance.md` (sources plus consent/anonymisation record). The provenance file must record `apparatus: {id, version, configuration}` and `canvas: {version}`.
+Each contribution is a mini-bundle under `methods/<method-id>/evidence/<slug>/` (evidence is organised per method — one collection per method). Copy that method version's `evidence-template/`. Shared roles are in [governance/evidence-roles.en.md](governance/evidence-roles.en.md): `index.md`, `question.md`, `context.md`, `intervention.md`, `observations.md` (teacher narrative, verbatim, native origin), `results.md` (structured measurements only — no interpretation; payload pinned by the method version), `reflection.md` (interpretation), `limitations.md` (scope and confounders), `provenance.md` (sources plus consent/anonymisation record). The provenance file must record `method: {id, version, levers, canvas}`.
 
 - **Observation/inference separation is mandatory**: measurements and observations are not interpretation, and interpretation is not a claim.
 - **Pre-registration**: every evidence bundle links a research question that predates the evidence. A contribution that "discovers" its question after the fact is a CI flag and goes to human review.
@@ -111,6 +111,6 @@ Before opening a pull request:
 - [ ] Filename follows `<slug>.<bcp47>.md`, English included
 - [ ] `generated.by` set to `<producer>/<version>` where applicable; no fabricated `verified: human:`
 - [ ] For evidence PRs: observation/inference separation maintained, and the consent/privacy record present in `provenance.md`
-- [ ] For apparatus PRs: catalog validation passes and every profile has a viable student workflow
+- [ ] For method PRs: catalog validation passes and every profile has a viable student workflow
 
 Use the pull request template (`.github/pull_request_template.md`) — it mirrors this checklist. Governance and spec changes are never auto-merged.

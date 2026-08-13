@@ -5,24 +5,26 @@ lang: en
 origin: native
 status: open
 title: AI assignment stress-test validity — when can task probes identify what an assessment still measures?
-description: "Primary research question for Apparatus #2: when standardized AI task probes provide valid, reliable, and useful evidence about the human capabilities an assignment can still measure in AI-permissive contexts."
+description: "Primary research question for the AI Assignment Stress Test method: when standardized AI task probes provide valid, reliable, and useful evidence about the human capabilities an assignment can still measure in AI-permissive contexts."
 tags: [research-question, assessment-validity, ai, task-analysis, measurement-validity]
 created: 2026-08-11T09:41:42Z
 timestamp: 2026-08-11T09:41:42Z
-generated: { by: codex/gpt-5, at: 2026-08-11T09:41:42Z }
+authors:
+  - name: Cronje van Heerden
 sources:
   - id: ai-assignment-stress-test-design
     resource: https://github.com/evaluchat/knowledge/blob/main/okf/bundles/evaluchat/concepts/ai-assignment-stress-test.md
-    title: AI Assignment Stress Test — Apparatus #2 Design (knowledge catalog)
+    title: AI Assignment Stress Test — method design (knowledge catalog)
   - id: testing-standards
     resource: https://www.testingstandards.net/uploads/7/6/6/4/76643089/standards_2014edition.pdf
     title: Standards for Educational and Psychological Testing (AERA, APA, & NCME, 2014)
   - id: kane-validity
     resource: https://eric.ed.gov/?id=EJ996447
     title: Kane (2013), Validating the Interpretations and Uses of Test Scores
-  - id: apparatus-method
-    resource: https://github.com/evaluchat/research/blob/main/methods/apparatus.en.md
-    title: The apparatus as research instrument (research catalog)
+  - id: evidence-roles
+    resource: https://github.com/evaluchat/research/blob/main/governance/evidence-roles.en.md
+    title: Shared evidence roles — how evidence cites a method (research catalog)
+generated: { by: cursor-grok/4.6, at: 2026-08-13T14:48:00Z }
 ---
 
 # AI assignment stress-test validity — when can task probes identify what an assessment still measures?
@@ -33,7 +35,7 @@ sources:
 > valid, reliable, and useful evidence about the human capabilities an assignment can still measure
 > when generative AI is available?**
 
-This is the primary research question for [AI Assignment Stress Test — Apparatus #2](../apparatus/ai-assignment-stress-test/ai-assignment-stress-test.en.md).
+This is the primary research question for [AI Assignment Stress Test](../methods/ai-assignment-stress-test/ai-assignment-stress-test.en.md).
 It evaluates an assignment-level assessment method, not a student's authorship, integrity, or
 learning.
 
@@ -96,7 +98,7 @@ should preserve the assignment artefact, declared intent, probe protocol, model-
 configuration, optional rubric, raw probe outputs where they may be shared ethically, and the
 assignment-level report.
 
-At minimum, a structured experiment should compare the apparatus report with independently produced
+At minimum, a structured experiment should compare the method report with independently produced
 expert task analyses that are blinded to the report until their initial analysis is recorded. It should
 report agreement as well as disagreement, repeated-run stability, missing data, and limitations. A
 subsequent teacher study may examine the consequences of using the report to redesign a task; it must
@@ -104,18 +106,18 @@ not substitute teacher satisfaction for validity evidence.
 
 ## Boundaries and ethics
 
-The unit of analysis is the assignment, not the student. The apparatus collects neither student
+The unit of analysis is the assignment, not the student. The method collects neither student
 submissions nor learner process telemetry, and its reports must never be repurposed as authorship
 detection or disciplinary evidence. Publication of teacher-supplied assignments and outputs remains
 opt-in, with appropriate anonymisation, provenance, and retention records.
 
 ## Related
 
-- [AI Assignment Stress Test — assignment-level measurement analysis](../apparatus/ai-assignment-stress-test/ai-assignment-stress-test.en.md)
-- [The apparatus as research instrument](../methods/apparatus.en.md) — distinguishes apparatus,
+- [AI Assignment Stress Test — assignment-level measurement analysis](../methods/ai-assignment-stress-test/ai-assignment-stress-test.en.md)
+- [Shared evidence roles](../governance/evidence-roles.en.md) — distinguishes method,
   intervention, measurement, evidence, and finding.
 - [Threshold calibration](threshold-calibration.en.md) — the complementary student-side research
-  question for Apparatus #1.
+  question for the Essays method.
 
 [testing-standards]: https://www.testingstandards.net/uploads/7/6/6/4/76643089/standards_2014edition.pdf
 [kane-validity]: https://eric.ed.gov/?id=EJ996447

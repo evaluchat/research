@@ -3,32 +3,20 @@ okf_version: "0.2"
 ---
 # Research Catalog
 
-Open research catalog for AI-compatible education research. This repository holds research truth: research questions, theory, methods, evidence contributions, and tiered findings. Content is licensed CC-BY-4.0; scripts and tooling are MIT (see [LICENSE](LICENSE) and [LICENSE-CODE](LICENSE-CODE)).
+Open research catalog for AI-compatible education research. This repository holds research truth: research questions, theory, methods, evidence contributions, and tiered findings. Content is licensed CC-BY-4.0; scripts and tooling are MIT (see [LICENSE](LICENSE) and [LICENSE-CODE](LICENSE-CODE)). Human intro: [README.md](README.md).
 
 ## Theory
 
-- [Theory](theory/) — theoretical constructs and background for the research program. Explicitly unproven (`status: draft`) until supported by evidence.
+- [Theory](theory/) — theoretical constructs and open research questions. Explicitly unproven (`status: draft`) until supported by evidence.
 
 ## Methods
 
-- [Methods](methods/) — measurement definitions, the contribution ladder, and how evidence is produced and staged.
+- [Methods](methods/) — published methods: versioned, profiled investigations that name levers, immutable profiles, and an evidence contract. Evidence for a method lives at `methods/<id>/evidence/`.
 
 ## Governance
 
-- [Governance](governance/) — the review protocol: finding tiers, approval gates, review procedure, and challenge rules.
-
-## Apparatus
-
-- [Apparatus](apparatus/) — research apparatuses: reproducible configurations of Canvas capabilities for one or more research questions, each with its own evidence collection.
-
-## Evidence
-
-- [Evidence](evidence/) — registry of evidence collections, organised per apparatus (`apparatus/<id>/evidence/`).
+- [Governance](governance/) — the contribution ladder (how evidence is produced), the review protocol (how claims are reviewed), and shared evidence roles (provenance `method: {id, version, levers, canvas}`).
 
 ## Findings
 
 - [Findings](findings/) — tiered findings derived from evidence. Empty until community evidence exists.
-
-## Templates
-
-- [Templates](templates/) — reusable skeletons, including the evidence bundle that Canvas and PR contributors start from.

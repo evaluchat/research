@@ -31,7 +31,7 @@ authors:
 
 ### Non-goals
 
-- Requiring `authors` on Research Question, Hypothesis, Apparatus, Evidence, etc.
+- Requiring `authors` on Research Question, Hypothesis, Method, Evidence, etc.
 - Documenting or linting optional fields (`specialty`, `orcid`, `affiliation`, …)
 - Rendering authors in the public site (follow-up if desired)
 - Letting agents invent author names when unknown

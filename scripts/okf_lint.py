@@ -17,13 +17,14 @@ MD_LINK_TARGET = re.compile(r"\.md(?:#.*)?$", re.IGNORECASE)
 RESERVED_NAMES = {
     "index.md",
     "log.md",
+    "changelog.md",
     "readme.md",
     "license",
     "license-code",
     "contributing.md",
     "agents.md",
 }
-SKIP_DIR_NAMES = {".github", "templates", ".git", ".superpowers", "docs"}
+SKIP_DIR_NAMES = {".github", ".git", ".superpowers", "docs", "evidence-template"}
 
 ROOT = Path(".").resolve()
 

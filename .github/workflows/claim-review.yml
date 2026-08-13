@@ -74,7 +74,7 @@ jobs:
             [[ -f "$f" ]] || continue
             base=$(basename "$f")
             lower=${base,,}
-            if [[ "$lower" == "index.md" || "$lower" == "log.md" || "$lower" == "readme.md" ]]; then
+            if [[ "$lower" == "index.md" || "$lower" == "log.md" || "$lower" == "changelog.md" || "$lower" == "readme.md" ]]; then
               continue
             fi
             if [[ -n "${seen[$f]:-}" ]]; then
