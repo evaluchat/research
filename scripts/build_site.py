@@ -65,7 +65,7 @@ GITHUB_BLOB = "https://github.com/evaluchat/research/blob/main/"
 REPO_URL = GITHUB_BLOB[: GITHUB_BLOB.index("/blob/")]
 SITE_LABEL = "Research catalog"
 SITE_DOMAIN = "research.evaluchat.org"
-SKIP_DIR_NAMES = {".github", ".git", "scripts", "site", "evidence-template"}
+SKIP_DIR_NAMES = {".github", "templates", ".git", "scripts", "site", "evidence-template"}
 
 # Site-root-relative registries, filled by build() before rendering:
 #   CONCEPT_PAGES: repo file path → page path (e.g. "theory/camdle.en.md" → "camdle.html")
