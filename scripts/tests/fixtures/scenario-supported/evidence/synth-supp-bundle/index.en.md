@@ -1,0 +1,19 @@
+---
+type: Reference
+id: index
+lang: en
+status: draft
+title: Synthetic index — synth-supp-bundle
+description: Evidence bundle index (synthetic fixture)
+stage: structured-experiment
+contributor: Cara Nguyen
+origin: native
+generated: { by: cursor-agent/grok-4.5, at: 2026-05-01T12:00:00Z }
+verified: { by: human:cara-nguyen-synthetic, at: 2026-05-01T12:00:00Z }
+---
+
+# Index
+
+Synthetic fixture bundle `synth-supp-bundle`.
+
+Not real evidence.
