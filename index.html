@@ -17,7 +17,6 @@
       </a>
     </div>
     <nav class="main-nav" aria-label="Primary navigation">
-      <a href="index.html">Research catalog</a>
       <a href="https://github.com/evaluchat/research">GitHub</a>
       <a href="https://github.com/evaluchat/research/blob/main/README.md">README</a>
       <a href="https://evaluchat.org/" class="nav-cta">Open evaluchat ↗</a>
@@ -73,7 +72,7 @@ workspace templates                → evidence → findings
 <h2 id="multilingual">Multilingual</h2>
 <p>Frontmatter (the catalog/machine layer) is always in English; content bodies may be in any language. Every file carries a <code>lang</code> (BCP-47) and a stable <code>id</code>, and filenames follow <code>&lt;slug&gt;.&lt;bcp47&gt;.md</code> for all languages — English included. Translations are trust-tiered: machine-confirmed until verified by a human. See <a href="https://github.com/evaluchat/research/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
 <h2 id="contributing">Contributing</h2>
-<p>Read <a href="https://github.com/evaluchat/research/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> for the house conventions, and use the issue templates for translation requests, spec changes, research questions, and evidence submissions. Agents that read or edit this repository must follow <a href="https://github.com/evaluchat/research/blob/main/AGENTS.md">AGENTS.md</a>. How evidence is produced: <a href="contribution-ladder.html">contribution ladder</a>. How claims are reviewed: <a href="review-protocol.html">review protocol</a>.</p>
+<p>Read <a href="https://github.com/evaluchat/research/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> for the house conventions, and use the issue templates for translation requests, spec changes, research questions, and evidence submissions. Agents that read or edit this repository must follow <a href="https://github.com/evaluchat/research/blob/main/AGENTS.md">AGENTS.md</a>. How evidence is produced: <a href="governance/contribution-ladder.html">contribution ladder</a>. How claims are reviewed: <a href="governance/review-protocol.html">review protocol</a>.</p>
 <h2 id="license">License</h2>
 <p>Content: CC-BY-4.0 (<a href="https://github.com/evaluchat/research/tree/main/LICENSE">LICENSE</a>). Code and tooling: MIT (<a href="https://github.com/evaluchat/research/tree/main/LICENSE-CODE">LICENSE-CODE</a>).</p>
 <h2 id="links">Links</h2>
@@ -82,7 +81,24 @@ workspace templates                → evidence → findings
 <li>Live research catalog: https://research.evaluchat.org</li>
 <li>Live knowledge catalog: https://knowledge.evaluchat.org</li>
 <li>OKF specification: https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf</li>
-</ul><h2>Recently updated</h2><table class="catalog"><thead><tr><th>Title / id</th><th>Type</th><th>Status</th><th>Updated</th></tr></thead><tbody><tr><td><a href="ai-assignment-stress-test.html">AI Assignment Stress Test — assignment-level measurement analysis</a><br/><span class="muted"><code>ai-assignment-stress-test</code></span></td><td>Method</td><td>draft</td><td class="muted">2026-08-13</td></tr><tr><td><a href="ai-assignment-stress-test-validity.html">AI assignment stress-test validity — when can task probes identify what an assessment still measures?</a><br/><span class="muted"><code>ai-assignment-stress-test-validity</code></span></td><td>Research Question</td><td>open</td><td class="muted">2026-08-13</td></tr><tr><td><a href="ai-assisted-essay.html">AI-assisted essay — constrained dialogic drafting (CAMDLE)</a><br/><span class="muted"><code>ai-assisted-essay</code></span></td><td>Method</td><td>draft</td><td class="muted">2026-08-13</td></tr><tr><td><a href="camdle.html">CAMDLE — constrained AI-mediated dialogic writing (theory, unproven)</a><br/><span class="muted"><code>camdle</code></span></td><td>Theory</td><td>draft</td><td class="muted">2026-08-13</td></tr><tr><td><a href="contribution-ladder.html">The contribution ladder — how teachers contribute to research</a><br/><span class="muted"><code>contribution-ladder</code></span></td><td>Playbook</td><td>stable</td><td class="muted">2026-08-13</td></tr><tr><td><a href="evidence-roles.html">Shared evidence roles — how every method files a run</a><br/><span class="muted"><code>evidence-roles</code></span></td><td>Reference</td><td>draft</td><td class="muted">2026-08-13</td></tr><tr><td><a href="revision-tracking-validity.html">Revision-tracking validity — assessor-blind process-evidence study</a><br/><span class="muted"><code>revision-tracking-validity</code></span></td><td>Method</td><td>draft</td><td class="muted">2026-08-13</td></tr><tr><td><a href="revision-tracking-validity-question.html">Revision-tracking validity — when can process metrics provide fair evidence about recorded Canvas AI assistance?</a><br/><span class="muted"><code>revision-tracking-validity-question</code></span></td><td>Research Question</td><td>open</td><td class="muted">2026-08-13</td></tr></tbody></table>
+</ul>
+<h2 id="theory">Theory</h2>
+<ul>
+<li><a href="theory/index.html">Theory</a> — theoretical constructs and open research questions. Explicitly unproven (<code>status: draft</code>) until supported by evidence.</li>
+</ul>
+<h2 id="methods">Methods</h2>
+<ul>
+<li><a href="methods/index.html">Methods</a> — published methods: versioned, profiled investigations that name levers, immutable profiles, and an evidence contract. Evidence for a method lives at <code>methods/&lt;id&gt;/evidence/</code>.</li>
+</ul>
+<h2 id="governance">Governance</h2>
+<ul>
+<li><a href="governance/index.html">Governance</a> — the contribution ladder (how evidence is produced), the review protocol (how claims are reviewed), and shared evidence roles (provenance <code>method: {id, version, levers, canvas}</code>).</li>
+</ul>
+<h2 id="findings">Findings</h2>
+<ul>
+<li><a href="findings/index.html">Findings</a> — tiered findings derived from evidence. Empty until community evidence exists.</li>
+</ul>
+<h2>Recently updated</h2><table class="catalog"><thead><tr><th>Title / id</th><th>Type</th><th>Status</th><th>Updated</th></tr></thead><tbody><tr><td><a href="methods/ai-assignment-stress-test.html">AI Assignment Stress Test — assignment-level measurement analysis</a><br/><span class="muted"><code>ai-assignment-stress-test</code></span></td><td>Method</td><td>draft</td><td class="muted">2026-08-13</td></tr><tr><td><a href="theory/ai-assignment-stress-test-validity.html">AI assignment stress-test validity — when can task probes identify what an assessment still measures?</a><br/><span class="muted"><code>ai-assignment-stress-test-validity</code></span></td><td>Research Question</td><td>open</td><td class="muted">2026-08-13</td></tr><tr><td><a href="methods/ai-assisted-essay.html">AI-assisted essay — constrained dialogic drafting (CAMDLE)</a><br/><span class="muted"><code>ai-assisted-essay</code></span></td><td>Method</td><td>draft</td><td class="muted">2026-08-13</td></tr><tr><td><a href="theory/camdle.html">CAMDLE — constrained AI-mediated dialogic writing (theory, unproven)</a><br/><span class="muted"><code>camdle</code></span></td><td>Theory</td><td>draft</td><td class="muted">2026-08-13</td></tr><tr><td><a href="governance/contribution-ladder.html">The contribution ladder — how teachers contribute to research</a><br/><span class="muted"><code>contribution-ladder</code></span></td><td>Playbook</td><td>stable</td><td class="muted">2026-08-13</td></tr><tr><td><a href="governance/evidence-roles.html">Shared evidence roles — how every method files a run</a><br/><span class="muted"><code>evidence-roles</code></span></td><td>Reference</td><td>draft</td><td class="muted">2026-08-13</td></tr><tr><td><a href="methods/revision-tracking-validity.html">Revision-tracking validity — assessor-blind process-evidence study</a><br/><span class="muted"><code>revision-tracking-validity</code></span></td><td>Method</td><td>draft</td><td class="muted">2026-08-13</td></tr><tr><td><a href="theory/revision-tracking-validity-question.html">Revision-tracking validity — when can process metrics provide fair evidence about recorded Canvas AI assistance?</a><br/><span class="muted"><code>revision-tracking-validity-question</code></span></td><td>Research Question</td><td>open</td><td class="muted">2026-08-13</td></tr></tbody></table>
 <p class="muted">10 concept groups · generated by build_site.py</p>
   </article>
 </main>
