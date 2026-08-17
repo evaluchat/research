@@ -88,12 +88,13 @@ profiles:
     author: evaluchat-research
     immutable: true
     configuration: { assignment_condition: canvas-ai-disabled, canvas_ai_assistance: false, task_set: equivalent-task-set-v1, randomisation_protocol: server-side-stratified-block-v1, assessment_workflow: two-pass-assessor-blind-v1, metrics_schema: revision-metrics-v1.0, focus_telemetry: off, data_minimisation_profile: counts-and-derived-metrics-v1, outcome_reference: recorded-canvas-event-v1, analysis_plan: revision-tracking-validity-analysis-v1 }
+evidence_template: evidence-template@1.0.0
 catalog_urls:
   spec: https://github.com/evaluchat/research/blob/main/methods/revision-tracking-validity/revision-tracking-validity.en.md
   evidence: https://github.com/evaluchat/research/tree/main/methods/revision-tracking-validity/evidence
   questions:
     - https://github.com/evaluchat/research/blob/main/theory/revision-tracking-validity-question.en.md
-generated: { by: cursor-grok/4.6, at: 2026-08-13T14:48:00Z }
+generated: { by: codex/gpt-5, at: 2026-08-17T22:14:52Z }
 sources:
   - id: revision-tracking-validity-question
     resource: https://github.com/evaluchat/research/blob/main/theory/revision-tracking-validity-question.en.md
@@ -514,7 +515,8 @@ hidden by a more complex model.
   reference-event definitions, and boundary statements. A change to any of these is a comparability
   decision requiring a new method or metric-schema version.
 - Evidence belongs in the method-owned [evidence collection](evidence/index.md). File a run with
-  this version's [evidence-template/](evidence-template/index.md). Shared roles are in
+  this version's [evidence template](evidence-template.en.md). Shared roles are rendered as
+  sections of the single completed packet and are defined in
   [shared evidence roles](../../governance/evidence-roles.en.md); this version pins blinded
   judgment matrices, condition-neutral metric summaries, and the reproducibility packet — never
   raw student text, transcripts, or identity mappings.
