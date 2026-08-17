@@ -25,6 +25,8 @@ RESERVED_NAMES = {
     "agents.md",
 }
 SKIP_DIR_NAMES = {".github", ".git", ".superpowers", "docs", "evidence-template"}
+EVIDENCE_TEMPLATE_FILENAME = "evidence-template.en.md"
+TEMPLATE_FIELD_TYPES = {"text", "textarea", "select", "number", "date"}
 
 ROOT = Path(".").resolve()
 
@@ -125,86 +127,308 @@ def _split_flow(inner: str) -> list[str]:
     return [p for p in parts if p]
 
 
-def _absorb_indented_line(nested: dict | list, stripped: str) -> dict | list | None:
-    """Absorb one indented frontmatter line into nested structure. None = hard fail."""
-    if stripped.startswith("-"):
-        item_body = stripped[1:].strip()
-        if not isinstance(nested, list):
-            # promote / start a list under a mapping parent handled by caller
-            nested = []
-        if not item_body:
-            nested.append({})
-            return nested
-        if ":" in item_body:
-            k, v = item_body.split(":", 1)
-            entry: dict = {k.strip(): _parse_scalar(v) if v.strip() else ""}
-            nested.append(entry)
-        else:
-            nested.append(_parse_scalar(item_body))
-        return nested
-    if ":" not in stripped:
-        return None
-    k, v = stripped.split(":", 1)
-    key = k.strip()
-    val = _parse_scalar(v) if v.strip() else ""
-    if isinstance(nested, list):
-        if not nested:
-            nested.append({key: val})
-        elif isinstance(nested[-1], dict):
-            nested[-1][key] = val
-        else:
-            nested.append({key: val})
-        return nested
-    nested[key] = val
-    return nested
-
-
 def parse_simple_yaml(block: str) -> dict | None:
-    """Minimal YAML: key: value, flow lists/maps, indented maps/lists."""
-    result: dict = {}
+    """Parse this catalog's small YAML subset, including nested maps and lists."""
     lines = block.splitlines()
-    i = 0
-    while i < len(lines):
-        line = lines[i]
-        if not line.strip() or line.strip().startswith("#"):
+
+    def next_content(i: int) -> int | None:
+        while i < len(lines):
+            stripped = lines[i].strip()
+            if stripped and not stripped.startswith("#"):
+                return i
             i += 1
-            continue
-        if line.startswith(" ") or line.startswith("\t"):
-            # orphan indent — invalid at top level without a pending key
+        return None
+
+    def indent_of(line: str) -> int | None:
+        prefix = line[: len(line) - len(line.lstrip(" \t"))]
+        if "\t" in prefix:
             return None
-        if ":" not in line:
+        return len(prefix)
+
+    def parse_block(i: int, indent: int) -> tuple[dict | list, int] | None:
+        first = next_content(i)
+        if first is None or indent_of(lines[first]) != indent:
             return None
-        key, rest = line.split(":", 1)
-        key = key.strip()
-        if not key:
-            return None
-        if rest.strip() == "":
-            j = i + 1
-            nested: dict | list = {}
-            saw_list = False
-            while j < len(lines):
-                nxt = lines[j]
-                if not nxt.strip() or nxt.strip().startswith("#"):
-                    j += 1
-                    continue
-                if not (nxt.startswith(" ") or nxt.startswith("\t")):
-                    break
-                stripped = nxt.strip()
-                if stripped.startswith("-"):
-                    if not saw_list:
-                        nested = []
-                        saw_list = True
-                absorbed = _absorb_indented_line(nested, stripped)
-                if absorbed is None:
+        first_text = lines[first].strip()
+        is_list = first_text == "-" or first_text.startswith("- ")
+        result: dict | list = [] if is_list else {}
+        i = first
+
+        while True:
+            current = next_content(i)
+            if current is None:
+                return result, len(lines)
+            current_indent = indent_of(lines[current])
+            if current_indent is None:
+                return None
+            if current_indent < indent:
+                return result, current
+            if current_indent > indent:
+                return None
+
+            text = lines[current].strip()
+            item_is_list = text == "-" or text.startswith("- ")
+            if item_is_list != is_list:
+                return None
+
+            if not is_list:
+                if ":" not in text:
                     return None
-                nested = absorbed
-                j += 1
-            result[key] = nested
-            i = j
-            continue
-        result[key] = _parse_scalar(rest)
-        i += 1
+                key, rest = text.split(":", 1)
+                key = key.strip()
+                if not key:
+                    return None
+                i = current + 1
+                if rest.strip():
+                    assert isinstance(result, dict)
+                    result[key] = _parse_scalar(rest)
+                    continue
+                child_start = next_content(i)
+                if child_start is not None:
+                    child_indent = indent_of(lines[child_start])
+                    if child_indent is None:
+                        return None
+                    if child_indent > indent:
+                        child = parse_block(child_start, child_indent)
+                        if child is None:
+                            return None
+                        value, i = child
+                        assert isinstance(result, dict)
+                        result[key] = value
+                        continue
+                assert isinstance(result, dict)
+                result[key] = {}
+                continue
+
+            item = text[1:].strip()
+            i = current + 1
+            assert isinstance(result, list)
+            if not item:
+                child_start = next_content(i)
+                if child_start is None:
+                    result.append({})
+                    continue
+                child_indent = indent_of(lines[child_start])
+                if child_indent is None or child_indent <= indent:
+                    result.append({})
+                    continue
+                child = parse_block(child_start, child_indent)
+                if child is None:
+                    return None
+                value, i = child
+                result.append(value)
+                continue
+
+            if ":" not in item:
+                result.append(_parse_scalar(item))
+                child_start = next_content(i)
+                if child_start is not None:
+                    child_indent = indent_of(lines[child_start])
+                    if child_indent is None or child_indent > indent:
+                        return None
+                continue
+
+            key, rest = item.split(":", 1)
+            key = key.strip()
+            if not key:
+                return None
+            entry: dict = {}
+            if rest.strip():
+                entry[key] = _parse_scalar(rest)
+            else:
+                child_start = next_content(i)
+                if child_start is not None:
+                    child_indent = indent_of(lines[child_start])
+                    if child_indent is None:
+                        return None
+                    if child_indent > indent:
+                        child = parse_block(child_start, child_indent)
+                        if child is None:
+                            return None
+                        entry[key], i = child
+                    else:
+                        entry[key] = {}
+                else:
+                    entry[key] = {}
+
+            child_start = next_content(i)
+            if child_start is not None:
+                child_indent = indent_of(lines[child_start])
+                if child_indent is None:
+                    return None
+                if child_indent > indent:
+                    child = parse_block(child_start, child_indent)
+                    if child is None:
+                        return None
+                    extra, i = child
+                    if not isinstance(extra, dict):
+                        return None
+                    entry.update(extra)
+            result.append(entry)
+
+    start = next_content(0)
+    if start is None:
+        return {}
+    if indent_of(lines[start]) != 0:
+        return None
+    parsed = parse_block(start, 0)
+    if parsed is None:
+        return None
+    result, end = parsed
+    if next_content(end) is not None or not isinstance(result, dict):
+        return None
     return result
+
+
+def is_evidence_template(path: Path) -> bool:
+    """True only for a method's non-concept, single-file evidence template."""
+    try:
+        parts = path.resolve().relative_to(ROOT).parts
+    except ValueError:
+        return False
+    return (
+        len(parts) == 3
+        and parts[0] == "methods"
+        and path.name == EVIDENCE_TEMPLATE_FILENAME
+    )
+
+
+def validate_evidence_template(
+    method_path: Path, method_meta: dict, errors: list[str]
+) -> None:
+    """Validate the typed, pinned template required by a Method."""
+    method_ref = rel(method_path)
+    pointer = method_meta.get("evidence_template")
+    if not isinstance(pointer, str) or not pointer.strip():
+        errors.append(
+            f"ERROR: {method_ref}: missing evidence_template "
+            "(expected evidence-template@<version>)"
+        )
+        return
+
+    template_id, sep, template_version = pointer.strip().rpartition("@")
+    if not sep or not template_id or not template_version:
+        errors.append(
+            f"ERROR: {method_ref}: evidence_template expected '<id>@<version>' "
+            f"(got {pointer!r})"
+        )
+        return
+    if template_id != "evidence-template":
+        errors.append(
+            f"ERROR: {method_ref}: evidence_template expected "
+            f"'evidence-template@<version>' (got {pointer!r})"
+        )
+
+    method_id = method_meta.get("id")
+    method_version = method_meta.get("version")
+    if not isinstance(method_id, str) or not method_id.strip():
+        errors.append(
+            f"ERROR: {method_ref}: cannot validate evidence template without method id"
+        )
+        return
+    if method_version is None or not str(method_version).strip():
+        errors.append(
+            f"ERROR: {method_ref}: cannot validate evidence template without method version"
+        )
+        return
+
+    template_path = ROOT / "methods" / method_id / EVIDENCE_TEMPLATE_FILENAME
+    template_ref = rel(template_path)
+    try:
+        template_text = template_path.read_text(encoding="utf-8")
+    except OSError as exc:
+        errors.append(
+            f"ERROR: {method_ref}: evidence_template {pointer!r} requires readable "
+            f"{template_ref} ({exc.strerror or exc})"
+        )
+        return
+
+    raw, _body = split_frontmatter(template_text)
+    if raw is None:
+        errors.append(
+            f"ERROR: {template_ref}: evidence template frontmatter is missing or unterminated"
+        )
+        return
+    template_meta = parse_simple_yaml(raw)
+    if template_meta is None:
+        errors.append(
+            f"ERROR: {template_ref}: evidence template frontmatter is not parseable simple YAML"
+        )
+        return
+
+    def expected(field: str, value, wanted) -> None:
+        if value != wanted:
+            errors.append(
+                f"ERROR: {template_ref}: {field} expected {wanted!r} (got {value!r})"
+            )
+
+    expected("type", template_meta.get("type"), "Form Template")
+    expected("id", template_meta.get("id"), "evidence-template")
+    expected("version", str(template_meta.get("version", "")), template_version)
+
+    lang = template_meta.get("lang")
+    if not isinstance(lang, str) or not lang.strip():
+        errors.append(f"ERROR: {template_ref}: lang expected a non-empty BCP-47 tag (got {lang!r})")
+    else:
+        if not LANG_RE.match(lang):
+            errors.append(
+                f"ERROR: {template_ref}: lang expected a plausible BCP-47 tag (got {lang!r})"
+            )
+        _slug, suffix = filename_slug_and_lang(template_path)
+        if suffix != lang:
+            errors.append(
+                f"ERROR: {template_ref}: filename language suffix expected {lang!r} "
+                f"(got {suffix!r})"
+            )
+
+    expected("template_kind", template_meta.get("template_kind"), "form")
+    expected(
+        "applies_to_method",
+        template_meta.get("applies_to_method"),
+        f"{method_id}@{method_version}",
+    )
+
+    fields = template_meta.get("fields")
+    if not isinstance(fields, dict) or not fields:
+        errors.append(
+            f"ERROR: {template_ref}: fields expected a non-empty mapping (got {fields!r})"
+        )
+    else:
+        for field_id, declaration in fields.items():
+            field_ref = f"fields.{field_id}"
+            if not isinstance(declaration, dict):
+                errors.append(
+                    f"ERROR: {template_ref}: {field_ref} expected a mapping (got {declaration!r})"
+                )
+                continue
+            field_type = declaration.get("type")
+            if field_type not in TEMPLATE_FIELD_TYPES:
+                errors.append(
+                    f"ERROR: {template_ref}: {field_ref}.type expected one of "
+                    f"{sorted(TEMPLATE_FIELD_TYPES)!r} (got {field_type!r})"
+                )
+            if field_type == "select" and not isinstance(declaration.get("options"), list):
+                errors.append(
+                    f"ERROR: {template_ref}: {field_ref}.options expected a list "
+                    f"for select (got {declaration.get('options')!r})"
+                )
+
+    generated = template_meta.get("generated")
+    if not isinstance(generated, dict):
+        errors.append(
+            f"ERROR: {template_ref}: generated expected a mapping with by and at (got {generated!r})"
+        )
+    else:
+        by = generated.get("by")
+        at = generated.get("at")
+        if not isinstance(by, str) or "/" not in by or not all(by.split("/", 1)):
+            errors.append(
+                f"ERROR: {template_ref}: generated.by expected '<producer>/<version>' (got {by!r})"
+            )
+        if at is None or not str(at).strip():
+            errors.append(
+                f"ERROR: {template_ref}: generated.at expected a non-empty ISO timestamp (got {at!r})"
+            )
 
 
 def filename_slug_and_lang(path: Path) -> tuple[str, str | None]:
@@ -269,7 +493,7 @@ def main() -> int:
             continue
         parsed[path] = (meta, body, None)
         cid = meta.get("id")
-        if isinstance(cid, str) and cid:
+        if not is_evidence_template(path) and isinstance(cid, str) and cid:
             by_id[cid].append((path, meta))
 
     for path in files:
@@ -290,7 +514,7 @@ def main() -> int:
                     f"ERROR: {r}: okf_version must be \"0.2\" (got {meta.get('okf_version')!r})"
                 )
 
-        if not reserved:
+        if not reserved and not is_evidence_template(path):
             if fm_err or meta is None:
                 errors.append(f"ERROR: {r}: {fm_err or 'missing frontmatter'}")
             else:
@@ -393,6 +617,9 @@ def main() -> int:
                         warnings.append(
                             f"WARNING: {r}: findings file missing ## Limitations"
                         )
+
+                if typ_s == "Method":
+                    validate_evidence_template(path, meta, errors)
 
         # Link warnings: all non-reserved concept bodies, plus every index.md
         # (reserved indexes still get missing-target warnings).
