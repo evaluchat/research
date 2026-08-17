@@ -13,7 +13,7 @@ timestamp: 2026-08-11T09:41:42Z
 research_questions: [ai-assignment-stress-test-validity]
 question: "To what extent, and under which task conditions, do standardized AI stress-test probes provide valid, reliable, and useful evidence about the human capabilities an assignment can still measure when generative AI is available?"
 roles: [teacher, org-admin]
-required_capabilities: [input-artefact-analysis, multi-model-probing, capability-mapping, redesign-generation, assignment-reporting]
+required_capabilities: [ai-dialogue]
 levers:
   - id: model_set
     type: string
@@ -74,7 +74,11 @@ catalog_urls:
   evidence: https://github.com/evaluchat/research/tree/main/methods/ai-assignment-stress-test/evidence
   questions:
     - https://github.com/evaluchat/research/blob/main/theory/ai-assignment-stress-test-validity.en.md
-generated: { by: cursor-grok/4.6, at: 2026-08-13T14:48:00Z }
+generated: { by: hermes-agent/deepseek-v4-flash, at: 2026-08-17T00:00:00Z }
+revision:
+  - note: "Capability contract correction: required_capabilities reduced to ai-dialogue; the five aspirational capabilities documented as future platform surface."
+    by: hermes-agent/deepseek-v4-flash
+    at: 2026-08-17T00:00:00Z
 sources:
   - id: ai-assignment-stress-test-design
     resource: https://github.com/evaluchat/knowledge/blob/main/okf/bundles/evaluchat/concepts/ai-assignment-stress-test.md
@@ -129,15 +133,42 @@ learner transcripts, process signals, submissions, or learner-level telemetry.
 
 ## Platform requirement
 
-`min_canvas_version: 0.5.9` adopts the shared lever vocabulary. The five declared required
-capabilities describe the additional teacher-side platform surface this draft needs: input-artefact
-analysis, multi-model comparison, capability mapping, redesign generation, and assignment-level
-reporting. They are requirements for a future Canvas implementation, not a claim that the current
-platform implements or executes this method.
+`min_canvas_version: 0.5.9` adopts the shared lever vocabulary. As operated, this method is a
+teacher-facing planning workspace: the teacher authors the assignment in a markdown space and the
+AI assistant answers from the knowledge catalog's OKF resources. The only platform capability it
+uses is `ai-dialogue` — declared as the single required capability in the frontmatter.
+
+The original draft declared five additional capabilities (input-artefact analysis, multi-model
+comparison, capability mapping, redesign generation, and assignment-level reporting). Those are
+aspirational surfaces for a future automated version of the instrument — not requirements the
+current platform implements or executes. They are documented below under [Future platform
+surface](#future-platform-surface) so the design intent survives without being mistaken for a
+platform contract.
 
 The method uses the recipe's deliberate divergence: it needs neither class management nor a
 student workspace, managed submission, drafting gate, or student defence. That divergence is part
-of the experiment's design, not a missing student workflow.
+of the experiment's design, not a missing student workflow. It is a teacher-side instrument, so the
+runtime catalog's "viable student workflow" gate (assignment-context, student-authoring,
+submission) does not apply — this method is not a student-facing assignment entry.
+
+## Future platform surface
+
+The five capabilities below would be needed by an automated, platform-hosted version of the
+stress test (pinned multi-model probing, structured stage outputs). They are listed here as
+design intent, not as claims about the current platform:
+
+| Capability | What an automated version would need it for |
+|---|---|
+| `input-artefact-analysis` | Structured receipt and parsing of the teacher's assignment prompt and optional rubric |
+| `multi-model-probing` | Running a pinned model set on the task to produce comparable completion probes |
+| `capability-mapping` | Deriving the measurement-validity map from probe results against the outcomes vocabulary |
+| `redesign-generation` | Producing the alternative task designs reported in the redesign stage |
+| `assignment-reporting` | Packaging stage outputs into the structured assignment-level report |
+
+Until those surfaces exist, the same analytical stages run through the `ai-dialogue` workspace:
+the teacher supplies the task artefact, the assistant applies the probe → measure → delegate →
+redesign logic conversationally with OKF grounding, and the teacher files the structured report
+using the method's evidence template.
 
 ## Levers and profile
 
@@ -195,5 +226,9 @@ collection.
 - Method version `0.1.0` describes this design. A change to report semantics, the outcomes
   vocabulary, or a pinned model set is a comparability change and requires a method-version
   decision.
+- 2026-08-17 correction: `required_capabilities` narrowed to the operative surface (`ai-dialogue`);
+  the five formerly-declared capabilities are aspirational automation surfaces, documented under
+  [Future platform surface](#future-platform-surface), not platform contract. The instrument's
+  analytical design (probe → measure → delegate → redesign → report) is unchanged.
 - The method version and Canvas version are independent and are both required in evidence
   provenance.
