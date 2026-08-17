@@ -19,13 +19,22 @@ leave students assignment context, an authoring surface, and submission. The
 Canvas app executes only reviewed built-in implementations; a method PR
 must never contain executable deployment code.
 
-Form Template PRs define a versioned, non-executable input contract. Their
-frontmatter declares the supported field types, requiredness, allowed options,
-and protected assistant guidance; a method may reference one with
-`evidence_template: <id>@<version>`. Fields sourced from a concluded run are
-read-only. Public evidence templates must keep system-authored measurements
-separate from owner-authored observations and reflection, and require explicit
-publication authorisation and anonymisation declarations.
+Form Template PRs define a versioned, non-executable input contract. Every
+`Method` must declare `evidence_template: evidence-template@<version>` and carry the
+corresponding single-file template at `methods/<method-id>/evidence-template.en.md`.
+The template frontmatter declares the supported field types, requiredness, allowed
+options, and protected assistant guidance; fields sourced from a concluded run are
+read-only. Public evidence templates must keep system-authored measurements separate
+from owner-authored observations and reflection, and require explicit publication
+authorisation and anonymisation declarations. These method-local templates are
+`template_kind: form`, not concepts: their shared `id: evidence-template` is exempt
+from concept identity, description, vocabulary, and site-publication rules.
+
+`scripts/okf_lint.py` enforces this evidence contract: it rejects a Method with no
+pointer, an unreadable template, or a template whose version, method binding, typed
+fields, language, provenance, or form kind does not match the contract. This is one
+side of the two-sided publishing gate: the platform catalog also requires and mirrors
+the same versioned template before a method can ship.
 
 Reserved files (no frontmatter required): `index.md` (per-directory listing), `CHANGELOG.md` (update log), `README.md`, `AGENTS.md`.
 
@@ -97,7 +106,15 @@ sources:
 
 ## Evidence contributions
 
-Each contribution is a mini-bundle under `methods/<method-id>/evidence/<slug>/` (evidence is organised per method — one collection per method). Copy that method version's `evidence-template/`. Shared roles are in [governance/evidence-roles.en.md](governance/evidence-roles.en.md): `index.md`, `question.md`, `context.md`, `intervention.md`, `observations.md` (teacher narrative, verbatim, native origin), `results.md` (structured measurements only — no interpretation; payload pinned by the method version), `reflection.md` (interpretation), `limitations.md` (scope and confounders), `provenance.md` (sources plus consent/anonymisation record). The provenance file must record `method: {id, version, levers, canvas}`.
+Each contribution is one completed packet under `methods/<method-id>/evidence/<slug>.md`,
+rendered from that method version's `evidence-template.en.md` (evidence is organised
+per method — one collection per method). The packet renders the shared roles in
+[governance/evidence-roles.en.md](governance/evidence-roles.en.md): question, context,
+intervention, observations (teacher narrative, verbatim, native origin), results
+(structured measurements only — no interpretation; payload pinned by the method
+version), reflection (interpretation), limitations (scope and confounders), and
+provenance (sources plus consent/anonymisation record). Its system-authored provenance
+must record `method: {id, version, levers, canvas}`.
 
 - **Observation/inference separation is mandatory**: measurements and observations are not interpretation, and interpretation is not a claim.
 - **Pre-registration**: every evidence bundle links a research question that predates the evidence. A contribution that "discovers" its question after the fact is a CI flag and goes to human review.
