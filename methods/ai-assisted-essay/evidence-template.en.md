@@ -284,7 +284,7 @@ fields:
     max_length: 1600
     display_lines: 5
 assistant:
-  guidance: "Help the owner describe only their concluded run. Never infer, invent, or expose student information, raw student work, raw transcripts, consent, or system measurements. Preserve the read-only frozen-run fields. Keep observations factual and separate from reflection; describe perceptions as perceptions, not proof of learning, engagement, effectiveness, or the views of teachers beyond this response. A response that is not authorised or not anonymised must not be submitted for public publication."
+  guidance: "Help the owner describe only their concluded run. Never infer, invent, or expose student information, raw student work, raw transcripts, or consent. Render the frozen system-authored fields exactly as provided; never alter, duplicate, or add system measurements. Keep observations factual and separate from reflection; describe perceptions as perceptions, not proof of learning, engagement, effectiveness, or the views of teachers beyond this response. A response that is not authorised or not anonymised must not be submitted for public publication."
 generated: { by: codex/gpt-5, at: 2026-08-17T14:33:56Z }
 sources:
   - id: ai-assisted-essay

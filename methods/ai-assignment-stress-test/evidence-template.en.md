@@ -268,7 +268,7 @@ fields:
     max_length: 1600
     display_lines: 5
 assistant:
-  guidance: "Help the owner describe only their concluded assignment-level run. Never infer, invent, or expose student information, raw student work, raw submissions, consent, or system measurements. Preserve every read-only frozen-run field. Keep observations factual and separate from reflection; describe judgements as this owner's report, not proof of task quality, learning, AI use, or the views of teachers beyond this response. A response that is not authorised or not anonymised must not be submitted for public publication."
+  guidance: "Help the owner describe only their concluded assignment-level run. Never infer, invent, or expose student information, raw student work, raw submissions, or consent. Render the frozen system-authored fields exactly as provided; never alter, duplicate, or add system measurements. Keep observations factual and separate from reflection; describe judgements as this owner's report, not proof of task quality, learning, AI use, or the views of teachers beyond this response. A response that is not authorised or not anonymised must not be submitted for public publication."
 generated: { by: codex/gpt-5, at: 2026-08-17T22:14:52Z }
 sources:
   - id: ai-assignment-stress-test

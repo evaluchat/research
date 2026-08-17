@@ -14,7 +14,8 @@ and records `method: {id, version, levers, canvas}` in its system-authored prove
 
 Every contribution must preserve the method boundary: no raw student text, AI transcript,
 identifiable revision trace, identity-to-condition mapping, integrity verdict, or grade-changing
-use. `observations.md` and `results.md` record measurements; `reflection.md` contains
-interpretation; `limitations.md` records uncertainty, scope, and confounders.
+use. The packet's observations and results sections record measurements; the reflection
+section contains interpretation; the limitations section records uncertainty, scope, and
+confounders.
 
 - [Method specification](../revision-tracking-validity.en.md)

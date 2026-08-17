@@ -106,7 +106,7 @@ sources:
 
 ## Evidence contributions
 
-Each contribution is one completed packet under `methods/<method-id>/evidence/<slug>.md`,
+Each contribution is one completed packet under `methods/<method-id>/evidence/<ISO-timestamp>.md` (for example `2026-08-17T14-30-00Z.md`),
 rendered from that method version's `evidence-template.en.md` (evidence is organised
 per method — one collection per method). The packet renders the shared roles in
 [governance/evidence-roles.en.md](governance/evidence-roles.en.md): question, context,
@@ -118,7 +118,7 @@ must record `method: {id, version, levers, canvas}`.
 
 - **Observation/inference separation is mandatory**: measurements and observations are not interpretation, and interpretation is not a claim.
 - **Pre-registration**: every evidence bundle links a research question that predates the evidence. A contribution that "discovers" its question after the fact is a CI flag and goes to human review.
-- **Consent/privacy**: raw student material is never committed. Only reviewed, appropriately anonymised artifacts with a consent record in `provenance.md`.
+- **Consent/privacy**: raw student material is never committed. Only reviewed, appropriately anonymised artifacts whose packet declares consent and anonymisation in its publication-provenance fields (`publication_authorisation`, `anonymisation_status`, `data_sharing_limits`) may be merged. Evidence packets no longer use a separate `provenance.md`; the consent/anonymisation record lives inside the single packet.
 
 ## Licensing terms for contributions
 
