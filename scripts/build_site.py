@@ -67,6 +67,7 @@ REPO_URL = GITHUB_BLOB[: GITHUB_BLOB.index("/blob/")]
 SITE_LABEL = "Research catalog"
 SITE_DOMAIN = "research.evaluchat.org"
 SKIP_DIR_NAMES = {".github", "templates", ".git", "scripts", "site", "evidence-template"}
+SKIP_FILE_NAMES = {"evidence-template.en.md"}
 
 # Site-root-relative registries, filled by build() before rendering:
 #   CONCEPT_PAGES: repo file path → page path
@@ -105,6 +106,10 @@ def under_skip_dir(path: Path) -> bool:
     except ValueError:
         parts = path.parts
     return any(p in SKIP_DIR_NAMES for p in parts[:-1])
+
+
+def is_skipped(path: Path) -> bool:
+    return under_skip_dir(path) or path.name.lower() in SKIP_FILE_NAMES
 
 
 def is_reserved(path: Path) -> bool:
@@ -259,7 +264,7 @@ def collect_concepts() -> tuple[dict[str, list[tuple[Path, dict, str]]], dict[Pa
             if not name.lower().endswith(".md"):
                 continue
             path = Path(dirpath) / name
-            if under_skip_dir(path) or is_reserved(path):
+            if is_skipped(path) or is_reserved(path):
                 continue
             text = path.read_text(encoding="utf-8", errors="replace")
             raw, body = split_frontmatter(text)
