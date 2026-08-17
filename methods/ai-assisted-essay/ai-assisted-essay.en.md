@@ -80,6 +80,11 @@ profiles:
     author: evaluchat
     immutable: true
     configuration: { ai_assistance: true, ai_canvas_actions: true, drafting_gate: discussion-first, threshold: 4, tracking: false }
+run_brief_template: evaluchat-assignment-brief@1.0.0
+evidence_template: evidence-template@1.0.0
+platform:
+  participant_invitations: required
+  review_surface: essay-process-review
 catalog_urls:
   spec: https://github.com/evaluchat/research/blob/main/methods/ai-assisted-essay/ai-assisted-essay.en.md
   evidence: https://github.com/evaluchat/research/tree/main/methods/ai-assisted-essay/evidence
@@ -183,8 +188,8 @@ judgment, read alongside the transcript, the draft, and the assignment context.
 ## Evidence contract (version 0.1.0)
 
 Evidence lives under [evidence/](evidence/index.md). File a concluded run using this version's
-[evidence-template/](evidence-template/index.md). Shared roles (question, observations vs results
-vs reflection vs limitations, provenance) are defined in
+[evidence template](evidence-template.en.md). Shared roles (question, observations vs results
+vs reflection vs limitations, provenance) are rendered as sections of the single completed packet and are defined in
 [shared evidence roles](../../governance/evidence-roles.en.md). This version pins the payload:
 
 - **results** — process-signal summaries, transcript-policy record (what was retained vs withheld),
