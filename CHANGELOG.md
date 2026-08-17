@@ -1,5 +1,8 @@
 # Research Catalog — Update Log
 
+## 2026-08-17
+* **Capability contract correction**: [AI Assignment Stress Test](methods/ai-assignment-stress-test/ai-assignment-stress-test.en.md) `required_capabilities` narrowed from five non-existent platform capabilities to the operative surface (`ai-dialogue`). The five formerly-declared capabilities (input-artefact analysis, multi-model probing, capability mapping, redesign generation, assignment reporting) are aspirational automation surfaces for a future platform-hosted version and are documented under a new "Future platform surface" section. Instrument design (probe → measure → delegate → redesign → report) unchanged.
+
 ## 2026-08-13
 * **Housekeeping**: Removed the catalog-wide `templates/` directory (evidence skeletons live on each method version as `evidence-template/`). Renamed `log.md` to `CHANGELOG.md`.
 * **Method terminology**: Catalog objects are `type: Method` with YAML `levers:` (not Apparatus / knobs). Instance dirs moved from `apparatus/<id>/` to `methods/<id>/`; evidence lives only at `methods/<id>/evidence/`; the top-level `evidence/` registry is gone. `contribution-ladder` moved to `governance/` beside the review protocol. `methods/apparatus.en.md` folded into [shared evidence roles](governance/evidence-roles.en.md) plus the Essays method spec. Each method version pins an `evidence-template/`. README is the two-repo + chain front door; `build_site.py` renders it as the gh-pages landing; `index.md` stays the OKF section listing.
