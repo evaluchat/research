@@ -10,7 +10,7 @@ This repository holds **research truth**: research questions, hypotheses, theory
 
 Every non-reserved file declares exactly one `type`:
 
-`Method`, `Theory`, `Research Question`, `Hypothesis`, `Intervention`, `Evidence Contribution`, `Observation`, `Measurement`, `Result`, `Reflection`, `Limitations`, `Finding`, `Synthesis`, `Replication`, `Challenge`, `Playbook`, `Reference`.
+`Method`, `Form Template`, `Theory`, `Research Question`, `Hypothesis`, `Intervention`, `Evidence Contribution`, `Observation`, `Measurement`, `Result`, `Reflection`, `Limitations`, `Finding`, `Synthesis`, `Replication`, `Challenge`, `Playbook`, `Reference`.
 
 Method PRs must declare an immutable ID and semantic version, minimum Canvas
 version, required capabilities, roles, telemetry, provenance, typed levers with
@@ -18,6 +18,14 @@ dependencies/exclusions, and immutable fully resolved profiles. Profiles must
 leave students assignment context, an authoring surface, and submission. The
 Canvas app executes only reviewed built-in implementations; a method PR
 must never contain executable deployment code.
+
+Form Template PRs define a versioned, non-executable input contract. Their
+frontmatter declares the supported field types, requiredness, allowed options,
+and protected assistant guidance; a method may reference one with
+`evidence_template: <id>@<version>`. Fields sourced from a concluded run are
+read-only. Public evidence templates must keep system-authored measurements
+separate from owner-authored observations and reflection, and require explicit
+publication authorisation and anonymisation declarations.
 
 Reserved files (no frontmatter required): `index.md` (per-directory listing), `CHANGELOG.md` (update log), `README.md`, `AGENTS.md`.
 
