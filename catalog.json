@@ -7,7 +7,7 @@
     ],
     "status": "draft",
     "description": "Method: a teacher-facing, assignment-level stress test that probes what current AI can do, maps what the task measures, identifies delegation loss, and offers alternative designs without requiring AI prohibition.",
-    "updated": "2026-08-13T14:48:00+00:00",
+    "updated": "2026-08-17T22:14:52+00:00",
     "canonical_resource": "https://github.com/evaluchat/research/blob/main/methods/ai-assignment-stress-test/ai-assignment-stress-test.en.md"
   },
   {
@@ -84,7 +84,7 @@
     ],
     "status": "draft",
     "description": "Method: a randomised, assessor-blind assignment study that evaluates the validity, fairness, limitations, and practical usefulness of condition-neutral revision metrics as evidence about recorded Canvas AI events.",
-    "updated": "2026-08-13T14:48:00+00:00",
+    "updated": "2026-08-17T22:14:52+00:00",
     "canonical_resource": "https://github.com/evaluchat/research/blob/main/methods/revision-tracking-validity/revision-tracking-validity.en.md"
   },
   {
