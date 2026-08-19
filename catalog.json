@@ -66,6 +66,17 @@
     "canonical_resource": "https://github.com/evaluchat/research/blob/main/governance/evidence-roles.en.md"
   },
   {
+    "id": "ledger-demo-method",
+    "type": "Method",
+    "languages": [
+      "en"
+    ],
+    "status": "stable",
+    "description": "Synthetic method whose accepted evidence exercises every Evidence Ledger scope bucket (included, outside, unknown, unavailable, resolver exclusion). Used to verify the ledger configuration canvas and snapshots.",
+    "updated": "2026-08-19T14:57:46+00:00",
+    "canonical_resource": "https://github.com/evaluchat/research/blob/main/methods/ledger-demo-method/ledger-demo-method.en.md"
+  },
+  {
     "id": "review-protocol",
     "type": "Reference",
     "languages": [
