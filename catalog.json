@@ -110,6 +110,28 @@
     "canonical_resource": "https://github.com/evaluchat/research/blob/main/theory/revision-tracking-validity-question.en.md"
   },
   {
+    "id": "synthetic-method",
+    "type": "Method",
+    "languages": [
+      "en"
+    ],
+    "status": "draft",
+    "description": "Synthetic method with a sealed evidence ledger snapshot. Exercises the v1 private GitHub research repository layout; not a classroom investigation.",
+    "updated": "2026-08-22T15:10:00+00:00",
+    "canonical_resource": "https://github.com/evaluchat/research/blob/main/methods/synthetic-method/synthetic-method.en.md"
+  },
+  {
+    "id": "synthetic-question",
+    "type": "Research Question",
+    "languages": [
+      "en"
+    ],
+    "status": "open",
+    "description": "Invented research question used only to exercise the v1 private GitHub research repository layout.",
+    "updated": "2026-08-22T15:10:00+00:00",
+    "canonical_resource": "https://github.com/evaluchat/research/blob/main/theory/synthetic-question.en.md"
+  },
+  {
     "id": "threshold-calibration",
     "type": "Research Question",
     "languages": [
