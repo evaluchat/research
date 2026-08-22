@@ -10,7 +10,8 @@ Evidence for a method lives only under that method, at `methods/<id>/evidence/`.
 |---|---|---|---|
 | [AI-assisted essay — constrained dialogic drafting (CAMDLE)](ai-assisted-essay/ai-assisted-essay.en.md) | [threshold-calibration](../theory/threshold-calibration.en.md) | draft | 0.5.9 |
 | [AI Assignment Stress Test — assignment-level measurement analysis](ai-assignment-stress-test/ai-assignment-stress-test.en.md) | [ai-assignment-stress-test-validity](../theory/ai-assignment-stress-test-validity.en.md) | draft | 0.5.9 |
-| [Revision-tracking validity — assessor-blind process-evidence study](revision-tracking-validity/revision-tracking-validity.en.md) | [revision-tracking-validity-question](../theory/revision-tracking-validity-question.en.md) | draft — implementation blocked | 0.5.9 |
+| [Ledger demo method — synthetic evidence collection](ledger-demo-method/ledger-demo-method.en.md) | (ledger configuration) | stable | 0.6.0 |
+| [Synthetic layout method — GitHub research repository contract](synthetic-method/synthetic-method.en.md) | [synthetic-question](../theory/synthetic-question.en.md) | draft | 0.8.0 |
 
 The Essays method publishes immutable canonical, gate-off, AI-off, canvas-action-off, and tracking-off profiles plus [synthetic fixtures](ai-assisted-essay/fixtures/index.md).
 
