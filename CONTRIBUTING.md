@@ -4,7 +4,7 @@ Thank you for contributing. This is an open, multilingual, PR-able OKF (v0.2) re
 
 ## What belongs here
 
-This repository holds **research truth**: research questions, hypotheses, theory, methods, evidence contributions, and tiered findings. Product documentation belongs in the [knowledge repository](https://github.com/evaluchat/knowledge). Internal strategy and competitive material never belongs in a public repository — strategic assumptions may enter this catalog only as explicit research questions, hypotheses, or shipped product truth.
+This repository holds **research truth**: research questions, hypotheses, theory, methods, evidence contributions, and tiered findings. Product documentation belongs in the [knowledge repository](https://github.com/openrigor/knowledge). Internal strategy and competitive material never belongs in a public repository — strategic assumptions may enter this catalog only as explicit research questions, hypotheses, or shipped product truth.
 
 ## Type vocabulary
 
@@ -99,7 +99,7 @@ generated: { by: <producer>/<version>, at: 2026-08-09T00:00:00Z }
 verified: { by: human:<id>, at: 2026-08-09T00:00:00Z }
 sources:
   - id: source-id
-    resource: https://github.com/evaluchat/research/blob/main/...
+    resource: https://github.com/openrigor/research/blob/main/...
     title: Human-readable source title
 ---
 ```

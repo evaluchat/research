@@ -1,16 +1,16 @@
-# Evaluchat Research Catalog
+# OpenRigor Research Catalog
 
-This repository holds **research truth**: what we are investigating and what the evidence currently supports. It is the companion to the [knowledge repository](https://github.com/evaluchat/knowledge), which holds **product truth**: what Evaluchat can do.
+This repository holds **research truth**: what we are investigating and what the evidence currently supports. It is the companion to the [knowledge repository](https://github.com/openrigor/knowledge), which holds **product truth**: what OpenRigor can do.
 
 ```text
 Knowledge                          Research
 product truth                      research truth
-what Evaluchat can do              what we are investigating
+what OpenRigor can do              what we are investigating
 features, capabilities,            theory → questions → methods
 workspace templates                → evidence → findings
 ```
 
-Evaluchat **runs** a method profile. It does not own research truth. Knowledge does not store classroom evidence. Research does not store executable product templates.
+OpenRigor **runs** a method profile. It does not own research truth. Knowledge does not store classroom evidence. Research does not store executable product templates.
 
 ## The chain
 
@@ -18,7 +18,7 @@ Evaluchat **runs** a method profile. It does not own research truth. Knowledge d
 Theory / question
     → Method  (published way of investigating that question)
          → selects levers  (which Knowledge-documented features this run engages)
-         → Evaluchat applies that profile in a workspace
+         → OpenRigor applies that profile in a workspace
          → when the run concludes, evidence is filed under that method
     → Finding  (a human claim, reviewed; not the raw export)
 ```
@@ -32,7 +32,7 @@ Evidence belongs to exactly one method, at `methods/<id>/evidence/`. Findings ma
 | Layer | Role |
 |---|---|
 | **Git / OKF** | The open substrate — provenance and contribution. Every claim traces to a file, a diff, and a review. |
-| **Website** | The human interface — this README rendered at [research.evaluchat.org](https://research.evaluchat.org). The OKF section listing stays in [`index.md`](index.md). |
+| **Website** | The human interface — this README rendered at [research.openrigor.org](https://research.openrigor.org). The OKF section listing stays in [`index.md`](index.md). |
 | **AI** | The reasoning interface — agents traverse question → method → evidence → review → finding via [AGENTS.md](AGENTS.md). |
 
 ## Multilingual
@@ -49,7 +49,7 @@ Content: CC-BY-4.0 ([LICENSE](LICENSE)). Code and tooling: MIT ([LICENSE-CODE](L
 
 ## Links
 
-- Knowledge repository: https://github.com/evaluchat/knowledge
-- Live research catalog: https://research.evaluchat.org
-- Live knowledge catalog: https://knowledge.evaluchat.org
+- Knowledge repository: https://github.com/openrigor/knowledge
+- Live research catalog: https://research.openrigor.org
+- Live knowledge catalog: https://knowledge.openrigor.org
 - OKF specification: https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf
