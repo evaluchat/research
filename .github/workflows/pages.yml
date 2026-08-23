@@ -40,8 +40,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          git config user.name "evaluchat-bot"
-          git config user.email "hello@evaluchat.com"
+          git config user.name "openrigor-bot"
+          git config user.email "hello@openrigor.org"
 
           WORK=$(mktemp -d)
           cp -a site/. "$WORK/"
