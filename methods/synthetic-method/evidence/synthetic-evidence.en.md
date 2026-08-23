@@ -11,7 +11,7 @@ stage: documented-experience
 generated: { by: cursor/composer-2.5, at: 2026-08-22T15:10:00Z }
 sources:
   - id: synthetic-method
-    resource: https://github.com/evaluchat/research/blob/main/methods/synthetic-method/synthetic-method.en.md
+    resource: https://github.com/openrigor/research/blob/main/methods/synthetic-method/synthetic-method.en.md
     title: Synthetic layout method
 ---
 

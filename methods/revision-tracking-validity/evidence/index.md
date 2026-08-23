@@ -1,7 +1,7 @@
 # Method — Revision-tracking validity (evidence collection)
 
 One evidence collection per method. No evidence contributions yet: the method is
-[implementation-blocked](https://github.com/evaluchat/research/issues/1) pending the general
+[implementation-blocked](https://github.com/openrigor/research/issues/1) pending the general
 Canvas condition-allocation capability. A public synthetic acceptance demonstration may be the
 first contribution only after the capability exists; it is not student evidence.
 

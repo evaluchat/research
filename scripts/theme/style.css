@@ -1,4 +1,4 @@
-/* Evaluchat catalog site — brand-aligned with docs.evaluchat.com.
+/* OpenRigor catalog site — brand-aligned with docs.openrigor.com.
    Tokens ported verbatim from docs/assets/style.css (source of truth:
    knowledge-catalog branding-guideline.md): brand blue #2c3e56,
    Source Sans 3 body, Inter wordmark, Fira Code mono. */
@@ -70,7 +70,7 @@ body {
 }
 
 .logo a {
-  /* Match evaluchat.com login wordmark: Inter semibold, tracking-tight */
+  /* Match openrigor.com login wordmark: Inter semibold, tracking-tight */
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;

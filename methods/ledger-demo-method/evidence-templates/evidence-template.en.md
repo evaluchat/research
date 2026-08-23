@@ -50,7 +50,7 @@ fields:
     type: text
     required: true
     read_only: true
-generated: { by: "evaluchat-hermes/1.0", at: 2026-08-19T14:57:46Z }
+generated: { by: "openrigor-hermes/1.0", at: 2026-08-19T14:57:46Z }
 ---
 
 # Ledger demo method — evidence packet (v0.9.0)

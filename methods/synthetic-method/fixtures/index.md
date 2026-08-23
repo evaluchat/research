@@ -7,4 +7,4 @@ repository layout-contract tests lives under this method:
 - [Ledger snapshot](../evidence/ledgers/synthetic-snapshot.en.md)
 - [Seal manifest](../evidence/ledgers/synthetic-snapshot.seal.yml)
 
-The evaluchat canvas repo keeps path stubs only; content SoT is here.
+The openrigor canvas repo keeps path stubs only; content SoT is here.

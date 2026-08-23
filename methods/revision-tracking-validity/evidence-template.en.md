@@ -286,13 +286,13 @@ assistant:
 generated: { by: codex/gpt-5, at: 2026-08-17T22:14:52Z }
 sources:
   - id: revision-tracking-validity
-    resource: https://github.com/evaluchat/research/blob/main/methods/revision-tracking-validity/revision-tracking-validity.en.md
+    resource: https://github.com/openrigor/research/blob/main/methods/revision-tracking-validity/revision-tracking-validity.en.md
     title: Revision-tracking validity — assessor-blind process-evidence study
   - id: revision-tracking-validity-question
-    resource: https://github.com/evaluchat/research/blob/main/theory/revision-tracking-validity-question.en.md
+    resource: https://github.com/openrigor/research/blob/main/theory/revision-tracking-validity-question.en.md
     title: Revision-tracking validity — theory research question
   - id: evidence-roles
-    resource: https://github.com/evaluchat/research/blob/main/governance/evidence-roles.en.md
+    resource: https://github.com/openrigor/research/blob/main/governance/evidence-roles.en.md
     title: Shared evidence roles — how every method files a run
 ---
 

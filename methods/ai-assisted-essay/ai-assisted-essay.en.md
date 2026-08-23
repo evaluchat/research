@@ -42,64 +42,64 @@ telemetry: [process_signals, transcript, output]
 provenance:
   sources:
     - id: essays-workflow
-      resource: https://github.com/evaluchat/knowledge/blob/main/concepts/essays-workflow.en.md
+      resource: https://github.com/openrigor/knowledge/blob/main/concepts/essays-workflow.en.md
       title: Essays workflow — proportional drafting unlock
 profiles:
   - id: canonical-constrained-dialogue
     version: 1.0.0
     label: Canonical constrained dialogue
     description: Production-parity Essays workflow with a four-message escape hatch.
-    author: evaluchat
+    author: openrigor
     immutable: true
     configuration: { ai_assistance: true, ai_canvas_actions: true, drafting_gate: discussion-first, threshold: 4, tracking: true }
   - id: gate-off
     version: 1.0.0
     label: Drafting gate off
     description: AI assistance without a thesis gate.
-    author: evaluchat
+    author: openrigor
     immutable: true
     configuration: { ai_assistance: true, ai_canvas_actions: true, drafting_gate: none, threshold: 0, tracking: true }
   - id: ai-off
     version: 1.0.0
     label: Authoring without AI
     description: Assignment context, local authoring, and submission without agent calls.
-    author: evaluchat
+    author: openrigor
     immutable: true
     configuration: { ai_assistance: false, ai_canvas_actions: false, drafting_gate: none, threshold: 0, tracking: true }
   - id: canvas-actions-off
     version: 1.0.0
     label: Dialogue without canvas actions
     description: AI dialogue remains available while AI generation and edits are disabled.
-    author: evaluchat
+    author: openrigor
     immutable: true
     configuration: { ai_assistance: true, ai_canvas_actions: false, drafting_gate: discussion-first, threshold: 4, tracking: true }
   - id: tracking-off
     version: 1.0.0
     label: No process tracking
     description: Canonical workflow without process telemetry capture or display.
-    author: evaluchat
+    author: openrigor
     immutable: true
     configuration: { ai_assistance: true, ai_canvas_actions: true, drafting_gate: discussion-first, threshold: 4, tracking: false }
-run_brief_template: evaluchat-assignment-brief@1.0.0
+run_brief_template: openrigor-assignment-brief@1.0.0
 evidence_template: evidence-template@1.0.0
 platform:
   participant_invitations: required
   review_surface: essay-process-review
 catalog_urls:
-  spec: https://github.com/evaluchat/research/blob/main/methods/ai-assisted-essay/ai-assisted-essay.en.md
-  evidence: https://github.com/evaluchat/research/tree/main/methods/ai-assisted-essay/evidence
+  spec: https://github.com/openrigor/research/blob/main/methods/ai-assisted-essay/ai-assisted-essay.en.md
+  evidence: https://github.com/openrigor/research/tree/main/methods/ai-assisted-essay/evidence
   questions:
-    - https://github.com/evaluchat/research/blob/main/theory/threshold-calibration.en.md
+    - https://github.com/openrigor/research/blob/main/theory/threshold-calibration.en.md
 generated: { by: cursor-grok/4.6, at: 2026-08-13T14:48:00Z }
 sources:
   - id: essays-workflow
-    resource: https://github.com/evaluchat/knowledge/blob/main/concepts/essays-workflow.en.md
+    resource: https://github.com/openrigor/knowledge/blob/main/concepts/essays-workflow.en.md
     title: Essays workflow — proportional drafting unlock (knowledge catalog)
   - id: research-method
-    resource: https://github.com/evaluchat/knowledge/blob/main/concepts/research-method.en.md
+    resource: https://github.com/openrigor/knowledge/blob/main/concepts/research-method.en.md
     title: Research methods — how Methods use platform capabilities and levers (knowledge catalog)
   - id: evidence-roles
-    resource: https://github.com/evaluchat/research/blob/main/governance/evidence-roles.en.md
+    resource: https://github.com/openrigor/research/blob/main/governance/evidence-roles.en.md
     title: Shared evidence roles — how evidence cites a method (research catalog)
 ---
 
@@ -206,5 +206,5 @@ comparable only when the resolved levers are recorded.
 - `status: draft` — spec version 0.1.0; platform 0.5.9 ships the constrained flow (see [essays-workflow]).
 - No evidence contributions yet. Threshold-calibration experiments may pre-register lever values here.
 
-[threshold-calibration]: https://github.com/evaluchat/research/blob/main/theory/threshold-calibration.en.md
-[essays-workflow]: https://github.com/evaluchat/knowledge/blob/main/concepts/essays-workflow.en.md
+[threshold-calibration]: https://github.com/openrigor/research/blob/main/theory/threshold-calibration.en.md
+[essays-workflow]: https://github.com/openrigor/knowledge/blob/main/concepts/essays-workflow.en.md

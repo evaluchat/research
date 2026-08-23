@@ -12,7 +12,7 @@ tags: [method, evidence-ledger, synthetic]
 roles: [student, teacher, org-admin]
 required_capabilities: [assignment-context, student-authoring, submission]
 evidence_template: evidence-template@1.0.0
-generated: { by: "evaluchat-hermes/1.0", at: 2026-08-19T14:57:46Z }
+generated: { by: "openrigor-hermes/1.0", at: 2026-08-19T14:57:46Z }
 ---
 
 # Ledger demo method — synthetic evidence collection

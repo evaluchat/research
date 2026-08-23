@@ -59,32 +59,32 @@ telemetry: [report]
 provenance:
   sources:
     - id: ai-assignment-stress-test-design
-      resource: https://github.com/evaluchat/knowledge/blob/main/okf/bundles/evaluchat/concepts/ai-assignment-stress-test.md
+      resource: https://github.com/openrigor/knowledge/blob/main/okf/bundles/openrigor/concepts/ai-assignment-stress-test.md
       title: AI Assignment Stress Test — method design
 profiles:
   - id: canonical-all-modes
     version: 1.0.0
     label: Canonical all-modes stress test
     description: Teacher-facing assignment analysis using the version-pinned model set, all AI-use modes, the full outcomes vocabulary, and three redesign alternatives.
-    author: evaluchat
+    author: openrigor
     immutable: true
     configuration: { model_set: stress-test-v0.1, ai_mode: full, drafting_gate: none, mode_coverage: [A, B, C, D, E, F], rubric_input: none, capability_focus: [closed-book-recall, unaided-production, ai-assisted-performance, error-detection, explanation, transfer, adaptation, argument-defence, ai-judgement, delayed-retention], redesign_count: 3, telemetry: report }
 evidence_template: evidence-template@1.0.0
 catalog_urls:
-  spec: https://github.com/evaluchat/research/blob/main/methods/ai-assignment-stress-test/ai-assignment-stress-test.en.md
-  evidence: https://github.com/evaluchat/research/tree/main/methods/ai-assignment-stress-test/evidence
+  spec: https://github.com/openrigor/research/blob/main/methods/ai-assignment-stress-test/ai-assignment-stress-test.en.md
+  evidence: https://github.com/openrigor/research/tree/main/methods/ai-assignment-stress-test/evidence
   questions:
-    - https://github.com/evaluchat/research/blob/main/theory/ai-assignment-stress-test-validity.en.md
+    - https://github.com/openrigor/research/blob/main/theory/ai-assignment-stress-test-validity.en.md
 generated: { by: codex/gpt-5, at: 2026-08-17T22:14:52Z }
 sources:
   - id: ai-assignment-stress-test-design
-    resource: https://github.com/evaluchat/knowledge/blob/main/okf/bundles/evaluchat/concepts/ai-assignment-stress-test.md
+    resource: https://github.com/openrigor/knowledge/blob/main/okf/bundles/openrigor/concepts/ai-assignment-stress-test.md
     title: AI Assignment Stress Test — method design (knowledge catalog)
   - id: research-method
-    resource: https://github.com/evaluchat/knowledge/blob/main/concepts/research-method.en.md
+    resource: https://github.com/openrigor/knowledge/blob/main/concepts/research-method.en.md
     title: Research methods — how Methods use platform capabilities and levers (knowledge catalog)
   - id: evidence-roles
-    resource: https://github.com/evaluchat/research/blob/main/governance/evidence-roles.en.md
+    resource: https://github.com/openrigor/research/blob/main/governance/evidence-roles.en.md
     title: Shared evidence roles — how evidence cites a method (research catalog)
 ---
 

@@ -21,7 +21,7 @@ There are no findings yet: no classroom experiment exists, and the first finding
 | --- | --- | --- | --- |
 | provisional | low | YES | single falsifiable claim + declared scope; links to ≥1 evidence contribution → intervention → research question; evidence bundle complete (observations, results with Measures, reflection, limitations, provenance + consent); no open challenge; no conflict with existing supported finding |
 | tentative | medium | YES, if requirements met | ≥1 structured experiment OR ≥2 documented experiences by distinct contributors/contexts with declared independence; direction-of-fit check passes |
-| supported | high | NO — human review required | human synthesis of the evidence chain; reviewer independence rule: a supported finding favourable to evaluchat requires ≥1 non-evaluchat reviewer once the reviewer pool exists; never auto-approved |
+| supported | high | NO — human review required | human synthesis of the evidence chain; reviewer independence rule: a supported finding favourable to openrigor requires ≥1 non-openrigor reviewer once the reviewer pool exists; never auto-approved |
 
 ## State machine
 

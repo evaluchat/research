@@ -10,7 +10,7 @@ tags: [evidence-ledger, synthetic, synthetic-method]
 generated: { by: cursor/composer-2.5, at: 2026-08-22T15:10:00Z }
 sources:
   - id: synthetic-evidence
-    resource: https://github.com/evaluchat/research/blob/main/methods/synthetic-method/evidence/synthetic-evidence.en.md
+    resource: https://github.com/openrigor/research/blob/main/methods/synthetic-method/evidence/synthetic-evidence.en.md
     title: Synthetic observation
 ---
 

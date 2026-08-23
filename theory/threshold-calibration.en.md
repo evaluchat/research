@@ -10,7 +10,7 @@ created: 2026-08-09T14:00:00Z
 generated: { by: cursor-grok/4.6, at: 2026-08-13T14:48:00Z }
 sources:
   - id: research-method
-    resource: https://github.com/evaluchat/knowledge/blob/main/concepts/research-method.en.md
+    resource: https://github.com/openrigor/knowledge/blob/main/concepts/research-method.en.md
     title: Research methods — how Methods use platform capabilities and levers (knowledge catalog)
 ---
 
@@ -50,4 +50,4 @@ A miscalibrated threshold fails in one of two directions. If the threshold is to
 
 Translations: none yet — contribute one via PR (see CONTRIBUTING.md).
 
-[research-method]: https://github.com/evaluchat/knowledge/blob/main/concepts/research-method.en.md
+[research-method]: https://github.com/openrigor/knowledge/blob/main/concepts/research-method.en.md
