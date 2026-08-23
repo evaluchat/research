@@ -8,7 +8,7 @@
     "status": "draft",
     "description": "Method: a teacher-facing, assignment-level stress test that probes what current AI can do, maps what the task measures, identifies delegation loss, and offers alternative designs without requiring AI prohibition.",
     "updated": "2026-08-17T22:14:52+00:00",
-    "canonical_resource": "https://github.com/evaluchat/research/blob/main/methods/ai-assignment-stress-test/ai-assignment-stress-test.en.md"
+    "canonical_resource": "https://github.com/openrigor/research/blob/main/methods/ai-assignment-stress-test/ai-assignment-stress-test.en.md"
   },
   {
     "id": "ai-assignment-stress-test-validity",
@@ -19,7 +19,7 @@
     "status": "open",
     "description": "Primary research question for the AI Assignment Stress Test method: when standardized AI task probes provide valid, reliable, and useful evidence about the human capabilities an assignment can still measure in AI-permissive contexts.",
     "updated": "2026-08-13T14:48:00+00:00",
-    "canonical_resource": "https://github.com/evaluchat/research/blob/main/theory/ai-assignment-stress-test-validity.en.md"
+    "canonical_resource": "https://github.com/openrigor/research/blob/main/theory/ai-assignment-stress-test-validity.en.md"
   },
   {
     "id": "ai-assisted-essay",
@@ -30,7 +30,7 @@
     "status": "draft",
     "description": "Method: a constrained dialogic drafting assignment where drafting support is gated behind dialogic contribution. Investigates threshold-calibration and the evidential value of the AI chat transcript for student engagement.",
     "updated": "2026-08-13T14:48:00+00:00",
-    "canonical_resource": "https://github.com/evaluchat/research/blob/main/methods/ai-assisted-essay/ai-assisted-essay.en.md"
+    "canonical_resource": "https://github.com/openrigor/research/blob/main/methods/ai-assisted-essay/ai-assisted-essay.en.md"
   },
   {
     "id": "camdle",
@@ -41,7 +41,7 @@
     "status": "draft",
     "description": "CAMDLE as a proposed learning design: a generative writing assistant whose drafting support is conditional on prior dialogic contribution — a research agenda, not an efficacy claim.",
     "updated": "2026-08-13T14:48:00+00:00",
-    "canonical_resource": "https://github.com/evaluchat/research/blob/main/theory/camdle.en.md"
+    "canonical_resource": "https://github.com/openrigor/research/blob/main/theory/camdle.en.md"
   },
   {
     "id": "contribution-ladder",
@@ -52,7 +52,7 @@
     "status": "stable",
     "description": "Observation → documented experience → structured experiment → replication/challenge → synthesis → finding: the contribution model that lets ordinary teachers contribute without writing papers.",
     "updated": "2026-08-13T14:48:00+00:00",
-    "canonical_resource": "https://github.com/evaluchat/research/blob/main/governance/contribution-ladder.en.md"
+    "canonical_resource": "https://github.com/openrigor/research/blob/main/governance/contribution-ladder.en.md"
   },
   {
     "id": "evidence-roles",
@@ -63,7 +63,7 @@
     "status": "draft",
     "description": "Catalog convention for evidence: shared document roles, observation/inference separation, and provenance that cites method {id, version, levers, canvas}. Payload shape is pinned by each method version.",
     "updated": "2026-08-13T14:48:00+00:00",
-    "canonical_resource": "https://github.com/evaluchat/research/blob/main/governance/evidence-roles.en.md"
+    "canonical_resource": "https://github.com/openrigor/research/blob/main/governance/evidence-roles.en.md"
   },
   {
     "id": "ledger-demo-method",
@@ -74,7 +74,7 @@
     "status": "stable",
     "description": "Synthetic method whose accepted evidence exercises every Evidence Ledger scope bucket (included, outside, unknown, unavailable, resolver exclusion). Used to verify the ledger configuration canvas and snapshots.",
     "updated": "2026-08-19T14:57:46+00:00",
-    "canonical_resource": "https://github.com/evaluchat/research/blob/main/methods/ledger-demo-method/ledger-demo-method.en.md"
+    "canonical_resource": "https://github.com/openrigor/research/blob/main/methods/ledger-demo-method/ledger-demo-method.en.md"
   },
   {
     "id": "review-protocol",
@@ -85,7 +85,7 @@
     "status": "stable",
     "description": "Tiered claim governance: low-friction entry (auto-approval at provisional/tentative via deterministic rules), high-bar promotion (supported requires human review), challenge-anything, direction-of-fit pre-registration.",
     "updated": "2026-08-09T14:00:00+00:00",
-    "canonical_resource": "https://github.com/evaluchat/research/blob/main/governance/review-protocol.en.md"
+    "canonical_resource": "https://github.com/openrigor/research/blob/main/governance/review-protocol.en.md"
   },
   {
     "id": "revision-tracking-validity",
@@ -96,7 +96,7 @@
     "status": "draft",
     "description": "Method: a randomised, assessor-blind assignment study that evaluates the validity, fairness, limitations, and practical usefulness of condition-neutral revision metrics as evidence about recorded Canvas AI events.",
     "updated": "2026-08-17T22:14:52+00:00",
-    "canonical_resource": "https://github.com/evaluchat/research/blob/main/methods/revision-tracking-validity/revision-tracking-validity.en.md"
+    "canonical_resource": "https://github.com/openrigor/research/blob/main/methods/revision-tracking-validity/revision-tracking-validity.en.md"
   },
   {
     "id": "revision-tracking-validity-question",
@@ -107,7 +107,7 @@
     "status": "open",
     "description": "Primary research question for the revision-tracking validity method: whether a frozen, condition-neutral revision-metrics protocol can validly, fairly, and usefully distinguish a recorded Canvas AI assistance event from no recorded Canvas AI event under assessor-blind study conditions.",
     "updated": "2026-08-13T14:48:00+00:00",
-    "canonical_resource": "https://github.com/evaluchat/research/blob/main/theory/revision-tracking-validity-question.en.md"
+    "canonical_resource": "https://github.com/openrigor/research/blob/main/theory/revision-tracking-validity-question.en.md"
   },
   {
     "id": "synthetic-method",
@@ -118,7 +118,7 @@
     "status": "draft",
     "description": "Synthetic method with a sealed evidence ledger snapshot. Exercises the v1 private GitHub research repository layout; not a classroom investigation.",
     "updated": "2026-08-22T15:10:00+00:00",
-    "canonical_resource": "https://github.com/evaluchat/research/blob/main/methods/synthetic-method/synthetic-method.en.md"
+    "canonical_resource": "https://github.com/openrigor/research/blob/main/methods/synthetic-method/synthetic-method.en.md"
   },
   {
     "id": "synthetic-question",
@@ -129,7 +129,7 @@
     "status": "open",
     "description": "Invented research question used only to exercise the v1 private GitHub research repository layout.",
     "updated": "2026-08-22T15:10:00+00:00",
-    "canonical_resource": "https://github.com/evaluchat/research/blob/main/theory/synthetic-question.en.md"
+    "canonical_resource": "https://github.com/openrigor/research/blob/main/theory/synthetic-question.en.md"
   },
   {
     "id": "threshold-calibration",
@@ -140,6 +140,6 @@
     "status": "open",
     "description": "Central research question: how the drafting-unlock threshold should vary by task type, proficiency level, language background, and learner strategy.",
     "updated": "2026-08-13T14:48:00+00:00",
-    "canonical_resource": "https://github.com/evaluchat/research/blob/main/theory/threshold-calibration.en.md"
+    "canonical_resource": "https://github.com/openrigor/research/blob/main/theory/threshold-calibration.en.md"
   }
 ]
