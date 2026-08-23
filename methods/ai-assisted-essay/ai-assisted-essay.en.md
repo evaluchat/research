@@ -80,7 +80,7 @@ profiles:
     author: openrigor
     immutable: true
     configuration: { ai_assistance: true, ai_canvas_actions: true, drafting_gate: discussion-first, threshold: 4, tracking: false }
-run_brief_template: openrigor-assignment-brief@1.0.0
+run_brief_template: evaluchat-assignment-brief@1.0.0
 evidence_template: evidence-template@1.0.0
 platform:
   participant_invitations: required
