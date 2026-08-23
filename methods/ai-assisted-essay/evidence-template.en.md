@@ -288,13 +288,13 @@ assistant:
 generated: { by: codex/gpt-5, at: 2026-08-17T14:33:56Z }
 sources:
   - id: ai-assisted-essay
-    resource: https://github.com/evaluchat/research/blob/main/methods/ai-assisted-essay/ai-assisted-essay.en.md
+    resource: https://github.com/openrigor/research/blob/main/methods/ai-assisted-essay/ai-assisted-essay.en.md
     title: AI-assisted essay — constrained dialogic drafting (CAMDLE)
   - id: threshold-calibration
-    resource: https://github.com/evaluchat/research/blob/main/theory/threshold-calibration.en.md
+    resource: https://github.com/openrigor/research/blob/main/theory/threshold-calibration.en.md
     title: Threshold calibration — what counts as sufficient dialogic contribution?
   - id: measuring-subjective-evidence
-    resource: https://github.com/evaluchat/knowledge/blob/main/references/how-to-measure-anything-evidence.md
+    resource: https://github.com/openrigor/knowledge/blob/main/references/how-to-measure-anything-evidence.md
     title: Measuring Subjective Evidence — Hubbard Reference
 ---
 

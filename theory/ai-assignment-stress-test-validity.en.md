@@ -13,7 +13,7 @@ authors:
   - name: Cronje van Heerden
 sources:
   - id: ai-assignment-stress-test-design
-    resource: https://github.com/evaluchat/knowledge/blob/main/okf/bundles/evaluchat/concepts/ai-assignment-stress-test.md
+    resource: https://github.com/openrigor/knowledge/blob/main/okf/bundles/openrigor/concepts/ai-assignment-stress-test.md
     title: AI Assignment Stress Test — method design (knowledge catalog)
   - id: testing-standards
     resource: https://www.testingstandards.net/uploads/7/6/6/4/76643089/standards_2014edition.pdf
@@ -22,7 +22,7 @@ sources:
     resource: https://eric.ed.gov/?id=EJ996447
     title: Kane (2013), Validating the Interpretations and Uses of Test Scores
   - id: evidence-roles
-    resource: https://github.com/evaluchat/research/blob/main/governance/evidence-roles.en.md
+    resource: https://github.com/openrigor/research/blob/main/governance/evidence-roles.en.md
     title: Shared evidence roles — how evidence cites a method (research catalog)
 generated: { by: cursor-grok/4.6, at: 2026-08-13T14:48:00Z }
 ---

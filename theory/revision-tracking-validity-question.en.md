@@ -19,7 +19,7 @@ sources:
     resource: https://eric.ed.gov/?id=EJ996447
     title: Kane (2013), Validating the Interpretations and Uses of Test Scores
   - id: evidence-roles
-    resource: https://github.com/evaluchat/research/blob/main/governance/evidence-roles.en.md
+    resource: https://github.com/openrigor/research/blob/main/governance/evidence-roles.en.md
     title: Shared evidence roles — how evidence cites a method (research catalog)
 generated: { by: cursor-grok/4.6, at: 2026-08-13T14:48:00Z }
 ---

@@ -272,13 +272,13 @@ assistant:
 generated: { by: codex/gpt-5, at: 2026-08-17T22:14:52Z }
 sources:
   - id: ai-assignment-stress-test
-    resource: https://github.com/evaluchat/research/blob/main/methods/ai-assignment-stress-test/ai-assignment-stress-test.en.md
+    resource: https://github.com/openrigor/research/blob/main/methods/ai-assignment-stress-test/ai-assignment-stress-test.en.md
     title: AI Assignment Stress Test — assignment-level measurement analysis
   - id: ai-assignment-stress-test-validity
-    resource: https://github.com/evaluchat/research/blob/main/theory/ai-assignment-stress-test-validity.en.md
+    resource: https://github.com/openrigor/research/blob/main/theory/ai-assignment-stress-test-validity.en.md
     title: AI assignment stress-test validity — when can task probes identify what an assessment still measures?
   - id: evidence-roles
-    resource: https://github.com/evaluchat/research/blob/main/governance/evidence-roles.en.md
+    resource: https://github.com/openrigor/research/blob/main/governance/evidence-roles.en.md
     title: Shared evidence roles — how every method files a run
 ---
 

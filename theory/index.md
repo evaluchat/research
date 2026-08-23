@@ -1,6 +1,6 @@
 # Theory
 
-Theoretical constructs and background for the evaluchat research program. Theory in this catalog is explicitly unproven (`status: draft`) until supported by evidence.
+Theoretical constructs and background for the openrigor research program. Theory in this catalog is explicitly unproven (`status: draft`) until supported by evidence.
 
 ## Theory
 

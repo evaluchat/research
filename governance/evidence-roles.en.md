@@ -10,10 +10,10 @@ tags: [governance, evidence, methods, provenance]
 generated: { by: cursor-grok/4.6, at: 2026-08-13T14:48:00Z }
 sources:
   - id: research-method
-    resource: https://github.com/evaluchat/knowledge/blob/main/concepts/research-method.en.md
+    resource: https://github.com/openrigor/knowledge/blob/main/concepts/research-method.en.md
     title: Research methods — how Methods use platform capabilities and levers (knowledge catalog)
   - id: contribution-ladder
-    resource: https://github.com/evaluchat/research/blob/main/governance/contribution-ladder.en.md
+    resource: https://github.com/openrigor/research/blob/main/governance/contribution-ladder.en.md
     title: The contribution ladder — how teachers contribute to research
 ---
 
@@ -21,7 +21,7 @@ sources:
 
 > `status: draft`. These roles apply to every published method. They are catalog convention, not a measurement schema. Each method version pins its own payload (what `results` actually contains) in `methods/<id>/evidence-template/`.
 
-A **Method** is a versioned, profiled way of investigating a research question. Evaluchat applies a method profile in a workspace. When a run concludes, evidence is filed under that method — never in a second, catalog-wide evidence cabinet.
+A **Method** is a versioned, profiled way of investigating a research question. OpenRigor applies a method profile in a workspace. When a run concludes, evidence is filed under that method — never in a second, catalog-wide evidence cabinet.
 
 Findings may *cite* several methods; they do not *own* evidence. Evidence belongs to exactly one method, at `methods/<id>/evidence/<slug>/`.
 
@@ -71,10 +71,10 @@ The evidence graph is `Question → Method → Version → Levers → Interventi
 
 Raw student material is never committed. A public artifact requires a consent and anonymisation record in `provenance`. If data cannot be public, say exactly what cannot be reproduced and provide the strongest lawful substitute (synthetic fixtures, data dictionary, restricted-access note).
 
-Participants produce activity inside Evaluchat; a teacher or researcher submits the anonymised evidence PR. Students do not file raw work into this catalog.
+Participants produce activity inside OpenRigor; a teacher or researcher submits the anonymised evidence PR. Students do not file raw work into this catalog.
 
 ## Where the payload lives
 
 Do not treat these shared roles as if every method measured the same thing. Essays, the stress test, and revision-tracking produce different payloads on purpose. Copy the method version's `evidence-template/` when filing a run. If the measures change, bump the method version.
 
-Until Evaluchat can generate the document at "Ready to conclude", humans fill the same template by hand. The catalog shape does not wait on that product work.
+Until OpenRigor can generate the document at "Ready to conclude", humans fill the same template by hand. The catalog shape does not wait on that product work.

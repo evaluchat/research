@@ -12,7 +12,7 @@ authors:
 generated: { by: cursor-grok/4.6, at: 2026-08-13T14:48:00Z }
 sources:
   - id: research-method
-    resource: https://github.com/evaluchat/knowledge/blob/main/concepts/research-method.en.md
+    resource: https://github.com/openrigor/knowledge/blob/main/concepts/research-method.en.md
     title: Research methods — how Methods use platform capabilities and levers (knowledge catalog)
 ---
 
@@ -26,7 +26,7 @@ sources:
 Translations: none yet — contribute one via PR (see CONTRIBUTING.md).
 
 **Constrained AI-Mediated Dialogic Language Education**  
-Evaluchat research and discussion paper · 2 August 2026
+OpenRigor research and discussion paper · 2 August 2026
 
 ## Scope and status
 
@@ -34,7 +34,7 @@ This paper establishes CAMDLE as a conceptual framework and research agenda for
 examining how dialogic constraints can mediate writing education with generative
 AI. It synthesises established literature, articulates a proposed design,
 describes a prototype research method, and identifies hypotheses for empirical
-study. Evaluchat has not yet established that CAMDLE improves language
+study. OpenRigor has not yet established that CAMDLE improves language
 proficiency, writing quality, critical thinking, or academic integrity outcomes.
 The claims below are therefore deliberately separated into four categories:
 
@@ -42,7 +42,7 @@ The claims below are therefore deliberately separated into four categories:
    researchers.
 2. **Proposed synthesis** — a way of connecting those ideas under the CAMDLE
    name.
-3. **Product description** — what the Evaluchat prototype is designed to do.
+3. **Product description** — what the OpenRigor prototype is designed to do.
 4. **Open hypothesis** — a claim that requires empirical testing.
 
 The purpose of this paper is to make the proposal inspectable by educators and
@@ -83,7 +83,7 @@ drafting support, and teacher-facing process evidence may bring some benefits
 of tutoring into writing education without treating automation as a substitute
 for learner judgment.
 
-Evaluchat is a prototype implementation of this idea. It combines a dialogue
+OpenRigor is a prototype implementation of this idea. It combines a dialogue
 panel, a drafting canvas, conditional scaffolding, revision history, and
 teacher-facing process signals. The platform is an instrument for research methods, not
 evidence that the proposed mechanism works.
@@ -142,9 +142,9 @@ Keystroke patterns, paste events, focus changes, and interaction counts are
 mechanical observations. They may prompt a conversation, but they do not prove
 who authored a sentence or whether learning occurred.
 
-## 2. Evaluchat as a research instrument
+## 2. OpenRigor as a research instrument
 
-Evaluchat is a browser-based prototype with two related workspaces:
+OpenRigor is a browser-based prototype with two related workspaces:
 
 - **Dialogue panel:** the learner discusses the task with a conversational
   language model, develops ideas, asks for feedback, and negotiates wording.
@@ -172,7 +172,7 @@ when read in context, but they remain indirect evidence and require human
 interpretation; they are not cognitive measurements simply because they occur
 during composing.
 
-Evaluchat therefore isolates the interaction layer, not the learner’s whole
+OpenRigor therefore isolates the interaction layer, not the learner’s whole
 cognitive or technological environment. It makes one defined pathway
 observable—the learner’s exchanges with the model, the model’s responses, the
 canvas state, and the conditions under which assistance is released—while
@@ -184,7 +184,7 @@ dictation, paper notes, or assistance from a second device.
 
 The research boundary is therefore explicit:
 
-> Evaluchat can constrain one interaction pathway and expose some process
+> OpenRigor can constrain one interaction pathway and expose some process
 > evidence. It cannot establish authorship purity, infer learning automatically,
 > or eliminate all forms of circumvention.
 
@@ -473,7 +473,7 @@ The DRIVE framework similarly treats interaction quality as a candidate object
 of assessment rather than assuming that final output is sufficient
 ([Assessing students’ DRIVE](https://doi.org/10.1016/j.caeai.2025.100497)).
 These studies support investigation of process evidence; they do not validate
-Evaluchat’s particular threshold or telemetry model.
+OpenRigor’s particular threshold or telemetry model.
 
 ### 5.1 Operationalising the threshold without pretending to measure learning
 
@@ -673,8 +673,8 @@ definitions, and decision rules so that post hoc optimisation is visible.
 | --- | --- | --- | --- | --- |
 | Independent writing | None or ordinary classroom tools | Not applicable | None | Estimate baseline writing and transfer |
 | Unconstrained AI | Open conversational AI | None | On request | Estimate substitution and convenience effects |
-| Fixed threshold | Evaluchat | Same threshold for all learners | Conditional | Test feasibility of a simple policy |
-| Adaptive threshold | Evaluchat | Calibrated by task and learner context | Conditional | Test equity and learning trade-offs |
+| Fixed threshold | OpenRigor | Same threshold for all learners | Conditional | Test feasibility of a simple policy |
+| Adaptive threshold | OpenRigor | Calibrated by task and learner context | Conditional | Test equity and learning trade-offs |
 | Human-plus-AI feedback | AI plus teacher feedback | Structured reflection | Conditional | Examine whether human feedback changes higher-order outcomes |
 
 The matrix is a starting point, not a recommendation to randomise minors into
@@ -765,7 +765,7 @@ Tools should not turn uncertain telemetry into automated misconduct findings.
 
 ## 10. Collaboration invitation
 
-Evaluchat is available as a prototype for educators and researchers
+OpenRigor is available as a prototype for educators and researchers
 who want to investigate constrained AI-mediated writing. Possible
 collaborations include:
 
@@ -775,7 +775,7 @@ collaborations include:
 - a methodological critique of process evidence and interaction assessment.
 
 Academic collaborators should retain ownership of the research question,
-protocol, analysis, and publication decisions. Evaluchat can contribute access
+protocol, analysis, and publication decisions. OpenRigor can contribute access
 to the prototype, implementation support, and appropriately governed telemetry,
 while disclosing its commercial interest in positive findings.
 
@@ -910,7 +910,7 @@ institutional policy.
 
 ## Appendix C: Publication and conflict-of-interest statement
 
-This document is produced by the developer of Evaluchat and therefore has a
+This document is produced by the developer of OpenRigor and therefore has a
 commercial interest in the platform being useful. The document reports no
 original participant study and makes no efficacy claim. Independent
 collaborators should control study design, analysis, interpretation, and
@@ -936,4 +936,4 @@ platform’s role, data access arrangements, funding, and author affiliations.
 - **Substitutive offloading:** Delegating conceptual work and accepting output
   without meaningful evaluation or transformation.
 
-[research-method]: https://github.com/evaluchat/knowledge/blob/main/concepts/research-method.en.md
+[research-method]: https://github.com/openrigor/knowledge/blob/main/concepts/research-method.en.md

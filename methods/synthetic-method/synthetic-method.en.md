@@ -15,10 +15,10 @@ evidence_template: evidence-template@1.0.0
 generated: { by: cursor/composer-2.5, at: 2026-08-22T15:10:00Z }
 sources:
   - id: synthetic-question
-    resource: https://github.com/evaluchat/research/blob/main/theory/synthetic-question.en.md
+    resource: https://github.com/openrigor/research/blob/main/theory/synthetic-question.en.md
     title: Synthetic question for repository layout contract testing
   - id: github-research-workspaces
-    resource: https://github.com/evaluchat/knowledge/blob/dev/designs/github-research-workspaces.en.md
+    resource: https://github.com/openrigor/knowledge/blob/dev/designs/github-research-workspaces.en.md
     title: GitHub research workspaces design (knowledge catalog)
 ---
 
